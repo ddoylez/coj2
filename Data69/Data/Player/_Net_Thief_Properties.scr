@@ -5,7 +5,7 @@
 AlternateFire()
 BreakOffDoor()
 Spurs()
-MaxHealth(700)
+MaxHealth(200)
 DamageMul(5)
 ArmorStopDamageProbability(0)
 MaxCarrySize(130)

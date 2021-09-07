@@ -1,4 +1,4 @@
 !include("Net_Thief_up0.scr")
 
-MaxHealth(850)
+MaxHealth(100)
 MoveSpeed(1100)
