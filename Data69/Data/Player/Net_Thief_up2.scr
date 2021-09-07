@@ -1,0 +1,4 @@
+!include("Net_Thief_up0.scr")
+
+MaxHealth(850)
+MoveSpeed(1200)

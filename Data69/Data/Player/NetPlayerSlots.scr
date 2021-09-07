@@ -1,0 +1,13 @@
+Slot(_SLOT_RIFLE,        1)
+Slot(_SLOT_PISTOL_RIGHT, 1)
+Slot(_SLOT_PISTOL_LEFT,  1)
+Slot(_SLOT_LASSO,        0)
+Slot(_SLOT_DYNAMITE,     20)
+Slot(_SLOT_KNIFE,        0)
+Slot(_SLOT_HAND_RIGHT,   1)
+Slot(_SLOT_HAND_LEFT,    1)
+
+AmmoCounter(_AMMO_RIFLEBULLET,  100, 12)
+AmmoCounter(_AMMO_SHOTGUNSHELL, 100, 6)
+AmmoCounter(_AMMO_PISTOLBULLET, 100, 12)
+AmmoCounter(_AMMO_ARROW,        100, 20)

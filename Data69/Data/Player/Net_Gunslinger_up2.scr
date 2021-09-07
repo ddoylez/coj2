@@ -1,0 +1,4 @@
+!include("Net_Gunslinger_up0.scr")
+
+MaxHealth(1000)
+MoveSpeed(600)

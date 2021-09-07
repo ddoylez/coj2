@@ -1,0 +1,31 @@
+!NetAmmo(s, i) // ammo type and amount of ammo pieces to be added
+!NetWeapon(s) // weapon that player will receive on start in multiplayer game
+!NetDefaultWeaponL(s) // weapon that player will have in left hand on start in multiplayer game
+!NetDefaultWeaponR(s) // weapon that player will have in right hand on start in multiplayer game
+
+//NetDefaultWeaponR("WeaponPistolDerringerNet")
+NetDefaultWeaponR("WeaponDynamiteStickNet")
+NetDefaultWeaponL("WeaponDynamiteStickNet")
+//NetWeapon("WeaponPistolDerringerNet")
+NetAmmo("AmmoPistol", 90)
+
+NetWeapon("WeaponDynamiteStickNet")
+NetWeapon("WeaponDynamiteStickNet")
+NetWeapon("WeaponDynamiteStickNet")
+NetWeapon("WeaponDynamiteStickNet")
+NetWeapon("WeaponDynamiteStickNet")
+NetWeapon("WeaponDynamiteStickNet")
+NetWeapon("WeaponDynamiteStickNet")
+NetWeapon("WeaponDynamiteStickNet")
+NetWeapon("WeaponDynamiteStickNet")
+NetWeapon("WeaponDynamiteStickNet")
+NetWeapon("WeaponDynamiteStickNet")
+NetWeapon("WeaponDynamiteStickNet")
+NetWeapon("WeaponDynamiteStickNet")
+NetWeapon("WeaponDynamiteStickNet")
+NetWeapon("WeaponDynamiteStickNet")
+NetWeapon("WeaponDynamiteStickNet")
+NetWeapon("WeaponDynamiteStickNet")
+NetWeapon("WeaponDynamiteStickNet")
+NetWeapon("WeaponDynamiteStickNet")
+NetWeapon("WeaponDynamiteStickNet")
