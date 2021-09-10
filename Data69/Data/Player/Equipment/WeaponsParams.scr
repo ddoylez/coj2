@@ -1468,10 +1468,10 @@ sub main()
     {
         WpnFXHit("WpnFXShotgunRemingtonSawOffFireL");
         Damage(60.0000);
-        MinDamage(40.0000);
+        MinDamage(35.0000);
         Accuracy(0.0000);
         AccuracyRecoilChange(10.0000);
-        Range(1200.0000);
+        Range(1800.0000);
         RangeMaxDamage(600.0000);
         RangeMinDamage(900.0000);
         Spread(10.0000);

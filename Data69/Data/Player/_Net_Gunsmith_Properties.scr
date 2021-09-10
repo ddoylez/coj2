@@ -30,6 +30,6 @@ CanKick(false)
 CanSprint(true)
 
 Cash(20000)
-Name("Lemantman")
+Name("Soy Boi")
 FlavourText("&NET_Gunsmith_Desc&")
 
