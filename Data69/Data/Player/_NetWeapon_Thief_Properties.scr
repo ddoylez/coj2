@@ -7,7 +7,7 @@
 NetDefaultWeaponR("WeaponDynamiteStickNet")
 NetDefaultWeaponL("WeaponDynamiteStickNet")
 //NetWeapon("WeaponPistolDerringerNet")
-NetAmmo("AmmoPistol", 90)
+//NetAmmo("AmmoPistol", 90)
 
 NetWeapon("WeaponDynamiteStickNet")
 NetWeapon("WeaponDynamiteStickNet")

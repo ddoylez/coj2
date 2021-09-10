@@ -30,6 +30,6 @@ CanKick(false)
 CanSprint(true)
 
 Cash(20000)
-Name("Fuck you Ted")
+Name("Lemantman")
 FlavourText("&NET_Gunsmith_Desc&")
 

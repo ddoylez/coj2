@@ -1,0 +1,11 @@
+!NetAmmo(s, i) // ammo type and amount of ammo pieces to be added
+!NetWeapon(s) // weapon that player will receive on start in multiplayer game
+!NetDefaultWeaponL(s) // weapon that player will have in left hand on start in multiplayer game
+!NetDefaultWeaponR(s) // weapon that player will have in right hand on start in multiplayer game
+
+NetDefaultWeaponR("WeaponRifleRemingtonNet")
+NetWeapon("WeaponRifleRemingtonNet")
+NetWeapon("WeaponPistolWalkerNet")
+NetAmmo("AmmoPistol", 60)
+NetAmmo("AmmoShotgun", 30)
+

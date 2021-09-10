@@ -1,0 +1,5917 @@
+//This is automatically generated script for Call of Juarez 2. Do not modify.
+//Source file: "CoJ2_Weapons.xls"
+//Generation time: 2009-04-06 10:09:57
+//GameMode: Single Player
+
+
+import "WeaponsParams_temp.scr"
+
+sub main()
+{
+    Param("WpnFX", "WpnFX", "WpnParam")
+    {
+    }
+
+    Param("WpnFXDamage", "WpnFXDamage", "WpnFX")
+    {
+        UseDynLight(true);
+        DamageElementName("");
+        FXDamageName("");
+        SBDamage("");
+        DamageLightScale(400.0000);
+        DamageLightColor([0.3529, 0.3137, 0.2745]);
+        DamageLightDurationIn(0.0750);
+        DamageLightDurationOut(0.0750);
+    }
+
+    Param("WpnFXDamage", "WpnFXPistolDamage", "WpnFXDamage")
+    {
+        FXDamageName("PistolBlow");
+        SBDamage("data/sounds/weapon/weapon_exploded");
+    }
+
+    Param("WpnFXDamage", "WpnFXPistolDerringerDamage", "WpnFXPistolDamage")
+    {
+        ElementsToHideNames("GunUnloader#GunHammer#GunLock#GunTrigger");
+        DamageElementName("GunTrigger");
+    }
+
+    Param("WpnFXDamage", "WpnFXPistolFrontierDamage", "WpnFXPistolDamage")
+    {
+        ElementsToHideNames("GunDrum#GunHammer#GunLoader#GunTrigger");
+        DamageElementName("GunTrigger");
+    }
+
+    Param("WpnFXDamage", "WpnFXPistolLemantDamage", "WpnFXPistolDamage")
+    {
+        ElementsToHideNames("GunDrum#GunHammerA#GunHammerB#GunLoaderA#GunLoaderB#GunTrigger");
+        DamageElementName("GunTrigger");
+    }
+
+    Param("WpnFXDamage", "WpnFXPistolPeacemakerDamage", "WpnFXPistolDamage")
+    {
+        ElementsToHideNames("ColtCock#ColtDrum#ColtLock#ColtRelase#ColtTrigger");
+        DamageElementName("ColtTrigger");
+    }
+
+    Param("WpnFXDamage", "WpnFXPistolSchofieldDamage", "WpnFXPistolDamage")
+    {
+        ElementsToHideNames("GunDrum#GunReleaser#GunCock#GunLock#GunTrigger");
+        DamageElementName("GunTrigger");
+    }
+
+    Param("WpnFXDamage", "WpnFXPistolVolcanicDamage", "WpnFXPistolDamage")
+    {
+        ElementsToHideNames("Volcanic_Breechblock#Volcanic_Clip#Volcanic_Cock#Volcanic_Lever#Volcanic_Loader#Volcanic_Triger");
+        DamageElementName("Volcanic_Triger");
+    }
+
+    Param("WpnFXDamage", "WpnFXPistolWalkerDamage", "WpnFXPistolDamage")
+    {
+        ElementsToHideNames("GunDrum#GunHammer#GunLoader#GunTrigger");
+        DamageElementName("GunTrigger");
+    }
+
+    Param("WpnFXDamage", "WpnFXRifleCogswellDamage", "WpnFXRifleDamage")
+    {
+        ElementsToHideNames("GunDrum#GunHammer#GunLever#GunLoader#GunTrigger");
+        DamageElementName("GunTrigger");
+    }
+
+    Param("WpnFXDamage", "WpnFXRifleDamage", "WpnFXDamage")
+    {
+        FXDamageName("AssaultRifleBlow");
+        SBDamage("data/sounds/weapon/weapon_exploded");
+    }
+
+    Param("WpnFXDamage", "WpnFXRifleWinchesterDamage", "WpnFXRifleDamage")
+    {
+        ElementsToHideNames("GunCock#GunLever#GunLoader#GunLock#GunSlider#GunTrigger");
+        DamageElementName("GunTrigger");
+    }
+
+    Param("WpnFXDamage", "WpnFXShotgunDamage", "WpnFXDamage")
+    {
+        FXDamageName("ShotgunBlow");
+        SBDamage("data/sounds/weapon/weapon_exploded");
+    }
+
+    Param("WpnFXDamage", "WpnFXShotgunRemingtonDamage", "WpnFXShotgunDamage")
+    {
+        ElementsToHideNames("GunHammerA#GunHammerB#GunLock#GunTriggerA#GunTriggerB");
+        DamageElementName("GunTriggerA");
+    }
+
+    Param("WpnFXDamage", "WpnFXStationaryDamage", "WpnFXRifleDamage")
+    {
+    }
+
+    Param("WpnFXExplosion", "WpnFXExplosion", "WpnFXHit")
+    {
+        UseDynLight(true);
+        FXExplosionName("dynamite_explosion");
+        FXExplosionWaterName("dynamite_explosion");
+        SBExplosion("data/sounds/explosion/dynamite_explosion");
+        ExplosionLightScale(800.0000);
+        ExplosionLightColor([0.9412, 0.8627, 0.7843]);
+        ExplosionLightDurationIn(0.1000);
+        ExplosionLightDurationOut(0.1000);
+        FXExplosionInsideName("INTDynamiteExplosion");
+    }
+
+    Param("WpnFXFire", "WpnFXBowFire", "WpnFXFire")
+    {
+        SBAttack("data/sounds/weapon/bow/arrow_shot_");
+        SBWhistle("data/sounds/weapon/bow/arrow_head_flybye_");
+        SBRicochetScript("WpnRicochetBow.scr");
+        FXTraceScript("");
+        UseDynLight(false);
+    }
+
+    Param("WpnFXFire", "WpnFXBucketFire", "WpnFXFire")
+    {
+        SBAttack("data/sounds/ambient/water/water_on_fire");
+        SBRicochetScript("");
+        FXFireName("BucketWater#BucketWater#BucketWater");
+        FXHitScript("WaterHit.scr");
+        FXTraceScript("WaterTrace.scr");
+        TraceGasoline(false);
+        DropBlood(false);
+        UseDynLight(false);
+    }
+
+    Param("WpnFXFire", "WpnFXFire", "WpnFXHit")
+    {
+        SBWhistle("");
+        SBAttackNoAmmo("");
+        SBDeactivate("");
+        FXFireName("##");
+        UseDynLight(true);
+        BarrelElementName("Barrel");
+        ShotLightScale(300.0000);
+        ShotLightColor([0.646, 0.574, 0.503]);
+        ShotLightDurationIn(0.0);
+        ShotLightDurationOut(0.2);
+        FXRepeteSeqName("");
+        FXReloadSeqName("");
+        FXReloadSeqMaxShootDelay(-1.0);
+    }
+
+    Param("WpnFXFire", "WpnFXGatlingFire", "WpnFXFire")
+    {
+        SBAttack("data/sounds/weapon/gatling/gatling_");
+        SBWhistle("data/sounds/whistle/bulletwhistle_");
+        SBAttackNoAmmo("data/sounds/weapon/gatling/gatling_empty");
+        FXFireName("gatling#gatling#aishot");
+    }
+
+    Param("WpnFXFire", "WpnFXLassoFire", "WpnFXFire")
+    {
+        SBAttack("data/sounds/weapon/lasso/lasso_throw");
+        SBWhistle("data/sounds/weapon/lasso/lasso_zip");
+        SBDeactivate("data/sounds/weapon/lasso/lasso_throw_end");
+        SBRicochetScript("WpnRicochetLasso.scr");
+        UseDynLight(false);
+    }
+
+    Param("WpnFXFire", "WpnFXPistolDerringerFire", "WpnFXPistolFire")
+    {
+        SBAttack("data/sounds/weapon/derringer/derringer_");
+        FXFireName("derringer#derringer#aishot");
+        FXFireBarrelName("derringerSmoke4s#derringerSmoke4s#");
+    }
+
+    Param("WpnFXFire", "WpnFXPistolDerringerFireB", "WpnFXPistolDerringerFire")
+    {
+        BarrelElementName("BarrelB");
+    }
+
+    Param("WpnFXFire", "WpnFXPistolFire", "WpnFXFire")
+    {
+        SBAttack("data/sounds/weapon/pistol/pistol_");
+        SBAttackEnd("data/sounds/weapon/frontier/Frontier_Hammer_");
+        SBWhistle("data/sounds/whistle/bulletwhistle_");
+        SBAttackNoAmmo("data/sounds/weapon/pistol/pistol_empty");
+    }
+
+    Param("WpnFXFire", "WpnFXPistolFrontierFire", "WpnFXPistolFire")
+    {
+        SBAttack("data/sounds/weapon/frontier/frontier_");
+        FXFireName("border#border#aishot");
+    }
+
+    Param("WpnFXFire", "WpnFXPistolLemantFire", "WpnFXPistolFire")
+    {
+        SBAttack("data/sounds/weapon/lemant/lemant_");
+        FXFireName("border#border#aishot");
+    }
+
+    Param("WpnFXFire", "WpnFXPistolPeacemakerFire", "WpnFXPistolFire")
+    {
+        SBAttack("data/sounds/weapon/peacemaker/peacemaker_");
+        FXFireName("gun#gun#aishot");
+        FXFireBarrelName("gunSmoke3s#gunSmoke3s#");
+    }
+
+    Param("WpnFXFire", "WpnFXPistolSchofieldFire", "WpnFXPistolFire")
+    {
+        SBAttack("data/sounds/weapon/schofield/schofield_");
+        FXFireName("Schofield#Schofield#aishot");
+        FXFireBarrelName("schofieldSmoke3s#schofieldSmoke3s#");
+    }
+
+    Param("WpnFXFire", "WpnFXPistolVolcanicFire", "WpnFXPistolFire")
+    {
+        SBAttack("data/sounds/weapon/volcanic/volcanic_");
+        FXFireName("Rifle#Rifle#aishot");
+        FXRepeteSeqName("volcanicReload");
+    }
+
+    Param("WpnFXFire", "WpnFXPistolWalkerFire", "WpnFXPistolFire")
+    {
+        SBAttack("data/sounds/weapon/walker/walker_");
+        FXFireName("Walker#Walker#aishot");
+        FXFireBarrelName("walkerSmoke3s#walkerSmoke3s#");
+    }
+
+    Param("WpnFXFire", "WpnFXRifleCogswellFire", "WpnFXRifleFire")
+    {
+        SBAttack("data/sounds/weapon/cogswell/cogswell_");
+        FXFireName("cogswell#cogswell#aishot");
+        FXFireBarrelName("derringerSmoke3s#derringerSmoke3s#");
+    }
+
+    Param("WpnFXFire", "WpnFXRifleFire", "WpnFXFire")
+    {
+        SBAttack("data/sounds/weapon/henry/henry_");
+        SBWhistle("data/sounds/whistle/bulletwhistle_");
+        SBAttackNoAmmo("data/sounds/weapon/henry/henry_empty");
+    }
+
+    Param("WpnFXFire", "WpnFXRifleLemantFire", "WpnFXRifleFire")
+    {
+        SBAttack("data/sounds/weapon/volcanic/volcanic_");
+        FXFireName("border#border#aishot");
+        BarrelElementName("BarrelB");
+        FXFireBarrelName("gunSmoke3s#gunSmoke3s#");
+    }
+
+    Param("WpnFXFire", "WpnFXRifleMusketFire", "WpnFXRifleFire")
+    {
+        SBAttack("data/sounds/weapon/winchester/winchester_");
+        SBAttackEnd("data/sounds/weapon/winchester/winchester_reload_");
+        FXFireName("Springfield#Springfield#AISpringfield");
+    }
+
+    Param("WpnFXFire", "WpnFXRifleWinchesterFire", "WpnFXRifleFire")
+    {
+        SBAttack("data/sounds/weapon/winchester/winchester_");
+        SBAttackEnd("data/sounds/weapon/winchester/winchester_reload_");
+        FXFireName("Rifle#Rifle#aishot");
+        FXRepeteSeqName("rifleReload");
+    }
+
+    Param("WpnFXFire", "WpnFXRifleWinchesterScopeFire", "WpnFXRifleFire")
+    {
+        SBAttack("data/sounds/weapon/winchesterscope/winchesterscope_");
+        SBAttackEnd("data/sounds/weapon/winchester/winchester_reload_");
+        FXFireName("Rifle#Rifle#aishot");
+    }
+
+    Param("WpnFXFire", "WpnFXRifleSharpsFire", "WpnFXRifleFire")
+    {
+        SBAttack("data/sounds/weapon/winchester/winchester_");
+        SBAttackEnd("data/sounds/weapon/winchester/winchester_reload_");
+        FXFireName("Sharps#Sharps#aishot");
+        FXReloadSeqName("SharpsReload");
+    }
+
+    Param("WpnFXFire", "WpnFXRifleSharpsScopeFire", "WpnFXRifleFire")
+    {
+        SBAttack("data/sounds/weapon/winchesterscope/winchesterscope_");
+        SBAttackEnd("data/sounds/weapon/winchester/winchester_reload_");
+        FXFireName("Sharps#Sharps#aishot");
+        FXReloadSeqName("SharpsReload");
+    }
+
+    Param("WpnFXFire", "WpnFXShotgunFire", "WpnFXFire")
+    {
+        SBAttack("data/sounds/weapon/henry/henry_");
+        SBWhistle("data/sounds/whistle/bulletwhistle_");
+        SBAttackNoAmmo("data/sounds/weapon/henry/henry_empty");
+        FXHitScript("WeaponHitShotgun.scr");
+    }
+
+    Param("WpnFXFire", "WpnFXShotgunRemingtonFireL", "WpnFXShotgunFire")
+    {
+        SBAttack("data/sounds/weapon/remington/remington_");
+        FXFireName("shotgun#shotgun#shotgun");
+        BarrelElementName("BarrelL");
+        FXReloadSeqName("Shotgunreload");
+        FXReloadSeqMaxShootDelay(10.0);
+    }
+
+    Param("WpnFXFire", "WpnFXShotgunRemingtonFireR", "WpnFXShotgunRemingtonFireL")
+    {
+        BarrelElementName("BarrelR");
+        FXReloadSeqName("Shotgunreload");
+        FXReloadSeqMaxShootDelay(10.0);
+    }
+
+    Param("WpnFXFire", "WpnFXShotgunRemingtonSawOffFireL", "WpnFXShotgunFire")
+    {
+        SBAttack("data/sounds/weapon/remingtonsawoff/remingtonsawoff_");
+        FXFireName("shotgunshort#shotgunshort#shotgunshort");
+        BarrelElementName("BarrelL");
+        FXReloadSeqName("Shotgunshortreload");
+        FXReloadSeqMaxShootDelay(10.0);
+    }
+
+    Param("WpnFXFire", "WpnFXShotgunRemingtonSawOffFireR", "WpnFXShotgunRemingtonSawOffFireL")
+    {
+        BarrelElementName("BarrelR");
+        FXReloadSeqName("Shotgunshortreload");
+        FXReloadSeqMaxShootDelay(10.0);
+    }
+
+    Param("WpnFXFire", "WpnFXStationaryFire", "WpnFXRifleFire")
+    {
+        SBAttack("data/sounds/weapon/sig550/sig550_");
+        FXFireName("gatling#gatling#aishot");
+        BarrelElementName("BarrelL");
+    }
+
+    Param("WpnFXHit", "WpnFXHandsMelee0", "WpnFXMelee")
+    {
+        SBRicochetScript("WpnRicochetHandsMelee0.scr");
+    }
+
+    Param("WpnFXHit", "WpnFXHandsMelee1", "WpnFXMelee")
+    {
+        SBRicochetScript("WpnRicochetHandsMelee1.scr");
+    }
+
+    Param("WpnFXHit", "WpnFXHandsMelee2", "WpnFXMelee")
+    {
+        SBRicochetScript("WpnRicochetHandsMelee2.scr");
+    }
+
+    Param("WpnFXHit", "WpnFXHit", "WpnFX")
+    {
+        SBAttack("");
+        SBAttackBegin("");
+        SBAttackEnd("");
+        SBRicochetScript("WpnRicochet.scr");
+        FXHitScript("WeaponHit.scr");
+        FXTraceScript("WeaponTrace.scr");
+        TraceGasoline(true);
+        DropBlood(true);
+    }
+
+    Param("WpnFXHit", "WpnFXHorseKick", "WpnFXMelee")
+    {
+        TraceGasoline(true);
+    }
+
+    Param("WpnFXHit", "WpnFXHumanDodge", "WpnFXMelee")
+    {
+        SBAttack("data/sounds/player/leg_wave");
+        TraceGasoline(true);
+    }
+
+    Param("WpnFXHit", "WpnFXHumanKick", "WpnFXMelee")
+    {
+        SBAttack("data/sounds/player/leg_wave");
+        TraceGasoline(true);
+        DropBlood(false);
+    }
+
+    Param("WpnFXHit", "WpnFXKnifeMelee", "WpnFXMelee")
+    {
+        SBAttack("data/sounds/weapon/knife/knife_attack");
+        SBAttackBegin("data/sounds/weapon/knife/knife_hit_01");
+        SBAttackEnd("data/sounds/weapon/knife/knife_hit_02");
+        SBRicochetScript("WpnRicochetKnifeMelee.scr");
+        FXTraceScript("");
+        TraceGasoline(true);
+    }
+
+    Param("WpnFXHit", "WpnFXKnifeThrow", "WpnFXThrow")
+    {
+        SBAttack("data/sounds/weapon/knife/knife_throw_");
+        SBRicochetScript("WpnRicochetKnifeThrow.scr");
+        FXTraceScript("");
+        TraceGasoline(true);
+        DropBlood(true);
+    }
+
+    Param("WpnFXHit", "WpnFXLassoDragIn", "WpnFXHit")
+    {
+        SBAttack("data/sounds/weapon/lasso/lasso_in");
+        SBAttackBegin("data/sounds/weapon/lasso/lasso_in");
+        SBAttackEnd("data/sounds/weapon/lasso/lasso_in");
+        SBRicochetScript("");
+        FXHitScript("");
+    }
+
+    Param("WpnFXHit", "WpnFXLassoDragOut", "WpnFXHit")
+    {
+        SBAttack("data/sounds/weapon/lasso/lasso_in");
+        SBAttackBegin("data/sounds/weapon/lasso/lasso_in");
+        SBAttackEnd("data/sounds/weapon/lasso/lasso_in");
+        SBRicochetScript("");
+        FXHitScript("");
+    }
+
+    Param("WpnFXHit", "WpnFXMelee", "WpnFXHit")
+    {
+        SBRicochetScript("WpnRicochetMelee.scr");
+        FXTraceScript("");
+        TraceGasoline(false);
+    }
+
+    Param("WpnFXHit", "WpnFXThrow", "WpnFXHit")
+    {
+        SBAttack("data/sounds/weapon/dynamitestickshoot");
+        SBRicochetScript("WpnRicochetThrow.scr");
+        FXTraceScript("");
+        TraceGasoline(false);
+        DropBlood(false);
+    }
+
+    Param("WpnFXHit", "WpnFXDynamiteThrow", "WpnFXThrow")
+    {
+        FXHitScript("WeaponDynamiteHit.scr");
+    }
+
+    Param("WpnFXHit", "WpnFXWhip", "WpnFXHit")
+    {
+        SBAttack("data/sounds/weapon/whip/whip_lash_");
+    }
+
+    Param("WpnFXMissile", "WpnFXMissile", "WpnFX")
+    {
+        SBMissileAttached("data/sounds/weapon/cannon/cannonball");
+    }
+
+    Param("WpnFXExplosion", "WpnFXnBlackPowderCannon", "WpnFXExplosion")
+    {
+        FXHitScript("WeaponHitCannon.scr");
+        FXExplosionName("");
+        FXExplosionWaterName("");
+        SBExplosion("data/sounds/explosion/New_Explos");
+    }
+
+    Param("WpnAttack", "WpnAttack", "WpnParam")
+    {
+        Rate(10.0000);
+        Accuracy(0.0000);
+        AccuracyRecoilChange(0.0000);
+        Range(0.0000);
+        FFSpeedLeft(0.0000);
+        FFSpeedRight(0.0000);
+        FFDuration(0.0000);
+        FFFadeTime(0.0000);
+        HorzRecoil(0.0000);
+        VertRecoil(0.0000);
+        MaxVertRecoil(0.0000);
+        MaxHorzRecoil(0.0000);
+        NoDelayMode(-1);
+        Burst(false);
+        Automatic(false);
+        AllowRandomTraces(false);
+        AimDirDev(0.0000);
+    }
+
+    Param("WpnAttackDrag", "WpnAttackDrag", "WpnAttack")
+    {
+        DragDistance(30.0000);
+    }
+
+    Param("WpnAttackDrag", "WpnAttackLassoDragIn", "WpnAttackDrag")
+    {
+        WpnFXHit("WpnFXLassoDragIn");
+        Rate(300.0000);
+        Accuracy(0.0000);
+        AccuracyRecoilChange(0.0000);
+        Range(0.0000);
+        FFSpeedLeft(0.0000);
+        FFSpeedRight(0.0000);
+        FFDuration(0.0000);
+        FFFadeTime(0.0000);
+        HorzRecoil(0.0000);
+        VertRecoil(0.0000);
+        MaxVertRecoil(0.0000);
+        MaxHorzRecoil(0.0000);
+        AimDirDev(0.0000);
+        DragDistance(-120.0000);
+    }
+
+    Param("WpnAttackDrag", "WpnAttackLassoShorten", "WpnAttackLassoDragIn")
+    {
+        DragDistance(-50.0000);
+    }
+
+    Param("WpnAttackDrag", "WpnAttackLassoDragOut", "WpnAttackDrag")
+    {
+        WpnFXHit("WpnFXLassoDragOut");
+        Rate(300.0000);
+        Accuracy(0.0000);
+        AccuracyRecoilChange(0.0000);
+        Range(0.0000);
+        FFSpeedLeft(0.0000);
+        FFSpeedRight(0.0000);
+        FFDuration(0.0000);
+        FFFadeTime(0.0000);
+        HorzRecoil(0.0000);
+        VertRecoil(0.0000);
+        MaxVertRecoil(0.0000);
+        MaxHorzRecoil(0.0000);
+        AimDirDev(0.0000);
+        DragDistance(120.0000);
+    }
+
+    Param("WpnAttackExplode", "WpnAttackDynamiteExplode", "WpnAttackExplode")
+    {
+        WpnFXHit("WpnFXExplosion");
+        Damage(400.0000);
+        Rate(20.0000);
+        Speed(2500.0000);
+        Radius(1500.0000);
+        ExplosionNoise(12000.0000);
+        ExplosionNoiseType(7);
+    }
+
+    Param("WpnAttackExplode", "WpnAttackDynamiteExplodeNet", "WpnAttackExplode")
+    {
+        WpnFXHit("WpnFXExplosion");
+        Damage(333.0000);
+        Rate(20.0000);
+        Speed(2500.0000);
+        Radius(1211.0000);
+        ExplosionNoise(12000.0000);
+        ExplosionNoiseType(7);
+    }
+
+    Param("WpnAttackExplode", "WpnAttackExplode", "WpnAttack")
+    {
+        Damage(150.0000);
+        Speed(1000.0000);
+        DamageType(3);
+        Radius(900.0000);
+        PhysicsEffectRatio(1.0000);
+        ExplosionNoise(0.0000);
+        ExplosionNoiseType(0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackBowFire", "WpnAttackFire")
+    {
+        WpnFXHit("WpnFXBowFire");
+        Damage(210.0);
+        MinDamage(105.0);
+        Rate(55.0);
+        Accuracy(6.0);
+        AccuracyRecoilChange(7.0);
+        Range(6000.0);
+        RangeMaxDamage(1500.0);
+        RangeMinDamage(3000.0);
+        Speed(5000.0);
+        DamageType(16);
+        AmmoIdx(0);
+        HitNoise(160.0000);
+        HitNoiseType(3);
+        FireNoise(600.0000);
+        FireNoiseType(2);
+        PhysicsEffectRatio(0.4000);
+        VertRecoil(4.0000);
+        MaxVertRecoil(10.0000);
+        Kindle(false);
+        GravityCoeff(1.0000);
+        MissileMeshFileName("BowArrow.msh");
+        MissileBehavScr("MissileBehaviorBow.scr");
+    }
+
+    Param("WpnAttackFire", "WpnAttackBowFireAlt", "WpnAttackBowFire")
+    {
+        Damage(210.0);
+        MinDamage(105.0);
+        Accuracy(0.2);
+        AccuracyRecoilChange(0.0);
+        Range(12000.0);
+        RangeMaxDamage(3000.0);
+        RangeMinDamage(6000.0);
+        Speed(9000.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackBowRustyFire", "WpnAttackBowFire")
+    {
+        Damage(180.0);
+        MinDamage(90.0);
+        Accuracy(6.0);
+        AccuracyRecoilChange(7.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackBowRustyFireAlt", "WpnAttackBowFireAlt")
+    {
+        Damage(180.0);
+        MinDamage(90.0);
+        Accuracy(0.2);
+        AccuracyRecoilChange(0.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackBowAlphaFire", "WpnAttackBowFire")
+    {
+        Damage(230.0);
+        MinDamage(115.0);
+        Accuracy(6.0);
+        AccuracyRecoilChange(7.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackBowAlphaFireAlt", "WpnAttackBowFireAlt")
+    {
+        Damage(230.0);
+        MinDamage(115.0);
+        Accuracy(0.2);
+        AccuracyRecoilChange(0.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackBowBetaFire", "WpnAttackBowFire")
+    {
+        Damage(250.0);
+        MinDamage(125.0);
+        Accuracy(6.0);
+        AccuracyRecoilChange(7.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackBowBetaFireAlt", "WpnAttackBowFireAlt")
+    {
+        Damage(250.0);
+        MinDamage(125.0);
+        Accuracy(0.2);
+        AccuracyRecoilChange(0.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackBowNetFire", "WpnAttackBowFire")
+    {
+        Damage(210.0);
+        MinDamage(105.0000);
+        Accuracy(0.2000);
+        AccuracyRecoilChange(4.0000);
+        Range(7000.0);
+        RangeMaxDamage(3600.0000);
+        RangeMinDamage(7200.0000);
+        Speed(7000.0000);
+        MissileBehavScr("MissileBehaviorBowNet.scr");
+    }
+
+    Param("WpnAttackFire", "WpnAttackBowNetFireAlt", "WpnAttackBowFireAlt")
+    {
+        Damage(210.0);
+        MinDamage(105.0000);
+        Accuracy(0.0000);
+        AccuracyRecoilChange(0.0000);
+        Range(10800.0000);
+        RangeMaxDamage(3600.0000);
+        RangeMinDamage(7200.0000);
+        Speed(9000.0000);
+        MissileBehavScr("MissileBehaviorBowNet.scr");
+    }
+
+    Param("WpnAttackFire", "WpnAttackBowUpgradeNetFire", "WpnAttackBowNetFire")
+    {
+        AccuracyRecoilChange(3.0000);
+        Range(7000.0);
+        Speed(7000.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackBowUpgradeNetFireAlt", "WpnAttackBowNetFire")
+    {
+        Accuracy(0.0);
+        AccuracyRecoilChange(3.0000);
+        Range(10800.0000);
+        Speed(9000.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackFire", "WpnAttack")
+    {
+        Damage(10.0000);
+        MinDamage(0.0000);
+        Range(5000.0000);
+        RangeMaxDamage(1000.0000);
+        RangeMinDamage(4000.0000);
+        Speed(30000.0000);
+        DamageType(2);
+        AmmoIdx(-1);
+        HitNoise(0.0000);
+        HitNoiseType(0);
+        FireNoise(0.0000);
+        FireNoiseType(0);
+        DeactivateNoise(0.0000);
+        DeactivateNoiseType(0);
+        PhysicsEffectRatio(1.0000);
+        OwnerSpeedCoeff(0.0000);
+        Kindle(true);
+        GravityCoeff(0.0000);
+        MissileMeshFileName("BulletTrail.msh");
+        MissileRendering(true);
+        MissileScale([1.0000, 1.0000, 1.0000]);
+        ShotThruFenceChance(0.5000);
+        MissileBehavScr("MissileBehaviorDefault.scr");
+    }
+
+    Param("WpnAttackFire", "WpnAttackGatlingFire", "WpnAttackFire")
+    {
+        WpnFXHit("WpnFXGatlingFire");
+        Damage(280.0000);
+        MinDamage(250.0000);
+        Rate(400.0000);
+        Accuracy(0.3000);
+        Range(12000.0000);
+        RangeMinDamage(6000.0000);
+        AmmoIdx(0);
+        HitNoise(1600.0000);
+        HitNoiseType(3);
+        FireNoise(8000.0000);
+        FireNoiseType(2);
+        FFSpeedLeft(0.6000);
+        FFSpeedRight(0.6000);
+        FFDuration(0.2000);
+        PhysicsEffectRatio(0.2500);
+        HorzRecoil(0.3000);
+        VertRecoil(0.6000);
+        MaxVertRecoil(3.0000);
+        MaxHorzRecoil(1.0000);
+        Burst(true);
+        Automatic(true);
+        MissileScale([1.0000, 1.0000, 10.0000]);
+    }
+
+    Param("WpnAttackFire", "WpnAttackGatlingMovableFire", "WpnAttackGatlingFire")
+    {
+        Accuracy(3.0);
+        AccuracyRecoilChange(0.5);
+        Range(7000.0000);
+        HorzRecoil(0.6);
+        VertRecoil(1.2);
+    }
+
+    Param("WpnAttackFire", "WpnAttackGatlingOnWagonFire", "WpnAttackGatlingFire")
+    {
+        Accuracy(3.21);
+    }
+
+    Param("WpnAttackFire", "WpnAttackLassoFire", "WpnAttackFire")
+    {
+        WpnFXHit("WpnFXLassoFire");
+        Damage(50.0000);
+        MinDamage(50.0000);
+        Rate(120.0000);
+        Accuracy(0.0000);
+        AccuracyRecoilChange(0.0000);
+        Range(1200.0000);
+        RangeMaxDamage(1200.0000);
+        RangeMinDamage(1200.0000);
+        Speed(2000.0000);
+        DamageType(17);
+        HitNoise(1000.0000);
+        HitNoiseType(3);
+        FireNoise(1000.0000);
+        FireNoiseType(11);
+        DeactivateNoise(1000.0000);
+        DeactivateNoiseType(11);
+        FFSpeedLeft(0.0000);
+        FFSpeedRight(0.0000);
+        FFDuration(0.0000);
+        FFFadeTime(0.0000);
+        HorzRecoil(0.0000);
+        VertRecoil(0.0000);
+        MaxVertRecoil(0.0000);
+        MaxHorzRecoil(0.0000);
+        AimDirDev(0.0000);
+        Kindle(false);
+        MissileRendering(false);
+        MissileBehavScr("MissileBehaviorLasso.scr");
+    }
+
+    Param("WpnAttackFire", "WpnAttackLassoFireAlt", "WpnAttackLassoFire")
+    {
+        Damage(0.0000);
+        MinDamage(0.0000);
+        PhysicsEffectRatio(0.0000);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolFire", "WpnAttackFire")
+    {
+        WpnFXHit("WpnFXPistolFire");
+        RangeMinDamage(2500.0000);
+        Speed(100000.0000);
+        AmmoIdx(0);
+        HitNoise(1600.0000);
+        HitNoiseType(3);
+        FireNoise(6000.0000);
+        FireNoiseType(2);
+        FFSpeedLeft(0.8000);
+        FFSpeedRight(0.6000);
+        FFDuration(0.1000);
+        HorzRecoil(1.0000);
+        VertRecoil(4.0000);
+        MaxVertRecoil(4.0000);
+        MaxHorzRecoil(1.0000);
+        MissileScale([1.0000, 1.0000, 10.0000]);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleCogswellFire", "WpnAttackRifleFireCoJ2")
+    {
+        WpnFXHit("WpnFXRifleCogswellFire");
+        Damage(150.0);
+        MinDamage(75.0);
+        Rate(180.0000);
+        Accuracy(2.8);
+        AccuracyRecoilChange(5.6);
+        Range(2800.0);
+        RangeMaxDamage(750.0);
+        RangeMinDamage(1500.0);
+        HorzRecoil(1.0000);
+        VertRecoil(4.0000);
+        MaxVertRecoil(4.0000);
+        MaxHorzRecoil(1.0000);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleCogswellRustyFire", "WpnAttackRifleCogswellFire")
+    {
+        Damage(125.0);
+        MinDamage(62.5);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleCogswellAlphaFire", "WpnAttackRifleCogswellFire")
+    {
+        Damage(180.0);
+        MinDamage(90.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleCogswellBetaFire", "WpnAttackRifleCogswellFire")
+    {
+        Damage(210.0);
+        MinDamage(105.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleCogswellNetFire", "WpnAttackRifleCogswellFire")
+    {
+        Damage(168.0000);
+        MinDamage(84.0000);
+        Accuracy(3.0000);
+        AccuracyRecoilChange(8.0000);
+        Range(2000.0000);
+        RangeMaxDamage(1200.0000);
+        RangeMinDamage(1600.0000);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolDerringerFire", "WpnAttackPistolFire")
+    {
+        WpnFXHit("WpnFXPistolDerringerFire");
+        Damage(80.0);
+        MinDamage(40.0);
+        Rate(180.0000);
+        Accuracy(1.5);
+        AccuracyRecoilChange(3.0);
+        Range(2000.0);
+        RangeMaxDamage(750.0);
+        RangeMinDamage(1500.0);
+        FFSpeedLeft(1.0000);
+        FFDuration(0.1200);
+        NoDelayMode(12);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolDerringerFireB", "WpnAttackPistolDerringerFire")
+    {
+        WpnFXHit("WpnFXPistolDerringerFireB");
+        AmmoIdx(1);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolDerringerRustyFire", "WpnAttackPistolDerringerFire")
+    {
+        Damage(80.0);
+        MinDamage(40.0);
+        NoDelayMode(12);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolDerringerRustyFireB", "WpnAttackPistolDerringerRustyFire")
+    {
+        WpnFXHit("WpnFXPistolDerringerFireB");
+        AmmoIdx(1);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolDerringerAlphaFire", "WpnAttackPistolDerringerFire")
+    {
+        Damage(105.0);
+        MinDamage(52.5);
+        NoDelayMode(12);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolDerringerAlphaFireB", "WpnAttackPistolDerringerAlphaFire")
+    {
+        WpnFXHit("WpnFXPistolDerringerFireB");
+        AmmoIdx(1);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolDerringerBetaFire", "WpnAttackPistolDerringerFire")
+    {
+        Damage(125.0);
+        MinDamage(62.5);
+        NoDelayMode(12);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolDerringerBetaFireB", "WpnAttackPistolDerringerBetaFire")
+    {
+        WpnFXHit("WpnFXPistolDerringerFireB");
+        AmmoIdx(1);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolDerringerNetFire", "WpnAttackPistolDerringerFire")
+    {
+        Damage(105.0000);
+        MinDamage(65.0000);
+        Accuracy(0.0000);
+        AccuracyRecoilChange(4.0000);
+        Range(4500.0000);
+        RangeMaxDamage(1500.0000);
+        RangeMinDamage(3000.0000);
+        NoDelayMode(12);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolDerringerNetFireB", "WpnAttackPistolDerringerNetFire")
+    {
+        WpnFXHit("WpnFXPistolDerringerFireB");
+        AmmoIdx(1);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolFrontierFire", "WpnAttackPistolFire")
+    {
+        WpnFXHit("WpnFXPistolFrontierFire");
+        Damage(105.0);
+        MinDamage(52.5);
+        Rate(180.0000);
+        Accuracy(0.75);
+        AccuracyRecoilChange(1.0);
+        Range(4000.0);
+        RangeMaxDamage(1500.0);
+        RangeMinDamage(3000.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolFrontierRustyFire", "WpnAttackPistolFrontierFire")
+    {
+        Damage(80.0);
+        MinDamage(40.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolFrontierAlphaFire", "WpnAttackPistolFrontierFire")
+    {
+        Damage(125.0);
+        MinDamage(62.5);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolFrontierBetaFire", "WpnAttackPistolFrontierFire")
+    {
+        Damage(180.0);
+        MinDamage(90.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolFrontierNetFire", "WpnAttackPistolFrontierFire")
+    {
+        Damage(126.0000);
+        MinDamage(65.0000);
+        Accuracy(0.5000);
+        AccuracyRecoilChange(6.0000);
+        Range(8100.0000);
+        RangeMaxDamage(2700.0000);
+        RangeMinDamage(5400.0000);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolLemantFire", "WpnAttackPistolFire")
+    {
+        WpnFXHit("WpnFXPistolLemantFire");
+        Damage(105.0);
+        MinDamage(52.5);
+        Rate(180.0000);
+        Accuracy(1.0);
+        AccuracyRecoilChange(1.5);
+        Range(4000.0);
+        RangeMaxDamage(1500.0);
+        RangeMinDamage(3000.0);
+        AmmoIdx(1);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolLemantRustyFire", "WpnAttackPistolLemantFire")
+    {
+        Damage(60.0);
+        MinDamage(40.0);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolLemantAlphaFire", "WpnAttackPistolLemantFire")
+    {
+        Damage(125.0);
+        MinDamage(62.5);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolLemantBetaFire", "WpnAttackPistolLemantFire")
+    {
+        Damage(150.0);
+        MinDamage(75.0);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolLemantNetFire", "WpnAttackPistolLemantFire")
+    {
+        Damage(147.0000);
+        MinDamage(74.0000);
+        Accuracy(1.0000);
+        AccuracyRecoilChange(7.0000);
+        Range(7200.0000);
+        RangeMaxDamage(2400.0000);
+        RangeMinDamage(4800.0000);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleLemantFire", "WpnAttackRifleFireCoJ2")
+    {
+        WpnFXHit("WpnFXRifleLemantFire");
+        Damage(145.0);
+        MinDamage(52.5);
+        Rate(180.0000);
+        Accuracy(1.0);
+        AccuracyRecoilChange(3.0);
+        Range(4000.0);
+        RangeMaxDamage(1500.0);
+        RangeMinDamage(3000.0);
+        HorzRecoil(1.0);
+        VertRecoil(4.0);
+        MaxVertRecoil(4.0);
+        MaxHorzRecoil(1.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleLemantRustyFire", "WpnAttackRifleLemantFire")
+    {
+        Damage(100.0);
+        MinDamage(50.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleLemantAlphaFire", "WpnAttackRifleLemantFire")
+    {
+        Damage(165.0);
+        MinDamage(82.5);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleLemantBetaFire", "WpnAttackRifleLemantFire")
+    {
+        Damage(190.0);
+        MinDamage(95.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleLemantNetFire", "WpnAttackRifleLemantFire")
+    {
+        Damage(189.0000);
+        MinDamage(74.0000);
+        Accuracy(1.0000);
+        AccuracyRecoilChange(7.0000);
+        Range(6300.0000);
+        RangeMaxDamage(2100.0000);
+        RangeMinDamage(4200.0000);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolPeacemakerFire", "WpnAttackPistolFire")
+    {
+        WpnFXHit("WpnFXPistolPeacemakerFire");
+        Damage(125.0);
+        MinDamage(72.5);
+        Rate(180.0000);
+        Accuracy(0.5);
+        AccuracyRecoilChange(0.75);
+        Range(4000.0);
+        RangeMaxDamage(1500.0);
+        RangeMinDamage(3000.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolPeacemakerRustyFire", "WpnAttackPistolPeacemakerFire")
+    {
+        Damage(80.0);
+        MinDamage(40.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolPeacemakerAlphaFire", "WpnAttackPistolPeacemakerFire")
+    {
+        Damage(150.0);
+        MinDamage(125.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolPeacemakerBetaFire", "WpnAttackPistolPeacemakerFire")
+    {
+        Damage(180.0);
+        MinDamage(90.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolPeacemakerNetFire", "WpnAttackPistolPeacemakerFire")
+    {
+        Damage(105.0000);
+        MinDamage(65.0000);
+        Accuracy(1.5000);
+        AccuracyRecoilChange(6.0000);
+        Range(5400.0000);
+        RangeMaxDamage(1800.0000);
+        RangeMinDamage(3600.0000);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolSchofieldFire", "WpnAttackPistolFire")
+    {
+        WpnFXHit("WpnFXPistolSchofieldFire");
+        Damage(105.0);
+        MinDamage(52.5);
+        Rate(180.0000);
+        Accuracy(0.75);
+        AccuracyRecoilChange(1.0);
+        Range(4000.0);
+        RangeMaxDamage(1500.0);
+        RangeMinDamage(3000.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolSchofieldRustyFire", "WpnAttackPistolSchofieldFire")
+    {
+        Damage(80.0);
+        MinDamage(40.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolSchofieldAlphaFire", "WpnAttackPistolSchofieldFire")
+    {
+        Damage(125.0);
+        MinDamage(62.5);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolSchofieldBetaFire", "WpnAttackPistolSchofieldFire")
+    {
+        Damage(180.0);
+        MinDamage(90.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolSchofieldNetFire", "WpnAttackPistolSchofieldFire")
+    {
+        Damage(84.0000);
+        MinDamage(65.0000);
+        Accuracy(1.70000);
+        AccuracyRecoilChange(6.0000);
+        Range(5400.0000);
+        RangeMaxDamage(1800.0000);
+        RangeMinDamage(3600.0000);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolVolcanicFire", "WpnAttackPistolFire")
+    {
+        WpnFXHit("WpnFXPistolVolcanicFire");
+        Damage(210.0);
+        MinDamage(105.0);
+        Rate(105.0000);
+        Accuracy(1.0);
+        AccuracyRecoilChange(1.5);
+        Range(4000.0);
+        RangeMaxDamage(1500.0);
+        RangeMinDamage(3000.0);
+        FFSpeedLeft(1.0000);
+        FFSpeedRight(1.0000);
+        FFDuration(0.1500);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolVolcanicRustyFire", "WpnAttackPistolVolcanicFire")
+    {
+        Damage(150.0);
+        MinDamage(125.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolVolcanicAlphaFire", "WpnAttackPistolVolcanicFire")
+    {
+        Damage(230.0);
+        MinDamage(115.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolVolcanicBetaFire", "WpnAttackPistolVolcanicFire")
+    {
+        Damage(250.0);
+        MinDamage(125.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolVolcanicNetFire", "WpnAttackPistolVolcanicFire")
+    {
+        Damage(210.0000);
+        MinDamage(105.0000);
+        Accuracy(1.5000);
+        AccuracyRecoilChange(10.0000);
+        Range(5400.0000);
+        RangeMaxDamage(1800.0000);
+        RangeMinDamage(3600.0000);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolWalkerFire", "WpnAttackPistolFire")
+    {
+        WpnFXHit("WpnFXPistolWalkerFire");
+        Damage(180.0);
+        MinDamage(90.0);
+        Rate(180.0000);
+        Accuracy(0.75);
+        AccuracyRecoilChange(1.0);
+        Range(4000.0);
+        RangeMaxDamage(1500.0);
+        RangeMinDamage(3000.0);
+        FFSpeedLeft(1.0000);
+        FFDuration(0.1200);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolWalkerRustyFire", "WpnAttackPistolWalkerFire")
+    {
+        Damage(125.0);
+        MinDamage(62.5);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolWalkerAlphaFire", "WpnAttackPistolWalkerFire")
+    {
+        Damage(210.0);
+        MinDamage(105.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolWalkerBetaFire", "WpnAttackPistolWalkerFire")
+    {
+        Damage(230.0);
+        MinDamage(115.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackPistolWalkerNetFire", "WpnAttackPistolWalkerFire")
+    {
+        Damage(168.0000);
+        MinDamage(84.0000);
+        Accuracy(1.5000);
+        AccuracyRecoilChange(8.0000);
+        Range(6300.0000);
+        RangeMaxDamage(2100.0000);
+        RangeMinDamage(4200.0000);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleFire", "WpnAttackFire")
+    {
+        WpnFXHit("WpnFXRifleFire");
+        AmmoIdx(0);
+        HitNoise(1600.0000);
+        HitNoiseType(3);
+        FireNoise(8000.0000);
+        FireNoiseType(2);
+        FFSpeedLeft(1.0000);
+        FFSpeedRight(0.6000);
+        FFDuration(0.1500);
+        MissileScale([1.0000, 1.0000, 10.0000]);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleFireCoJ2", "WpnAttackRifleFire")
+    {
+        Speed(100000.0000);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackMultiFire", "WpnAttackFire")
+    {
+        Shots(5);
+        Spread(5.0000);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunFire", "WpnAttackMultiFire")
+    {
+        WpnFXHit("WpnFXShotgunFire");
+        AmmoIdx(0);
+        HitNoise(1600.0000);
+        HitNoiseType(3);
+        FireNoise(9000.0000);
+        FireNoiseType(2);
+        FFSpeedLeft(1.0000);
+        FFSpeedRight(1.0000);
+        FFDuration(0.2000);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonFireL", "WpnAttackShotgunFire")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonFireL");
+        Damage(40.0);
+        MinDamage(20.0);
+        Rate(1000.0);
+        Accuracy(1.0000);
+        AccuracyRecoilChange(5.0000);
+        Range(5300.0);
+        RangeMaxDamage(1500.0);
+        RangeMinDamage(3000.0);
+        Shots(8);
+        Spread(3.0000);
+        HorzRecoil(2.0000);
+        VertRecoil(8.0000);
+        MaxVertRecoil(8.0000);
+        MaxHorzRecoil(2.0000);
+        NoDelayMode(12);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonFireR", "WpnAttackShotgunRemingtonFireL")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonFireR");
+        AmmoIdx(1);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonRustyFireL", "WpnAttackShotgunRemingtonFireL")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonFireL");
+        Damage(30.0);
+        MinDamage(15.0);
+        NoDelayMode(12);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonRustyFireR", "WpnAttackShotgunRemingtonRustyFireL")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonFireR");
+        AmmoIdx(1);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonAlphaFireL", "WpnAttackShotgunRemingtonFireL")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonFireL");
+        Damage(50.0);
+        MinDamage(25.0);
+        NoDelayMode(12);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonAlphaFireR", "WpnAttackShotgunRemingtonAlphaFireL")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonFireR");
+        AmmoIdx(1);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonBetaFireL", "WpnAttackShotgunRemingtonFireL")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonFireL");
+        Damage(60.0);
+        MinDamage(30.0);
+        NoDelayMode(12);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonBetaFireR", "WpnAttackShotgunRemingtonBetaFireL")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonFireR");
+        AmmoIdx(1);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonNetFireL", "WpnAttackShotgunRemingtonFireL")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonFireL");
+        Damage(35.0000);
+        MinDamage(20.0000);
+        Accuracy(0.0000);
+        AccuracyRecoilChange(6.0000);
+        Range(2400.0000);
+        RangeMaxDamage(1800.0000);
+        RangeMinDamage(2100.0000);
+        Spread(6.0000);
+        NoDelayMode(12);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonNetFireR", "WpnAttackShotgunRemingtonNetFireL")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonFireR");
+        AmmoIdx(1);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonSawOffFireL", "WpnAttackShotgunFire")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonSawOffFireL");
+        Damage(40.0);
+        MinDamage(20.0);
+        Rate(1000.0);
+        Accuracy(2.0000);
+        AccuracyRecoilChange(7.5000);
+        Range(3000.0000);
+        RangeMaxDamage(1500.0);
+        RangeMinDamage(3000.0);
+        Shots(8);
+        Spread(6.0000);
+        HorzRecoil(2.0000);
+        VertRecoil(8.0000);
+        MaxVertRecoil(8.0000);
+        MaxHorzRecoil(2.0000);
+        NoDelayMode(12);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonSawOffFireR", "WpnAttackShotgunRemingtonSawOffFireL")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonSawOffFireR");
+        AmmoIdx(1);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonSawOffRustyFireL", "WpnAttackShotgunRemingtonSawOffFireL")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonSawOffFireL");
+        Damage(30.0);
+        MinDamage(15.0);
+        Accuracy(1.0000);
+        NoDelayMode(12);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonSawOffRustyFireR", "WpnAttackShotgunRemingtonSawOffRustyFireL")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonSawOffFireR");
+        AmmoIdx(1);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonSawOffAlphaFireL", "WpnAttackShotgunRemingtonSawOffFireL")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonSawOffFireL");
+        Damage(50.0);
+        MinDamage(25.0);
+        Accuracy(1.0000);
+        NoDelayMode(12);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonSawOffAlphaFireR", "WpnAttackShotgunRemingtonSawOffAlphaFireL")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonSawOffFireR");
+        AmmoIdx(1);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonSawOffBetaFireL", "WpnAttackShotgunRemingtonSawOffFireL")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonSawOffFireL");
+        Damage(60.0);
+        MinDamage(30.0);
+        NoDelayMode(12);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonSawOffBetaFireR", "WpnAttackShotgunRemingtonSawOffBetaFireL")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonSawOffFireR");
+        AmmoIdx(1);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonSawOffNetFireL", "WpnAttackShotgunRemingtonSawOffFireL")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonSawOffFireL");
+        Damage(60.0000);
+        MinDamage(40.0000);
+        Accuracy(0.0000);
+        AccuracyRecoilChange(10.0000);
+        Range(1200.0000);
+        RangeMaxDamage(600.0000);
+        RangeMinDamage(900.0000);
+        Spread(10.0000);
+        NoDelayMode(12);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackShotgunRemingtonSawOffNetFireR", "WpnAttackShotgunRemingtonSawOffNetFireL")
+    {
+        WpnFXHit("WpnFXShotgunRemingtonSawOffFireR");
+        AmmoIdx(1);
+        NoDelayMode(11);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleMusketFire", "WpnAttackRifleFireCoJ2")
+    {
+        WpnFXHit("WpnFXRifleMusketFire");
+        Damage(210.0000);
+        MinDamage(95.0000);
+        Rate(35.0000);
+        Accuracy(0.5000);
+        AccuracyRecoilChange(10.0000);
+        Range(7600.0000);
+        RangeMinDamage(6000.0000);
+        HorzRecoil(1.0000);
+        VertRecoil(4.0000);
+        MaxVertRecoil(4.0000);
+        MaxHorzRecoil(1.0000);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleSharpsFire", "WpnAttackRifleFireCoJ2")
+    {
+        WpnFXHit("WpnFXRifleSharpsFire");
+        Damage(250.0);
+        MinDamage(125.0);
+        Rate(30.0);
+        Accuracy(0.2);
+        AccuracyRecoilChange(10.0);
+        Range(8000.0);
+        RangeMaxDamage(3000.0);
+        RangeMinDamage(6000.0);
+        HorzRecoil(1.0000);
+        VertRecoil(4.0000);
+        MaxVertRecoil(4.0000);
+        MaxHorzRecoil(1.0000);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleSharpsRustyFire", "WpnAttackRifleSharpsFire")
+    {
+        Damage(210.0);
+        MinDamage(110.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleSharpsAlphaFire", "WpnAttackRifleSharpsFire")
+    {
+        Damage(500.0);
+        MinDamage(250.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleSharpsBetaFire", "WpnAttackRifleSharpsFire")
+    {
+        Damage(500.0);
+        MinDamage(250.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleSharpsNetFire", "WpnAttackRifleSharpsFire")
+    {
+        Damage(250.0000);
+        MinDamage(125.0000);
+        AccuracyRecoilChange(11.0000);
+        Range(12300.0000);
+        RangeMaxDamage(4100.0000);
+        RangeMinDamage(8200.0000);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleSharpsNoAmmo", "WpnAttackRifleSharpsFire")
+    {
+        WpnFXHit("WpnFXRifleFire");
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleSharpsScopeFire", "WpnAttackRifleSharpsFire")
+    {
+        Accuracy(6.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleSharpsScopeFireAlt", "WpnAttackRifleSharpsFire")
+    {
+        WpnFXHit("WpnFXRifleSharpsScopeFire");
+        Damage(250.0);
+        MinDamage(250.0);
+        Accuracy(6.0);
+        AccuracyRecoilChange(10.0);
+        Range(20000.0);
+        RangeMaxDamage(20000.0);
+        RangeMinDamage(20000.0);
+        Speed(150000.0);
+        HorzRecoil(0.0000);
+        VertRecoil(0.0000);
+        MaxVertRecoil(0.0000);
+        MaxHorzRecoil(0.0000);
+        MissileBehavScr("MissileBehaviorWinchesterScope.scr");
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleSharpsScopeRustyFire", "WpnAttackRifleSharpsRustyFire")
+    {
+        Accuracy(6.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleSharpsScopeRustyFireAlt", "WpnAttackRifleSharpsScopeFireAlt")
+    {
+        Damage(210.0);
+        MinDamage(210.0);
+        Accuracy(6.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleSharpsScopeAlphaFire", "WpnAttackRifleSharpsAlphaFire")
+    {
+        Accuracy(6.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleSharpsScopeAlphaFireAlt", "WpnAttackRifleSharpsScopeFireAlt")
+    {
+        Damage(500.0);
+        MinDamage(500.0);
+        Accuracy(6.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleSharpsScopeBetaFire", "WpnAttackRifleSharpsBetaFire")
+    {
+        Accuracy(6.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleSharpsScopeBetaFireAlt", "WpnAttackRifleSharpsScopeFireAlt")
+    {
+        Damage(500.0);
+        MinDamage(500.0);
+        Accuracy(6.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleSharpsScopeNetFire", "WpnAttackRifleSharpsNetFire")
+    {
+        Accuracy(6.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleSharpsScopeNetFireAlt", "WpnAttackRifleSharpsScopeFireAlt")
+    {
+        Damage(250.0000);
+        MinDamage(205.0000);
+        Accuracy(6.0);
+        AccuracyRecoilChange(11.0000);
+        Range(13500.0000);
+        RangeMaxDamage(6000.0000);
+        RangeMinDamage(9000.0000);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleSharpsScopeNoAmmo", "WpnAttackRifleSharpsScopeFire")
+    {
+        WpnFXHit("WpnFXRifleFire");
+        Accuracy(6.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleWinchesterFire", "WpnAttackRifleFireCoJ2")
+    {
+        WpnFXHit("WpnFXRifleWinchesterFire");
+        Damage(210.0);
+        MinDamage(105.0);
+        Rate(35.0);
+        Accuracy(0.5);
+        AccuracyRecoilChange(9.0);
+        Range(8000.0);
+        RangeMaxDamage(3000.0);
+        RangeMinDamage(6000.0);
+        HorzRecoil(1.0000);
+        VertRecoil(4.0000);
+        MaxVertRecoil(4.0000);
+        MaxHorzRecoil(1.0000);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleWinchesterRustyFire", "WpnAttackRifleWinchesterFire")
+    {
+        Damage(210.0);
+        MinDamage(105.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleWinchesterAlphaFire", "WpnAttackRifleWinchesterFire")
+    {
+        Damage(230.0);
+        MinDamage(115.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleWinchesterBetaFire", "WpnAttackRifleWinchesterFire")
+    {
+        Damage(250.0);
+        MinDamage(125.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleWinchesterNetFire", "WpnAttackRifleWinchesterFire")
+    {
+        Damage(189.0000);
+        Accuracy(0.0000);
+        AccuracyRecoilChange(9.0000);
+        Range(13500.0000);
+        RangeMaxDamage(4500.0000);
+        RangeMinDamage(9000.0000);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleWinchesterNoAmmo", "WpnAttackRifleWinchesterFire")
+    {
+        WpnFXHit("WpnFXRifleFire");
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleWinchesterScopeFire", "WpnAttackRifleWinchesterFire")
+    {
+        Accuracy(6.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleWinchesterScopeFireAlt", "WpnAttackRifleWinchesterFire")
+    {
+        WpnFXHit("WpnFXRifleWinchesterScopeFire");
+        Damage(210.0);
+        MinDamage(105.0);
+        Accuracy(6.0);
+        AccuracyRecoilChange(9.0);
+        Range(20000.0);
+        RangeMaxDamage(20000.0);
+        RangeMinDamage(20000.0);
+        Speed(150000.0);
+        HorzRecoil(0.0000);
+        VertRecoil(0.0000);
+        MaxVertRecoil(0.0000);
+        MaxHorzRecoil(0.0000);
+        MissileBehavScr("MissileBehaviorWinchesterScope.scr");
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleWinchesterScopeRustyFire", "WpnAttackRifleWinchesterRustyFire")
+    {
+        Accuracy(6.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleWinchesterScopeRustyFireAlt", "WpnAttackRifleWinchesterScopeFireAlt")
+    {
+        Damage(210.0);
+        MinDamage(105.0);
+        Accuracy(6.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleWinchesterScopeAlphaFire", "WpnAttackRifleWinchesterAlphaFire")
+    {
+        Accuracy(6.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleWinchesterScopeAlphaFireAlt", "WpnAttackRifleWinchesterScopeFireAlt")
+    {
+        Damage(230.0);
+        MinDamage(115.0);
+        Accuracy(6.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleWinchesterScopeBetaFire", "WpnAttackRifleWinchesterBetaFire")
+    {
+        Accuracy(6.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleWinchesterScopeBetaFireAlt", "WpnAttackRifleWinchesterScopeFireAlt")
+    {
+        Damage(250.0);
+        MinDamage(125.0);
+        Accuracy(6.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleWinchesterScopeNetFire", "WpnAttackRifleWinchesterScopeFire")
+    {
+        Accuracy(6.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleWinchesterScopeNetFireAlt", "WpnAttackRifleWinchesterScopeFireAlt")
+    {
+        Damage(150.0000);
+        MinDamage(110.0000);
+        Accuracy(6.0);
+        AccuracyRecoilChange(9.0000);
+        Range(13500.0000);
+        RangeMaxDamage(6000.0000);
+        RangeMinDamage(8000.0000);
+    }
+
+    Param("WpnAttackFire", "WpnAttackRifleWinchesterScopeNoAmmo", "WpnAttackRifleWinchesterScopeFire")
+    {
+        WpnFXHit("WpnFXRifleFire");
+        Accuracy(6.0);
+    }
+
+    Param("WpnAttackFire", "WpnAttackStationaryFire", "WpnAttackRifleFire")
+    {
+        WpnFXHit("WpnFXStationaryFire");
+        Damage(80.0000);
+        MinDamage(50.0000);
+        Rate(600.0000);
+        Accuracy(0.1200);
+        AccuracyRecoilChange(0.3000);
+        Range(20000.0000);
+        RangeMaxDamage(15000.0000);
+        RangeMinDamage(18000.0000);
+        PhysicsEffectRatio(0.7500);
+        HorzRecoil(0.1000);
+        VertRecoil(2.5000);
+        MaxVertRecoil(4.0000);
+        MaxHorzRecoil(0.1000);
+        Burst(true);
+    }
+
+    Param("WpnAttackFire", "WpnAttackStationaryFireAlt", "WpnAttackStationaryFire")
+    {
+        Rate(100.0000);
+        Accuracy(0.0000);
+        AccuracyRecoilChange(0.0000);
+        HorzRecoil(0.5000);
+        VertRecoil(4.0000);
+        MaxVertRecoil(10.0000);
+        MaxHorzRecoil(2.0000);
+        Burst(false);
+    }
+
+    Param("WpnAttackMelee", "WpnAttackChairMelee", "WpnAttackMelee")
+    {
+        Damage(100.0);
+        Rate(120.0000);
+        Speed(100.0);
+        PhysicsEffectRatio(2.0000);
+        DamageToPawn(75.0);
+        SelfDamageCoeff(2.0);
+        PhysicsEffectRatioToPawn(2.0000);
+    }
+
+    Param("WpnAttackMelee", "WpnAttackHandsMelee0", "WpnAttackMelee")
+    {
+        WpnFXHit("WpnFXHandsMelee0");
+        Damage(30.0000);
+        Rate(1000.0000);
+        Range(90.0000);
+        Speed(45.0000);
+        DamageType(12);
+        DamageToPawn(30.0000);
+    }
+
+    Param("WpnAttackMelee", "WpnAttackHandsMelee1", "WpnAttackMelee")
+    {
+        WpnFXHit("WpnFXHandsMelee1");
+        Damage(30.0000);
+        Rate(1000.0000);
+        Range(90.0000);
+        Speed(50.0000);
+        DamageType(13);
+        DamageToPawn(30.0000);
+    }
+
+    Param("WpnAttackMelee", "WpnAttackHandsMelee2", "WpnAttackMelee")
+    {
+        WpnFXHit("WpnFXHandsMelee2");
+        Damage(30.0000);
+        Rate(1000.0000);
+        Range(90.0000);
+        Speed(15.0000);
+        DamageType(14);
+        DamageToPawn(30.0000);
+    }
+
+    Param("WpnAttackMelee", "WpnAttackHorseKick", "WpnAttackMelee")
+    {
+        WpnFXHit("WpnFXHorseKick");
+        Damage(210.0000);
+        Rate(1000.0000);
+        Range(90.0000);
+        Speed(135.0000);
+        PhysicsEffectRatio(1.1000);
+        DamageToPawn(210.0000);
+        DirY(0.5000);
+    }
+
+    Param("WpnAttackMelee", "WpnAttackHumanDodgeLeft", "WpnAttackMelee")
+    {
+        WpnFXHit("WpnFXHumanDodge");
+        Damage(105.0000);
+        Rate(1000.0000);
+        Range(90.0000);
+        Speed(45.0000);
+        PhysicsEffectRatio(1.1000);
+        DamageToPawn(300.0000);
+        DirY(0.5000);
+    }
+
+    Param("WpnAttackMelee", "WpnAttackHumanDodgeRight", "WpnAttackHumanDodgeLeft")
+    {
+    }
+
+    Param("WpnAttackMelee", "WpnAttackHumanKick", "WpnAttackMelee")
+    {
+        WpnFXHit("WpnFXHumanKick");
+        Damage(105.0000);
+        Rate(1000.0000);
+        Range(90.0000);
+        Speed(45.0000);
+        PhysicsEffectRatio(1.1000);
+        DamageToPawn(70.0000);
+        DirY(0.5000);
+    }
+
+    Param("WpnAttackMelee", "WpnAttackKnifeMelee", "WpnAttackMelee")
+    {
+        WpnFXHit("WpnFXKnifeMelee");
+        Damage(70.0000);
+        Rate(120.0000);
+        Speed(1000.0000);
+        HitNoise(600.0000);
+        HitNoiseType(3);
+        PhysicsEffectRatio(2.0000);
+        DamageToPawn(210.0000);
+        PhysicsEffectRatioToPawn(0.5000);
+    }
+
+    Param("WpnAttackMelee", "WpnAttackMelee", "WpnAttack")
+    {
+        WpnFXHit("WpnFXMelee");
+        Damage(100.0000);
+        Range(100.0000);
+        Speed(100.0000);
+        DamageType(1);
+        HitNoise(0.0000);
+        HitNoiseType(0);
+        PhysicsEffectRatio(1.0000);
+        DamageToPawn(100.0000);
+        DirY(0.0000);
+        SelfDamageCoeff(0.0000);
+        PhysicsEffectRatioToPawn(1.0000);
+        AttackContinuous(false);
+        HitDir(0);
+        IsOnlyWantedTarget(false);
+    }
+
+    Param("WpnAttackMelee", "WpnAttackWhip", "WpnAttackMelee")
+    {
+        WpnFXHit("WpnFXWhip");
+        Damage(20.0000);
+        Rate(120.0000);
+        Range(500.0000);
+        Speed(1000.0000);
+        DamageType(10);
+        PhysicsEffectRatio(2.0000);
+        DamageToPawn(20.0000);
+        SelfDamageCoeff(0.5000);
+        PhysicsEffectRatioToPawn(2.0000);
+    }
+
+    Param("WpnAttackMultiFire", "WpnAttackBucketFire", "WpnAttackMultiFire")
+    {
+        WpnFXHit("WpnFXBucketFire");
+        Damage(0.0000);
+        Rate(120.0000);
+        Range(500.0000);
+        RangeMaxDamage(500.0000);
+        RangeMinDamage(500.0000);
+        Speed(600.0000);
+        Spread(10.0000);
+        DamageType(9);
+        AmmoIdx(0);
+        PhysicsEffectRatio(0.7500);
+        OwnerSpeedCoeff(0.0000);
+        GravityCoeff(1.0000);
+        MissileRendering(false);
+        MissileBehavScr("MissileBehaviorLasso.scr");
+    }
+
+    Param("WpnAttackThrow", "WpnAttackChairThrow", "WpnAttackThrow")
+    {
+        Damage(100.0000);
+        Rate(120.0000);
+        Range(1500.0000);
+        PhysicsEffectRatio(2.0000);
+        DirY(0.1250);
+        SelfDamageCoeff(0.2500);
+        LinSpeed(1250.0000);
+        MaxMomentum(100000.0000);
+        AngVelocity([10.0000, 0.0000, 0.0000]);
+        SpeedThreshold(200.0000);
+    }
+
+    Param("WpnAttackThrow", "WpnAttackDynamiteThrow", "WpnAttackThrow")
+    {
+        WpnFXHit("WpnFXDynamiteThrow");
+        Damage(10.0000);
+        Rate(120.0000);
+        DirY(0.1250);
+        LinSpeed(2500.0000);
+        AngVelocity([2.0000, 2.0000, 2.0000]);
+        TraceSimulation(true);
+        TraceSimulationTorpor(0.25);
+    }
+
+    Param("WpnAttackThrow", "WpnAttackKnifeThrow", "WpnAttackThrow")
+    {
+        WpnFXHit("WpnFXKnifeThrow");
+        Damage(110.000);
+        MinDamage(110.000);
+        Rate(200.0);
+        Range(2000.0000);
+        HitNoise(600.0000);
+        HitNoiseType(3);
+        PhysicsEffectRatio(1.0);
+        OwnerSpeedCoeff(1.0);
+        DirY(0.1250);
+        LinSpeed(3000.0000);
+        MaxMomentum(10000.0000);
+        SpeedThreshold(200.0000);
+        TraceSimulation(true);
+        TraceSimulationTorpor(0.25);
+    }
+
+    Param("WpnAttackThrow", "WpnAttackThrow", "WpnAttack")
+    {
+        WpnFXHit("WpnFXThrow");
+        Damage(0.0000);
+        Range(2000.0000);
+        DamageType(1);
+        HitNoise(0.0000);
+        HitNoiseType(0);
+        PhysicsEffectRatio(1.0000);
+        OwnerSpeedCoeff(1.2000);
+        DirY(0.2500);
+        SelfDamageCoeff(0.0000);
+        LinSpeed(2000.0000);
+        MaxMomentum(20000.0000);
+        AngVelocity([0.0000, 0.0000, 0.0000]);
+        SpeedThreshold(500.0000);
+        MinMomentum(0.0000);
+        TraceSimulation(false);
+    }
+
+    Param("WpnAttackFire", "WpnAttackBlackPowderCannonFire", "WpnAttackFire")
+    {
+        WpnFXHit("WpnFXnBlackPowderCannon");
+        Damage(350.0);
+        MinDamage(150.0);
+        Rate(20.0);
+        Accuracy(3.0);
+        AccuracyRecoilChange(2.0);
+        Range(5000.0);
+        RangeMaxDamage(5000.0);
+        RangeMinDamage(5000.0);
+        Speed(9000.0);
+        DamageType(4);
+        HitNoise(1600.0);
+        HitNoiseType(3);
+        FireNoise(12000.0);
+        FireNoiseType(2);
+        FFSpeedLeft(1.0);
+        FFSpeedRight(0.7);
+        FFDuration(0.4);
+        FFFadeTime(0.0);
+        PhysicsEffectRatio(1.0);
+        HorzRecoil(12.0);
+        VertRecoil(12.0);
+        MaxVertRecoil(12.0);
+        MaxHorzRecoil(12.0);
+        Burst(false);
+        GravityCoeff(2.0);
+        MissileMeshFileName("canonball.msh");
+        MissileRendering(true);
+        ShotThruFenceChance(0.0);
+        WpnAttackExplode("WpnAttackBlackPowderCannonExplode");
+        MissileBehavScr("MissileBehaviorLasso.scr");
+        FXMissileClass("WpnFXMissile");
+    }
+
+    Param("WpnAttackExplode", "WpnAttackBlackPowderCannonExplode", "WpnAttackExplode")
+    {
+        WpnFXHit("WpnFXnBlackPowderCannon");
+        Damage(350.0);
+        Rate(20.0);
+        Speed(2500.0);
+        DamageType(3);
+        Radius(900.0);
+        PhysicsEffectRatio(1.0);
+        Burst(false);
+        ExplosionNoise(12000.0);
+        ExplosionNoiseType(7);
+    }
+
+    Param("WpnAttackThrow", "WpnAttackLampThrow", "WpnAttackThrow")
+    {
+        WpnFXHit("WpnFXDynamiteThrow");
+        Damage(50.0);
+        Rate(120.0000);
+        Range(1500.0000);
+        PhysicsEffectRatio(2.0000);
+        DirY(0.1250);
+        SelfDamageCoeff(1.0);
+        LinSpeed(2500.0000);
+        MaxMomentum(100000.0000);
+        AngVelocity([2.0000, 2.0000, 2.0000]);
+        SpeedThreshold(200.0000);
+    }
+
+    Param("WpnVisual", "WpnVisual", "WpnParam")
+    {
+        MeshFileName("bbox.msh");
+        IconTextureName("");
+        ShowHudInfo(false);
+        QualityIcon(4);
+        FirePowerInfo(0);
+        RateOfFireInfo(0);
+        RateOfReloadInfo(0);
+        RangeInfo(0);
+        AccuracyInfo(0);
+        SBPullOut("");
+        SBPutAway("");
+        SBStartAlt("");
+        SBStartNormal("");
+        SBEmergencyFire("");
+        NoAmmoSkin("");
+        NoAmmoHandSkin("");
+        AmmoSkin("");
+        AmmoHandSkin("");
+        RotateElement("");
+        RotateAxis([0.0000, 1.0000, 0.0000]);
+        RotateAttack(0.0000);
+        RotateReload(0.0000);
+        SoundZTranslation(50.0000);
+        Animated(false);
+        BurnWithFireFX(false);
+        EmergencyElementName("Barrel");
+        EmergencyShift([0.0000, 0.0000, 0.0000]);
+    }
+
+    Param("WpnVisual", "WpnVisualBow", "WpnVisual")
+    {
+        MeshFileName("Bow.msh");
+        IconTextureName("bow");
+        ShowHudInfo(true);
+        QualityIcon(0);
+        FirePowerInfo(7);
+        RateOfFireInfo(3);
+        RateOfReloadInfo(3);
+        RangeInfo(3);
+        AccuracyInfo(8);
+        SBPutAway("data/sounds/weapon/bow/bow_pull_away");
+        SBStartAlt("data/sounds/weapon/bow/bow_preparing");
+        NoAmmoSkin("NoArrow");
+        NoAmmoHandSkin("NoArrow");
+        AmmoSkin("NoArrow");
+        AmmoHandSkin("Default");
+        SoundZTranslation(0.0000);
+        Animated(true);
+    }
+
+    Param("WpnVisual", "WpnVisualBowRusty", "WpnVisualBow")
+    {
+        QualityIcon(1);
+        FirePowerInfo(6);
+        RateOfFireInfo(2);
+        RateOfReloadInfo(2);
+        RangeInfo(3);
+        AccuracyInfo(7);
+        NoAmmoSkin("RustyNoArrow");
+        NoAmmoHandSkin("RustyNoArrow");
+        AmmoSkin("RustyNoArrow");
+        AmmoHandSkin("Rusty");
+    }
+
+    Param("WpnVisual", "WpnVisualBowAlpha", "WpnVisualBow")
+    {
+        QualityIcon(2);
+        FirePowerInfo(8);
+        RateOfFireInfo(3);
+        RateOfReloadInfo(3);
+        RangeInfo(3);
+        AccuracyInfo(9);
+        NoAmmoSkin("GrandNoArrow");
+        NoAmmoHandSkin("GrandNoArrow");
+        AmmoSkin("GrandNoArrow");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualBowBeta", "WpnVisualBow")
+    {
+        QualityIcon(3);
+        FirePowerInfo(9);
+        RateOfFireInfo(4);
+        RateOfReloadInfo(4);
+        RangeInfo(3);
+        AccuracyInfo(9);
+        NoAmmoSkin("SuperbNoArrow");
+        NoAmmoHandSkin("SuperbNoArrow");
+        AmmoSkin("SuperbNoArrow");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualBowNet", "WpnVisualBow")
+    {
+        QualityIcon(0);
+        FirePowerInfo(9);
+        RateOfFireInfo(2);
+        RateOfReloadInfo(6);
+        NoAmmoSkin("NoArrow");
+        NoAmmoHandSkin("NoArrow");
+        AmmoSkin("NoArrow");
+        AmmoHandSkin("Default");
+    }
+
+    Param("WpnVisual", "WpnVisualBowAlphaNet", "WpnVisualBowNet")
+    {
+        QualityIcon(2);
+        NoAmmoSkin("GrandNoArrow");
+        NoAmmoHandSkin("GrandNoArrow");
+        AmmoSkin("GrandNoArrow");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualBowBetaNet", "WpnVisualBowNet")
+    {
+        QualityIcon(3);
+        NoAmmoSkin("SuperbNoArrow");
+        NoAmmoHandSkin("SuperbNoArrow");
+        AmmoSkin("SuperbNoArrow");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualBucket", "WpnVisual")
+    {
+        MeshFileName("");
+        IconTextureName("bucket");
+        NoAmmoSkin("NoWater");
+        NoAmmoHandSkin("NoWater");
+        AmmoSkin("Water");
+        AmmoHandSkin("WaterA");
+        SoundZTranslation(0.0000);
+        BurnWithFireFX(true);
+    }
+
+    Param("WpnVisual", "WpnVisualChair", "WpnVisual")
+    {
+        MeshFileName("");
+        IconTextureName("chair");
+        BurnWithFireFX(true);
+    }
+
+    Param("WpnVisual", "WpnVisualFire", "WpnVisual")
+    {
+        NoAmmoSkin("Default");
+        NoAmmoHandSkin("Default");
+        AmmoSkin("Default");
+        AmmoHandSkin("Default");
+        Animated(true);
+        FXEmergencyName("damagedsmoke");
+    }
+
+    Param("WpnVisual", "WpnVisualGatling", "WpnVisual")
+    {
+        MeshFileName("gatling_ai.msh");
+        IconTextureName("gatling");
+        WpnFXDamage("WpnFXRifleDamage");
+        Animated(true);
+    }
+
+    Param("WpnVisual", "WpnVisualGatlingPlayer", "WpnVisualGatling")
+    {
+        MeshFileName("gatling_player.msh");
+    }
+
+    Param("WpnVisual", "WpnVisualHands", "WpnVisual")
+    {
+        IconTextureName("fists");
+    }
+
+    Param("WpnVisualKnife", "WpnVisualKnife", "WpnVisual")
+    {
+        MeshFileName("ThrowingKnife.msh");
+        IconTextureName("knife");
+        BreakSkinName("Default");
+        BreakMeshName("ThrowingKnife_Broken.msh");
+    }
+
+    Param("WpnVisual", "WpnVisualPistol", "WpnVisualFire")
+    {
+        ShowHudInfo(true);
+        WpnFXDamage("WpnFXPistolDamage");
+        SBPullOut("data/sounds/weapon/pistol/pistol_pull out");
+        SBPutAway("data/sounds/weapon/pistol/pistol_putaway");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolCogswell", "WpnVisualPistol")
+    {
+        MeshFileName("Cogswell.msh");
+        IconTextureName("cogswell");
+        QualityIcon(0);
+        FirePowerInfo(5);
+        RateOfFireInfo(5);
+        RateOfReloadInfo(5);
+        RangeInfo(1);
+        AccuracyInfo(2);
+        WpnFXDamage("WpnFXRifleCogswellDamage");
+        RotateElement("GunDrum");
+        RotateAxis([0.0000, 0.0000, 1.0000]);
+        RotateAttack(60.0000);
+        RotateReload(60.0000);
+    }
+
+    Param("WpnVisual", "WpnVisualPistolCogswellRusty", "WpnVisualPistolCogswell")
+    {
+        QualityIcon(1);
+        FirePowerInfo(4);
+        RateOfFireInfo(3);
+        RateOfReloadInfo(2);
+        RangeInfo(1);
+        AccuracyInfo(2);
+        NoAmmoSkin("Rusty");
+        NoAmmoHandSkin("Rusty");
+        AmmoSkin("Rusty");
+        AmmoHandSkin("Rusty");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolCogswellAlpha", "WpnVisualPistolCogswell")
+    {
+        QualityIcon(2);
+        FirePowerInfo(6);
+        RateOfFireInfo(6);
+        RateOfReloadInfo(6);
+        RangeInfo(1);
+        AccuracyInfo(2);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolCogswellBeta", "WpnVisualPistolCogswell")
+    {
+        QualityIcon(3);
+        FirePowerInfo(7);
+        RateOfFireInfo(8);
+        RateOfReloadInfo(9);
+        RangeInfo(1);
+        AccuracyInfo(2);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolCogswellNet", "WpnVisualPistolCogswell")
+    {
+        QualityIcon(0);
+        FirePowerInfo(6);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(7);
+    }
+
+    Param("WpnVisual", "WpnVisualPistolCogswellAlphaNet", "WpnVisualPistolCogswellNet")
+    {
+        QualityIcon(2);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolCogswellBetaNet", "WpnVisualPistolCogswellNet")
+    {
+        QualityIcon(3);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolDerringer", "WpnVisualPistol")
+    {
+        MeshFileName("Derringer.msh");
+        IconTextureName("derringer");
+        QualityIcon(0);
+        FirePowerInfo(2);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(6);
+        RangeInfo(1);
+        AccuracyInfo(3);
+        WpnFXDamage("WpnFXPistolDerringerDamage");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolDerringerRusty", "WpnVisualPistolDerringer")
+    {
+        QualityIcon(1);
+        FirePowerInfo(2);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(5);
+        RangeInfo(1);
+        AccuracyInfo(3);
+        NoAmmoSkin("Rusty");
+        NoAmmoHandSkin("Rusty");
+        AmmoSkin("Rusty");
+        AmmoHandSkin("Rusty");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolDerringerAlpha", "WpnVisualPistolDerringer")
+    {
+        QualityIcon(2);
+        FirePowerInfo(3);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(7);
+        RangeInfo(1);
+        AccuracyInfo(3);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolDerringerBeta", "WpnVisualPistolDerringer")
+    {
+        QualityIcon(3);
+        FirePowerInfo(4);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(9);
+        RangeInfo(1);
+        AccuracyInfo(3);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolDerringerNet", "WpnVisualPistolDerringer")
+    {
+        QualityIcon(0);
+        FirePowerInfo(3);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(5);
+    }
+
+    Param("WpnVisual", "WpnVisualPistolDerringerAlphaNet", "WpnVisualPistolDerringerNet")
+    {
+        QualityIcon(2);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolDerringerBetaNet", "WpnVisualPistolDerringerNet")
+    {
+        QualityIcon(3);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolFrontier", "WpnVisualPistol")
+    {
+        MeshFileName("ColtFrontier.msh");
+        IconTextureName("frontier");
+        QualityIcon(0);
+        FirePowerInfo(3);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(6);
+        RangeInfo(2);
+        AccuracyInfo(5);
+        WpnFXDamage("WpnFXPistolFrontierDamage");
+        RotateElement("GunDrum");
+        RotateAxis([0.0000, 0.0000, 1.0000]);
+        RotateAttack(60.0000);
+        RotateReload(60.0000);
+    }
+
+    Param("WpnVisual", "WpnVisualPistolFrontierRusty", "WpnVisualPistolFrontier")
+    {
+        QualityIcon(1);
+        FirePowerInfo(2);
+        RateOfFireInfo(8);
+        RateOfReloadInfo(4);
+        RangeInfo(2);
+        AccuracyInfo(5);
+        NoAmmoSkin("Rusty");
+        NoAmmoHandSkin("Rusty");
+        AmmoSkin("Rusty");
+        AmmoHandSkin("Rusty");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolFrontierAlpha", "WpnVisualPistolFrontier")
+    {
+        QualityIcon(2);
+        FirePowerInfo(4);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(7);
+        RangeInfo(2);
+        AccuracyInfo(5);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolFrontierBeta", "WpnVisualPistolFrontier")
+    {
+        QualityIcon(3);
+        FirePowerInfo(6);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(8);
+        RangeInfo(2);
+        AccuracyInfo(5);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolFrontierNet", "WpnVisualPistolFrontier")
+    {
+        QualityIcon(0);
+    }
+
+    Param("WpnVisual", "WpnVisualPistolFrontierAlphaNet", "WpnVisualPistolFrontierNet")
+    {
+        QualityIcon(2);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolFrontierBetaNet", "WpnVisualPistolFrontierNet")
+    {
+        QualityIcon(3);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolLemant", "WpnVisualPistol")
+    {
+        MeshFileName("Lemant.msh");
+        IconTextureName("lemant");
+        QualityIcon(0);
+        FirePowerInfo(3);
+        RateOfFireInfo(5);
+        RateOfReloadInfo(4);
+        RangeInfo(2);
+        AccuracyInfo(4);
+        WpnFXDamage("WpnFXPistolLemantDamage");
+        RotateElement("Bone_Drum");
+        RotateAxis([1.0000, 0.0000, 0.0000]);
+        RotateAttack(45.0000);
+        RotateReload(45.0000);
+    }
+
+    Param("WpnVisual", "WpnVisualPistolLemantRusty", "WpnVisualPistolLemant")
+    {
+        QualityIcon(1);
+        FirePowerInfo(1);
+        RateOfFireInfo(3);
+        RateOfReloadInfo(1);
+        RangeInfo(2);
+        AccuracyInfo(4);
+        NoAmmoSkin("Rusty");
+        NoAmmoHandSkin("Rusty");
+        AmmoSkin("Rusty");
+        AmmoHandSkin("Rusty");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolLemantAlpha", "WpnVisualPistolLemant")
+    {
+        QualityIcon(2);
+        FirePowerInfo(4);
+        RateOfFireInfo(6);
+        RateOfReloadInfo(5);
+        RangeInfo(2);
+        AccuracyInfo(4);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolLemantBeta", "WpnVisualPistolLemant")
+    {
+        QualityIcon(3);
+        FirePowerInfo(5);
+        RateOfFireInfo(8);
+        RateOfReloadInfo(8);
+        RangeInfo(2);
+        AccuracyInfo(4);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolLemantNet", "WpnVisualPistolLemant")
+    {
+        QualityIcon(0);
+        FirePowerInfo(5);
+        RateOfFireInfo(8);
+        RateOfReloadInfo(7);
+    }
+
+    Param("WpnVisual", "WpnVisualPistolLemantAlphaNet", "WpnVisualPistolLemantNet")
+    {
+        QualityIcon(2);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolLemantBetaNet", "WpnVisualPistolLemantNet")
+    {
+        QualityIcon(3);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolPeacemaker", "WpnVisualPistol")
+    {
+        MeshFileName("classic_sixshooter.msh");
+        IconTextureName("peacemaker");
+        QualityIcon(0);
+        FirePowerInfo(4);
+        RateOfFireInfo(6);
+        RateOfReloadInfo(6);
+        RangeInfo(2);
+        AccuracyInfo(6);
+        WpnFXDamage("WpnFXPistolPeacemakerDamage");
+        RotateElement("ColtDrum");
+        RotateAxis([0.0000, 0.0000, 1.0000]);
+        RotateAttack(60.0000);
+        RotateReload(60.0000);
+    }
+
+    Param("WpnVisual", "WpnVisualPistolPeacemakerRusty", "WpnVisualPistolPeacemaker")
+    {
+        QualityIcon(1);
+        FirePowerInfo(2);
+        RateOfFireInfo(5);
+        RateOfReloadInfo(4);
+        RangeInfo(2);
+        AccuracyInfo(6);
+        NoAmmoSkin("Rusty");
+        NoAmmoHandSkin("Rusty");
+        AmmoSkin("Rusty");
+        AmmoHandSkin("Rusty");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolPeacemakerAlpha", "WpnVisualPistolPeacemaker")
+    {
+        QualityIcon(2);
+        FirePowerInfo(5);
+        RateOfFireInfo(7);
+        RateOfReloadInfo(7);
+        RangeInfo(2);
+        AccuracyInfo(6);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolPeacemakerBeta", "WpnVisualPistolPeacemaker")
+    {
+        QualityIcon(3);
+        FirePowerInfo(6);
+        RateOfFireInfo(8);
+        RateOfReloadInfo(8);
+        RangeInfo(2);
+        AccuracyInfo(6);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolPeacemakerNet", "WpnVisualPistolPeacemaker")
+    {
+        QualityIcon(0);
+        FirePowerInfo(3);
+        RateOfFireInfo(8);
+        RateOfReloadInfo(8);
+    }
+
+    Param("WpnVisual", "WpnVisualPistolPeacemakerAlphaNet", "WpnVisualPistolPeacemakerNet")
+    {
+        QualityIcon(2);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolPeacemakerBetaNet", "WpnVisualPistolPeacemakerNet")
+    {
+        QualityIcon(3);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolSchofield", "WpnVisualPistol")
+    {
+        MeshFileName("Schofield.msh");
+        IconTextureName("schofield");
+        QualityIcon(0);
+        FirePowerInfo(3);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(10);
+        RangeInfo(2);
+        AccuracyInfo(5);
+        WpnFXDamage("WpnFXPistolSchofieldDamage");
+        RotateElement("GunDrum");
+        RotateAxis([0.0000, 0.0000, -1.0000]);
+        RotateAttack(60.0000);
+    }
+
+    Param("WpnVisual", "WpnVisualPistolSchofieldRusty", "WpnVisualPistolSchofield")
+    {
+        QualityIcon(1);
+        FirePowerInfo(2);
+        RateOfFireInfo(8);
+        RateOfReloadInfo(9);
+        RangeInfo(2);
+        AccuracyInfo(5);
+        NoAmmoSkin("Rusty");
+        NoAmmoHandSkin("Rusty");
+        AmmoSkin("Rusty");
+        AmmoHandSkin("Rusty");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolSchofieldAlpha", "WpnVisualPistolSchofield")
+    {
+        QualityIcon(2);
+        FirePowerInfo(4);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(10);
+        RangeInfo(2);
+        AccuracyInfo(5);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolSchofieldBeta", "WpnVisualPistolSchofield")
+    {
+        QualityIcon(3);
+        FirePowerInfo(6);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(10);
+        RangeInfo(2);
+        AccuracyInfo(5);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolSchofieldNet", "WpnVisualPistolSchofield")
+    {
+        QualityIcon(0);
+        FirePowerInfo(3);
+        RateOfFireInfo(9);
+        RateOfReloadInfo(10);
+    }
+
+    Param("WpnVisual", "WpnVisualPistolSchofieldAlphaNet", "WpnVisualPistolSchofieldNet")
+    {
+        QualityIcon(2);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolSchofieldBetaNet", "WpnVisualPistolSchofieldNet")
+    {
+        QualityIcon(3);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolVolcanic", "WpnVisualPistol")
+    {
+        MeshFileName("Volcanic.msh");
+        IconTextureName("volcanic");
+        QualityIcon(0);
+        FirePowerInfo(7);
+        RateOfFireInfo(3);
+        RateOfReloadInfo(3);
+        RangeInfo(2);
+        AccuracyInfo(4);
+        WpnFXDamage("WpnFXPistolVolcanicDamage");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolVolcanicRusty", "WpnVisualPistolVolcanic")
+    {
+        QualityIcon(1);
+        FirePowerInfo(5);
+        RateOfFireInfo(1);
+        RateOfReloadInfo(1);
+        RangeInfo(2);
+        AccuracyInfo(4);
+        NoAmmoSkin("Rusty");
+        NoAmmoHandSkin("Rusty");
+        AmmoSkin("Rusty");
+        AmmoHandSkin("Rusty");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolVolcanicAlpha", "WpnVisualPistolVolcanic")
+    {
+        QualityIcon(2);
+        FirePowerInfo(8);
+        RateOfFireInfo(4);
+        RateOfReloadInfo(4);
+        RangeInfo(2);
+        AccuracyInfo(4);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolVolcanicBeta", "WpnVisualPistolVolcanic")
+    {
+        QualityIcon(3);
+        FirePowerInfo(9);
+        RateOfFireInfo(6);
+        RateOfReloadInfo(7);
+        RangeInfo(2);
+        AccuracyInfo(4);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolVolcanicNet", "WpnVisualPistolVolcanic")
+    {
+        QualityIcon(0);
+        FirePowerInfo(7);
+        RateOfFireInfo(6);
+        RateOfReloadInfo(1);
+    }
+
+    Param("WpnVisual", "WpnVisualPistolVolcanicAlphaNet", "WpnVisualPistolVolcanicNet")
+    {
+        QualityIcon(2);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolVolcanicBetaNet", "WpnVisualPistolVolcanicNet")
+    {
+        QualityIcon(3);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolWalker", "WpnVisualPistol")
+    {
+        MeshFileName("ranger.msh");
+        IconTextureName("walker");
+        QualityIcon(0);
+        FirePowerInfo(6);
+        RateOfFireInfo(4);
+        RateOfReloadInfo(5);
+        RangeInfo(2);
+        AccuracyInfo(5);
+        WpnFXDamage("WpnFXPistolWalkerDamage");
+        RotateElement("GunDrum");
+        RotateAxis([0.0000, 0.0000, 1.0000]);
+        RotateAttack(60.0000);
+        RotateReload(60.0000);
+    }
+
+    Param("WpnVisual", "WpnVisualPistolWalkerRusty", "WpnVisualPistolWalker")
+    {
+        QualityIcon(1);
+        FirePowerInfo(4);
+        RateOfFireInfo(2);
+        RateOfReloadInfo(2);
+        RangeInfo(2);
+        AccuracyInfo(5);
+        NoAmmoSkin("Rusty");
+        NoAmmoHandSkin("Rusty");
+        AmmoSkin("Rusty");
+        AmmoHandSkin("Rusty");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolWalkerAlpha", "WpnVisualPistolWalker")
+    {
+        QualityIcon(2);
+        FirePowerInfo(7);
+        RateOfFireInfo(5);
+        RateOfReloadInfo(6);
+        RangeInfo(2);
+        AccuracyInfo(5);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolWalkerBeta", "WpnVisualPistolWalker")
+    {
+        QualityIcon(3);
+        FirePowerInfo(8);
+        RateOfFireInfo(7);
+        RateOfReloadInfo(9);
+        RangeInfo(2);
+        AccuracyInfo(5);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolWalkerNet", "WpnVisualPistolWalker")
+    {
+        QualityIcon(0);
+        FirePowerInfo(6);
+        RateOfFireInfo(7);
+        RateOfReloadInfo(8);
+    }
+
+    Param("WpnVisual", "WpnVisualPistolWalkerAlphaNet", "WpnVisualPistolWalkerNet")
+    {
+        QualityIcon(2);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualPistolWalkerBetaNet", "WpnVisualPistolWalkerNet")
+    {
+        QualityIcon(3);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualRifle", "WpnVisualFire")
+    {
+        ShowHudInfo(true);
+        WpnFXDamage("WpnFXRifleDamage");
+        SBPullOut("data/sounds/weapon/henry/henry_pull out");
+        SBPutAway("data/sounds/weapon/henry/henry_putaway");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleMusket", "WpnVisualRifle")
+    {
+        MeshFileName("Springfield.msh");
+        IconTextureName("sprinfield");
+        WpnFXDamage("WpnFXRifleWinchesterDamage");
+        ReloadAnim("U_R_S_SpringfieldReload");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleMusketRusty", "WpnVisualRifleMusket")
+    {
+        NoAmmoSkin("Rusty");
+        NoAmmoHandSkin("Rusty");
+        AmmoSkin("Rusty");
+        AmmoHandSkin("Rusty");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleRemington", "WpnVisualRifle")
+    {
+        MeshFileName("Remington.msh");
+        IconTextureName("remington_db");
+        QualityIcon(0);
+        FirePowerInfo(8);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(4);
+        RangeInfo(3);
+        AccuracyInfo(4);
+        WpnFXDamage("WpnFXShotgunRemingtonDamage");
+        EmergencyElementName("BarrelL");
+        EmergencyShift([-3.0000, 0.0000, 0.0000]);
+    }
+
+    Param("WpnVisual", "WpnVisualRifleRemingtonRusty", "WpnVisualRifleRemington")
+    {
+        QualityIcon(1);
+        FirePowerInfo(6);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(1);
+        RangeInfo(3);
+        AccuracyInfo(4);
+        NoAmmoSkin("Rusty");
+        NoAmmoHandSkin("Rusty");
+        AmmoSkin("Rusty");
+        AmmoHandSkin("Rusty");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleRemingtonAlpha", "WpnVisualRifleRemington")
+    {
+        QualityIcon(2);
+        FirePowerInfo(9);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(5);
+        RangeInfo(3);
+        AccuracyInfo(4);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleRemingtonBeta", "WpnVisualRifleRemington")
+    {
+        QualityIcon(3);
+        FirePowerInfo(10);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(8);
+        RangeInfo(3);
+        AccuracyInfo(4);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleRemingtonNet", "WpnVisualRifleRemington")
+    {
+        QualityIcon(0);
+        FirePowerInfo(7);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(3);
+    }
+
+    Param("WpnVisual", "WpnVisualRifleRemingtonAlphaNet", "WpnVisualRifleRemingtonNet")
+    {
+        QualityIcon(2);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleRemingtonBetaNet", "WpnVisualRifleRemingtonNet")
+    {
+        QualityIcon(3);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleRemingtonSawOff", "WpnVisualRifleRemington")
+    {
+        MeshFileName("RemingtonSawOff.msh");
+        IconTextureName("remington_saw_off");
+        QualityIcon(0);
+        FirePowerInfo(8);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(4);
+        RangeInfo(2);
+        AccuracyInfo(2);
+    }
+
+    Param("WpnVisual", "WpnVisualRifleRemingtonSawOffRusty", "WpnVisualRifleRemingtonSawOff")
+    {
+        QualityIcon(1);
+        FirePowerInfo(6);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(1);
+        RangeInfo(2);
+        AccuracyInfo(2);
+        NoAmmoSkin("Rusty");
+        NoAmmoHandSkin("Rusty");
+        AmmoSkin("Rusty");
+        AmmoHandSkin("Rusty");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleRemingtonSawOffAlpha", "WpnVisualRifleRemingtonSawOff")
+    {
+        QualityIcon(2);
+        FirePowerInfo(9);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(5);
+        RangeInfo(2);
+        AccuracyInfo(2);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleRemingtonSawOffBeta", "WpnVisualRifleRemingtonSawOff")
+    {
+        QualityIcon(3);
+        FirePowerInfo(10);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(8);
+        RangeInfo(2);
+        AccuracyInfo(2);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleRemingtonSawOffNet", "WpnVisualRifleRemingtonSawOff")
+    {
+        QualityIcon(0);
+        FirePowerInfo(10);
+        RateOfFireInfo(10);
+        RateOfReloadInfo(3);
+    }
+
+    Param("WpnVisual", "WpnVisualRifleRemingtonSawOffAlphaNet", "WpnVisualRifleRemingtonSawOffNet")
+    {
+        QualityIcon(2);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleRemingtonSawOffBetaNet", "WpnVisualRifleRemingtonSawOffNet")
+    {
+        QualityIcon(3);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleSharps", "WpnVisualRifle")
+    {
+        MeshFileName("sharps_rifle.msh");
+        IconTextureName("sharps");
+        QualityIcon(0);
+        FirePowerInfo(9);
+        RateOfFireInfo(1);
+        RateOfReloadInfo(1);
+        RangeInfo(4);
+        AccuracyInfo(9);
+        WpnFXDamage("WpnFXRifleWinchesterDamage");
+        NoAmmoSkin("Standard");
+        NoAmmoHandSkin("Standard");
+        AmmoSkin("Standard");
+        AmmoHandSkin("Standard");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleSharpsRusty", "WpnVisualRifleSharps")
+    {
+        QualityIcon(1);
+        FirePowerInfo(7);
+        RateOfFireInfo(1);
+        RateOfReloadInfo(1);
+        RangeInfo(4);
+        AccuracyInfo(9);
+        NoAmmoSkin("Rusty");
+        NoAmmoHandSkin("Rusty");
+        AmmoSkin("Rusty");
+        AmmoHandSkin("Rusty");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleSharpsAlpha", "WpnVisualRifleSharps")
+    {
+        QualityIcon(2);
+        FirePowerInfo(10);
+        RateOfFireInfo(1);
+        RateOfReloadInfo(1);
+        RangeInfo(4);
+        AccuracyInfo(9);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleSharpsBeta", "WpnVisualRifleSharps")
+    {
+        QualityIcon(3);
+        FirePowerInfo(10);
+        RateOfFireInfo(1);
+        RateOfReloadInfo(1);
+        RangeInfo(4);
+        AccuracyInfo(9);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleSharpsNet", "WpnVisualRifleSharps")
+    {
+        QualityIcon(0);
+        FirePowerInfo(10);
+        RateOfFireInfo(2);
+        RateOfReloadInfo(2);
+        NoAmmoSkin("Standard");
+        NoAmmoHandSkin("Standard");
+        AmmoSkin("Standard");
+        AmmoHandSkin("Standard");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleSharpsAlphaNet", "WpnVisualRifleSharpsNet")
+    {
+        QualityIcon(2);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleSharpsBetaNet", "WpnVisualRifleSharpsNet")
+    {
+        QualityIcon(3);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleSharpsScope", "WpnVisualRifleSharps")
+    {
+        IconTextureName("sharps_scope");
+        QualityIcon(0);
+        FirePowerInfo(9);
+        RateOfFireInfo(1);
+        RateOfReloadInfo(1);
+        RangeInfo(10);
+        AccuracyInfo(10);
+        NoAmmoSkin("Standard_Scope");
+        NoAmmoHandSkin("Standard_Scope");
+        AmmoSkin("Standard_Scope");
+        AmmoHandSkin("Standard_Scope");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleSharpsScopeRusty", "WpnVisualRifleSharpsScope")
+    {
+        QualityIcon(1);
+        FirePowerInfo(7);
+        RateOfFireInfo(1);
+        RateOfReloadInfo(1);
+        RangeInfo(10);
+        AccuracyInfo(10);
+        NoAmmoSkin("Rusty_Scope");
+        NoAmmoHandSkin("Rusty_Scope");
+        AmmoSkin("Rusty_Scope");
+        AmmoHandSkin("Rusty_Scope");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleSharpsScopeAlpha", "WpnVisualRifleSharpsScope")
+    {
+        QualityIcon(2);
+        FirePowerInfo(10);
+        RateOfFireInfo(1);
+        RateOfReloadInfo(1);
+        RangeInfo(10);
+        AccuracyInfo(10);
+        NoAmmoSkin("Grand_Scope");
+        NoAmmoHandSkin("Grand_Scope");
+        AmmoSkin("Grand_Scope");
+        AmmoHandSkin("Grand_Scope");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleSharpsScopeBeta", "WpnVisualRifleSharpsScope")
+    {
+        QualityIcon(3);
+        FirePowerInfo(10);
+        RateOfFireInfo(1);
+        RateOfReloadInfo(1);
+        RangeInfo(10);
+        AccuracyInfo(10);
+        NoAmmoSkin("Superb_Scope");
+        NoAmmoHandSkin("Superb_Scope");
+        AmmoSkin("Superb_Scope");
+        AmmoHandSkin("Superb_Scope");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleSharpsScopeNet", "WpnVisualRifleSharpsScope")
+    {
+        QualityIcon(0);
+        FirePowerInfo(10);
+        RateOfFireInfo(1);
+        RateOfReloadInfo(2);
+        NoAmmoSkin("Standard_Scope");
+        NoAmmoHandSkin("Standard_Scope");
+        AmmoSkin("Standard_Scope");
+        AmmoHandSkin("Standard_Scope");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleSharpsScopeAlphaNet", "WpnVisualRifleSharpsScopeNet")
+    {
+        QualityIcon(2);
+        NoAmmoSkin("Grand_Scope");
+        NoAmmoHandSkin("Grand_Scope");
+        AmmoSkin("Grand_Scope");
+        AmmoHandSkin("Grand_Scope");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleSharpsScopeBetaNet", "WpnVisualRifleSharpsScopeNet")
+    {
+        QualityIcon(3);
+        NoAmmoSkin("Superb_Scope");
+        NoAmmoHandSkin("Superb_Scope");
+        AmmoSkin("Superb_Scope");
+        AmmoHandSkin("Superb_Scope");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleWinchester", "WpnVisualRifle")
+    {
+        MeshFileName("Winchester.msh");
+        IconTextureName("winchester");
+        QualityIcon(0);
+        FirePowerInfo(7);
+        RateOfFireInfo(1);
+        RateOfReloadInfo(3);
+        RangeInfo(4);
+        AccuracyInfo(8);
+        WpnFXDamage("WpnFXRifleWinchesterDamage");
+        NoAmmoSkin("Standard");
+        NoAmmoHandSkin("Standard");
+        AmmoSkin("Standard");
+        AmmoHandSkin("Standard");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleWinchesterRusty", "WpnVisualRifleWinchester")
+    {
+        QualityIcon(1);
+        FirePowerInfo(7);
+        RateOfFireInfo(1);
+        RateOfReloadInfo(1);
+        RangeInfo(4);
+        AccuracyInfo(8);
+        NoAmmoSkin("Rusty");
+        NoAmmoHandSkin("Rusty");
+        AmmoSkin("Rusty");
+        AmmoHandSkin("Rusty");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleWinchesterAlpha", "WpnVisualRifleWinchester")
+    {
+        QualityIcon(2);
+        FirePowerInfo(8);
+        RateOfFireInfo(2);
+        RateOfReloadInfo(4);
+        RangeInfo(4);
+        AccuracyInfo(8);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleWinchesterBeta", "WpnVisualRifleWinchester")
+    {
+        QualityIcon(3);
+        FirePowerInfo(9);
+        RateOfFireInfo(2);
+        RateOfReloadInfo(7);
+        RangeInfo(4);
+        AccuracyInfo(8);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleWinchesterNet", "WpnVisualRifleWinchester")
+    {
+        QualityIcon(0);
+        FirePowerInfo(8);
+        RateOfFireInfo(4);
+        RateOfReloadInfo(4);
+        NoAmmoSkin("Standard");
+        NoAmmoHandSkin("Standard");
+        AmmoSkin("Standard");
+        AmmoHandSkin("Standard");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleWinchesterAlphaNet", "WpnVisualRifleWinchesterNet")
+    {
+        QualityIcon(2);
+        NoAmmoSkin("Grand");
+        NoAmmoHandSkin("Grand");
+        AmmoSkin("Grand");
+        AmmoHandSkin("Grand");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleWinchesterBetaNet", "WpnVisualRifleWinchesterNet")
+    {
+        QualityIcon(3);
+        NoAmmoSkin("Superb");
+        NoAmmoHandSkin("Superb");
+        AmmoSkin("Superb");
+        AmmoHandSkin("Superb");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleWinchesterScope", "WpnVisualRifleWinchester")
+    {
+        IconTextureName("winchester_scope");
+        QualityIcon(0);
+        FirePowerInfo(7);
+        RateOfFireInfo(1);
+        RateOfReloadInfo(3);
+        RangeInfo(10);
+        AccuracyInfo(10);
+        NoAmmoSkin("Standard_Scope");
+        NoAmmoHandSkin("Standard_Scope");
+        AmmoSkin("Standard_Scope");
+        AmmoHandSkin("Standard_Scope");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleWinchesterScopeRusty", "WpnVisualRifleWinchesterScope")
+    {
+        QualityIcon(1);
+        FirePowerInfo(7);
+        RateOfFireInfo(1);
+        RateOfReloadInfo(1);
+        RangeInfo(10);
+        AccuracyInfo(10);
+        NoAmmoSkin("Rusty_Scope");
+        NoAmmoHandSkin("Rusty_Scope");
+        AmmoSkin("Rusty_Scope");
+        AmmoHandSkin("Rusty_Scope");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleWinchesterScopeAlpha", "WpnVisualRifleWinchesterScope")
+    {
+        QualityIcon(2);
+        FirePowerInfo(8);
+        RateOfFireInfo(2);
+        RateOfReloadInfo(4);
+        RangeInfo(10);
+        AccuracyInfo(10);
+        NoAmmoSkin("Grand_Scope");
+        NoAmmoHandSkin("Grand_Scope");
+        AmmoSkin("Grand_Scope");
+        AmmoHandSkin("Grand_Scope");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleWinchesterScopeBeta", "WpnVisualRifleWinchesterScope")
+    {
+        QualityIcon(3);
+        FirePowerInfo(9);
+        RateOfFireInfo(2);
+        RateOfReloadInfo(7);
+        RangeInfo(10);
+        AccuracyInfo(10);
+        NoAmmoSkin("Superb_Scope");
+        NoAmmoHandSkin("Superb_Scope");
+        AmmoSkin("Superb_Scope");
+        AmmoHandSkin("Superb_Scope");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleWinchesterScopeNet", "WpnVisualRifleWinchesterScope")
+    {
+        QualityIcon(0);
+        FirePowerInfo(8);
+        RateOfFireInfo(4);
+        RateOfReloadInfo(3);
+        NoAmmoSkin("Standard_Scope");
+        NoAmmoHandSkin("Standard_Scope");
+        AmmoSkin("Standard_Scope");
+        AmmoHandSkin("Standard_Scope");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleWinchesterScopeAlphaNet", "WpnVisualRifleWinchesterScopeNet")
+    {
+        QualityIcon(2);
+        NoAmmoSkin("Grand_Scope");
+        NoAmmoHandSkin("Grand_Scope");
+        AmmoSkin("Grand_Scope");
+        AmmoHandSkin("Grand_Scope");
+    }
+
+    Param("WpnVisual", "WpnVisualRifleWinchesterScopeBetaNet", "WpnVisualRifleWinchesterScopeNet")
+    {
+        QualityIcon(3);
+        NoAmmoSkin("Superb_Scope");
+        NoAmmoHandSkin("Superb_Scope");
+        AmmoSkin("Superb_Scope");
+        AmmoHandSkin("Superb_Scope");
+    }
+
+    Param("WpnVisual", "WpnVisualStationary", "WpnVisualRifle")
+    {
+        MeshFileName("Sig550.msh");
+        IconTextureName("stationary");
+        WpnFXDamage("WpnFXStationaryDamage");
+    }
+
+    Param("WpnVisual", "WpnVisualWhip", "WpnVisual")
+    {
+        MeshFileName("Whip.msh");
+        IconTextureName("whip");
+        Animated(true);
+        BurnWithFireFX(true);
+    }
+
+    Param("WpnVisualLasso", "WpnVisualLasso", "WpnVisualFire")
+    {
+        MeshFileName("Lasso.msh");
+        IconTextureName("lasso");
+        NoAmmoSkin("");
+        NoAmmoHandSkin("");
+        AmmoSkin("");
+        AmmoHandSkin("");
+        RotateAttack(0.0000);
+        RotateReload(0.0000);
+        SoundZTranslation(0.0000);
+    }
+
+    Param("WpnVisualExplosive", "WpnVisualDynamite", "WpnVisualExplosive")
+    {
+        MeshFileName("Dynamite.msh");
+        IconTextureName("dynamite");
+        SBFuseFire("data/sounds/fuseloop");
+        BurnWithFireFX(true);
+        FuseShift([0.0000, 0.0000, 0.0000]);
+    }
+
+    Param("WpnVisualExplosive", "WpnVisualExplosive", "WpnVisual")
+    {
+        SBFuseFire("");
+        FuseShift([0.0000, 10.0000, 0.0000]);
+        FXFuseFireName("stick");
+        FuseElementName("Dynamite");
+    }
+
+    Param("WpnVisual", "WpnVisualLamp", "WpnVisual")
+    {
+        MeshFileName("");
+        IconTextureName("lamp");
+        BurnWithFireFX(true);
+    }
+
+    Param("WpnAmmo", "WpnAmmo", "WpnParam")
+    {
+        Type(5);
+        Capacity(0);
+        SBReload("");
+        SBReloadEnd("");
+        SBReloadBegin("");
+        SBUnloadBegin("");
+        SBUnload("");
+        SBUnloadEnd("");
+    }
+
+    Param("WpnAmmo", "WpnAmmoStationary", "WpnAmmoRifle")
+    {
+        Type(8);
+        Capacity(50);
+        SBReloadBegin("data/sounds/weapon/sig550/sig550_reload");
+    }
+
+    Param("WpnAmmo", "WpnAmmoStationaryPlayer", "WpnAmmoStationary")
+    {
+        Capacity(100);
+    }
+
+    Param("WpnAmmo", "WpnAmmoBow", "WpnAmmo")
+    {
+        Type(3);
+        Capacity(1);
+        SBReloadEnd("data/sounds/weapon/bow/shot_preparing");
+    }
+
+    Param("WpnAmmo", "WpnAmmoBucket", "WpnAmmo")
+    {
+        Type(6);
+        Capacity(3);
+    }
+
+    Param("WpnAmmo", "WpnAmmoKnife", "WpnAmmo")
+    {
+        Type(7);
+        Capacity(1);
+        SBReloadEnd("data/sounds/weapon/knife/shot_preparing");
+    }
+
+    Param("WpnAmmo", "WpnAmmoPistol", "WpnAmmo")
+    {
+        Type(2);
+    }
+
+    Param("WpnAmmo", "WpnAmmoPistolCogswell", "WpnAmmoPistol")
+    {
+        Capacity(6);
+        SBReload("data/sounds/weapon/loading_bullets_");
+    }
+
+    Param("WpnAmmo", "WpnAmmoPistolDerringer", "WpnAmmoPistol")
+    {
+        Capacity(1);
+        SBReload("data/sounds/weapon/loading_bullets_");
+    }
+
+    Param("WpnAmmo", "WpnAmmoPistolFrontier", "WpnAmmoPistol")
+    {
+        Capacity(6);
+        SBReload("data/sounds/weapon/loading_bullets_");
+        SBReloadEnd("data/sounds/weapon/frontier/frontier_turn_cylinder_");
+    }
+
+    Param("WpnAmmo", "WpnAmmoPistolLemant", "WpnAmmoPistol")
+    {
+        Capacity(8);
+        SBReload("data/sounds/weapon/loading_bullets_");
+    }
+
+    Param("WpnAmmo", "WpnAmmoRifleLemant", "WpnAmmoPistolLemant")
+    {
+        Capacity(1);
+        SBReload("data/sounds/weapon/loading_bullets_");
+    }
+
+    Param("WpnAmmo", "WpnAmmoPistolPeacemaker", "WpnAmmoPistol")
+    {
+        Capacity(6);
+        SBReload("data/sounds/weapon/loading_bullets_");
+        SBReloadEnd("data/sounds/weapon/peacemaker/peacemaker_turn_cylinder_");
+    }
+
+    Param("WpnAmmo", "WpnAmmoPistolSchofield", "WpnAmmoPistol")
+    {
+        Capacity(6);
+        SBReloadBegin("data/sounds/weapon/schofield/schofield_reload");
+    }
+
+    Param("WpnAmmo", "WpnAmmoPistolVolcanic", "WpnAmmoPistol")
+    {
+        Capacity(12);
+        SBReload("data/sounds/weapon/volcanic/volcanic_reload");
+    }
+
+    Param("WpnAmmo", "WpnAmmoPistolWalker", "WpnAmmoPistol")
+    {
+        Capacity(6);
+        SBReload("data/sounds/weapon/loading_bullets_");
+    }
+
+    Param("WpnAmmo", "WpnAmmoShotgun", "WpnAmmo")
+    {
+        Type(1);
+    }
+
+    Param("WpnAmmo", "WpnAmmoShotgunRemington", "WpnAmmoShotgun")
+    {
+        Capacity(1);
+        SBReload("data/sounds/weapon/remington/remington_bullets_out_");
+        SBReloadEnd("data/sounds/weapon/remington/remington_reload_");
+    }
+
+    Param("WpnAmmo", "WpnAmmoRifle", "WpnAmmo")
+    {
+        Type(0);
+    }
+
+    Param("WpnAmmo", "WpnAmmoRifleSharps", "WpnAmmoRifle")
+    {
+        Capacity(1);
+        SBReload("data/sounds/weapon/winchester/winchester_bullet_");
+    }
+
+    Param("WpnAmmo", "WpnAmmoRifleWinchester", "WpnAmmoRifle")
+    {
+        Capacity(12);
+        SBReload("data/sounds/weapon/winchester/winchester_bullet_");
+    }
+
+    Param("WpnAmmo", "WpnAmmoRifleMusket", "WpnAmmoRifle")
+    {
+        Capacity(1);
+        SBReload("data/sounds/weapon/winchester/winchester_bullet_");
+    }
+
+    Param("WpnAI", "WpnAI", "WpnParam")
+    {
+        MeleeDamage(0.0000);
+        MeleeSpeed(0.0000);
+        MeleeAttackRange(0.0000);
+        RandomSingleFireDelay(1.0000);
+        FiringDeviation(2.0000);
+        SingleFireDelay(1.0000);
+        DamageMult(0.7000);
+        Special(false);
+    }
+
+    Param("WpnAI", "WpnAIRifle", "WpnAI")
+    {
+        MeleeDamage(625.0000);
+        MeleeSpeed(450.0000);
+        MeleeAttackRange(135.0000);
+        FiringDeviation(8.0000);
+    }
+
+    Param("WpnAI", "WpnAIStationary", "WpnAI")
+    {
+        MeleeDamage(300.0000);
+        MeleeSpeed(450.0000);
+        MeleeAttackRange(135.0000);
+        RandomSingleFireDelay(0.3000);
+        FiringDeviation(4.0000);
+        SingleFireDelay(0.1000);
+        DamageMult(0.9000);
+    }
+
+    Param("WpnAI", "WpnAIGatling", "WpnAI")
+    {
+        MeleeDamage(300.0000);
+        MeleeSpeed(450.0000);
+        MeleeAttackRange(135.0000);
+        RandomSingleFireDelay(0.3000);
+        FiringDeviation(4.0000);
+        SingleFireDelay(0.1000);
+        DamageMult(0.9000);
+    }
+
+    Param("WpnAI", "WpnAIHands", "WpnAI")
+    {
+        MeleeDamage(300.0000);
+        MeleeSpeed(300.0000);
+        MeleeAttackRange(50.0000);
+    }
+
+    Param("WpnAI", "WpnAIKnife", "WpnAI")
+    {
+        MeleeDamage(300.0000);
+        MeleeSpeed(250.0000);
+        MeleeAttackRange(155.0000);
+    }
+
+    Param("WpnAI", "WpnAIPistol", "WpnAI")
+    {
+        MeleeDamage(625.0000);
+        MeleeSpeed(400.0000);
+        MeleeAttackRange(135.0000);
+        RandomSingleFireDelay(0.3);
+        FiringDeviation(2.000);
+        SingleFireDelay(0.2);
+        DamageMult(1.5000);
+    }
+
+    Param("WpnAI", "WpnAIRifleCoJ2", "WpnAI")
+    {
+        MeleeDamage(625.0000);
+        MeleeSpeed(300.0000);
+        MeleeAttackRange(135.0000);
+        RandomSingleFireDelay(0.6);
+        FiringDeviation(1.0000);
+        SingleFireDelay(0.7);
+        DamageMult(2.0000);
+    }
+
+    Param("WpnAI", "WpnAIRifleCoJ2Indian", "WpnAI")
+    {
+        MeleeDamage(625.0000);
+        MeleeSpeed(300.0000);
+        MeleeAttackRange(135.0000);
+        RandomSingleFireDelay(0.6);
+        FiringDeviation(2.0000);
+        SingleFireDelay(0.7);
+        DamageMult(1.0000);
+        Special(true);
+    }
+
+    Param("WpnAI", "WpnAIRifleCoJ2Musket", "WpnAI")
+    {
+        MeleeDamage(625.0000);
+        MeleeSpeed(300.0000);
+        MeleeAttackRange(135.0000);
+        RandomSingleFireDelay(0.6);
+        FiringDeviation(1.0000);
+        SingleFireDelay(0.7);
+        DamageMult(2.0000);
+    }
+
+    Param("WpnAI", "WpnAIBowCoJ2", "WpnAI")
+    {
+        MeleeDamage(625.0000);
+        MeleeSpeed(300.0000);
+        MeleeAttackRange(135.0000);
+        RandomSingleFireDelay(0.5);
+        FiringDeviation(2.0);
+        SingleFireDelay(0.5);
+        DamageMult(0.7000);
+    }
+
+    Param("WpnAI", "WpnAIRifleCoJ2SharpsScope", "WpnAI")
+    {
+        MeleeDamage(625.0000);
+        MeleeSpeed(300.0000);
+        MeleeAttackRange(135.0000);
+        RandomSingleFireDelay(0.4);
+        FiringDeviation(1.0);
+        SingleFireDelay(0.4);
+        DamageMult(2.0);
+    }
+
+    Param("WpnLogic", "WpnLogic", "WpnParam")
+    {
+        AttackStateTimeMul(1.0);
+        ReloadStateTimeMul(1.0);
+        AccuracyMul(1.0);
+        Cost(1);
+        SingleHanded(true);
+        DefaultHand(0);
+        PutToOtherHand(true);
+        WeaponType(0);
+        WeaponTypeForStat(-1);
+        BarrelElementName("Barrel");
+        StateTimesScript("");
+        CanShowCrosshair(true);
+        Mass(3.0000);
+        WeaponAnimType(0);
+        Zoom(1.5000);
+        ScopeZoom(0.0000);
+        MassTranslation([0.0000, 0.0000, 0.0000]);
+        InvIndex(-1);
+        InventorySlotsThatThisItemFits("10");
+        HandStateMashineClassName(3);
+        PhysicsScript("Data/Physics/Single/DroppedInventoryWood.scr");
+        Flammability(0.0000);
+        CanAttackInsteadOther(false);
+        CanAlternateUse(false);
+        CanNormalFire(true);
+        CanAlternateFire(false);
+        ReloadWholeClipAtOnce(false);
+        CanNoAmmoUse(true);
+        CanFireAlly(false);
+        ExtentsInflate([25.0000, 25.0000, 25.0000]);
+        ThrowAwayOnDie(true);
+        ODECollideBits(-1617);
+        TraceCollisionType(3);
+        Health(100.0000);
+        DamageThreshold(100000.0000);
+        AutoReload(false);
+        CanFireDeadBody(true);
+    }
+
+    Param("WpnLogicBow", "WpnLogicBow", "WpnLogicFireNoDestroyable")
+    {
+        AttackStateTimeMul(1.2);
+        ReloadStateTimeMul(1.2);
+        Cost(200);
+        SingleHanded(false);
+        PutToOtherHand(false);
+        WeaponType(5);
+        WeaponTypeForStat(6);
+        StateTimesScript("Data/Player/Equipment/WeaponBow.scr");
+        Mass(5.0000);
+        WeaponAnimType(7);
+        MassTranslation([-0.500, 0.0000, 0.500]);
+        InvIndex(6);
+        InventorySlotsThatThisItemFits("5;10");
+        HandStateMashineClassName(4);
+        CanAlternateUse(true);
+        CanNormalFire(true);
+        CanAlternateFire(true);
+        CanNoAmmoUse(true);
+        BrokenArrowProbability(35.0);
+    }
+
+    Param("WpnLogicBow", "WpnLogicBowRusty", "WpnLogicBow")
+    {
+        AttackStateTimeMul(1.5);
+        ReloadStateTimeMul(1.5);
+        Cost(100);
+        BrokenArrowProbability(40.0);
+    }
+
+    Param("WpnLogicBow", "WpnLogicBowAlpha", "WpnLogicBow")
+    {
+        AttackStateTimeMul(1.0);
+        ReloadStateTimeMul(1.0);
+        Cost(300);
+        BrokenArrowProbability(30.0);
+    }
+
+    Param("WpnLogicBow", "WpnLogicBowBeta", "WpnLogicBow")
+    {
+        AttackStateTimeMul(0.875);
+        ReloadStateTimeMul(0.875);
+        Cost(500);
+        BrokenArrowProbability(25.0);
+    }
+
+    Param("WpnLogicBow", "WpnLogicBowNet", "WpnLogicBow")
+    {
+        AttackStateTimeMul(2.0);
+        ReloadStateTimeMul(2.0);
+        InventorySlotsThatThisItemFits("0;10");
+    }
+
+    Param("WpnLogicFireNoDestroyable", "WpnLogicBucket", "WpnLogicFireNoDestroyable")
+    {
+        SingleHanded(false);
+        DefaultHand(1);
+        PutToOtherHand(false);
+        WeaponType(6);
+        StateTimesScript("Data/Player/Equipment/WeaponBucket.scr");
+        CanShowCrosshair(false);
+        Mass(10.0000);
+        WeaponAnimType(9);
+        MassTranslation([0.0000, -0.7500, 0.0000]);
+        InvIndex(8);
+        Flammability(0.5000);
+        CanAlternateUse(false);
+        CanNormalFire(true);
+        CanAlternateFire(false);
+        ReloadWholeClipAtOnce(true);
+        CanFireAlly(true);
+        ODECollideBits(-1025);
+        TraceCollisionType(5);
+    }
+
+    Param("WpnLogicMelee", "WpnLogicChair", "WpnLogicMelee")
+    {
+        SingleHanded(false);
+        PutToOtherHand(false);
+        WeaponType(6);
+        StateTimesScript("Data/Player/Equipment/WeaponChair.scr");
+        CanShowCrosshair(false);
+        Mass(20.0000);
+        WeaponAnimType(8);
+        MassTranslation([0.0000, -0.3500, -0.1500]);
+        InvIndex(8);
+        Flammability(0.5000);
+        CanAlternateUse(false);
+        CanNormalFire(true);
+        CanAlternateFire(false);
+        ODECollideBits(-1025);
+        TraceCollisionType(5);
+        DamageThreshold(0.0000);
+    }
+
+    Param("WpnLogicFireNoDestroyable", "WpnLogicFireNoDestroyable", "WpnLogicMelee")
+    {
+    }
+
+    Param("WpnLogicHands", "WpnLogicHands", "WpnLogicMelee")
+    {
+        SingleHanded(false);
+        PutToOtherHand(false);
+        WeaponTypeForStat(9);
+        StateTimesScript("Data/Player/Equipment/WeaponHands.scr");
+        CanShowCrosshair(false);
+        WeaponAnimType(10);
+        InvIndex(3);
+        InventorySlotsThatThisItemFits("7;10");
+    }
+
+    Param("WpnLogicKnife", "WpnLogicKnife", "WpnLogicThrow")
+    {
+        Cost(10);
+        WeaponType(10);
+        WeaponTypeForStat(12);
+        StateTimesScript("WeaponKnife.scr");
+        CanShowCrosshair(false);
+        Mass(0.5000);
+        WeaponAnimType(21);
+        InvIndex(10);
+        InventorySlotsThatThisItemFits("6;10");
+        PhysicsScript("DroppedInventoryMetal.scr");
+        BreakProbability(0.25);
+        StoneMetalDestrPropMultipl(2.0);
+    }
+
+    Param("WpnLogicThrow", "WpnLogicMelee", "WpnLogicThrow")
+    {
+        WeaponTypeForStat(10);
+    }
+
+    Param("WpnLogicThrow", "WpnLogicThrow", "WpnLogic")
+    {
+    }
+
+    Param("WpnLogicWhip", "WpnLogicWhip", "WpnLogicMelee")
+    {
+        PutToOtherHand(false);
+        WeaponType(6);
+        StateTimesScript("WeaponWhip.scr");
+        Mass(20.0000);
+        WeaponAnimType(22);
+        MassTranslation([0.0000, -0.3500, -0.1500]);
+        InvIndex(8);
+        Flammability(0.5000);
+        ODECollideBits(-1025);
+        TraceCollisionType(5);
+        DamageThreshold(0.0000);
+    }
+
+    Param("WpnLogicExplosive", "WpnLogicDynamite", "WpnLogicExplosive")
+    {
+        Cost(15);
+        WeaponType(4);
+        StateTimesScript("WeaponDynamiteStick.scr");
+        CanShowCrosshair(false);
+        Mass(1.6000);
+        WeaponAnimType(4);
+        MassTranslation([0.0000, -0.2500, 0.0000]);
+        InvIndex(2);
+        PhysicsScript("DroppedInventoryDynamite.scr");
+        Flammability(0.1000);
+        CanNormalFire(false);
+        CanAlternateFire(true);
+        Health(40.0000);
+        AttackExplodeClass("WpnAttackDynamiteExplode");
+    }
+
+    Param("WpnLogicExplosive", "WpnLogicDynamiteNet", "WpnLogicDynamite")
+    {
+        StateTimesScript("WeaponDynamiteStickNet.scr");
+        CanShowCrosshair(false);
+        AttackExplodeClass("WpnAttackDynamiteExplodeNet");
+    }
+
+    Param("WpnLogicExplosive", "WpnLogicExplosive", "WpnLogicThrow")
+    {
+        WeaponTypeForStat(5);
+        InventorySlotsThatThisItemFits("4;10");
+        ExplodeTime(3.0000);
+        FuseFireNoise(1000.0000);
+        FuseFireNoiseType(5);
+        FuseFireNoiseUpdateTime(0.5000);
+    }
+
+    Param("WpnLogicFire", "WpnLogicFire", "WpnLogicFireNoDestroyable")
+    {
+        TimeToAnihilateAfterDie(12.0000);
+        HudDurabilityModificator(1.0);
+        SafeShots(200);
+    }
+
+    Param("WpnLogicLasso", "WpnLogicLasso", "WpnLogicFireNoDestroyable")
+    {
+        SingleHanded(false);
+        DefaultHand(1);
+        PutToOtherHand(false);
+        WeaponType(9);
+        WeaponTypeForStat(11);
+        StateTimesScript("WeaponLasso.scr");
+        CanShowCrosshair(false);
+        Mass(10.0000);
+        WeaponAnimType(5);
+        Zoom(1.5000);
+        ScopeZoom(0.0000);
+        InvIndex(9);
+        InventorySlotsThatThisItemFits("3");
+        HandStateMashineClassName(7);
+        Flammability(0.0000);
+        CanAlternateUse(true);
+        ExtentsInflate([75.0000, 75.0000, 75.0000]);
+        Health(100.0000);
+        DamageThreshold(100000.0000);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistol", "WpnLogicFire")
+    {
+        WeaponType(2);
+        WeaponTypeForStat(1);
+        Mass(10.0000);
+        Zoom(2.0000);
+        ScopeZoom(0.0000);
+        MassTranslation([-1.40, -0.10, -0.20]);
+        InvIndex(0);
+        InventorySlotsThatThisItemFits("2;1;10");
+        PhysicsScript("DroppedInventoryMetal.scr");
+        CanAttackInsteadOther(true);
+        CanAlternateUse(true);
+        CanNormalFire(true);
+        CanAlternateFire(true);
+        ThrowAwayOnDie(false);
+        HudDurabilityModificator(0.5);
+        SafeShots(300);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolDoubleAmmo", "WpnLogicPistol")
+    {
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolCogswell", "WpnLogicPistol")
+    {
+        AttackStateTimeMul(1.63636363636364);
+        ReloadStateTimeMul(1.2);
+        Cost(119);
+        StateTimesScript("WeaponPistolCogswell.scr");
+        WeaponAnimType(11);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolCogswellRusty", "WpnLogicPistolCogswell")
+    {
+        AttackStateTimeMul(2.57142857142857);
+        ReloadStateTimeMul(1.35);
+        Cost(67);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolCogswellAlpha", "WpnLogicPistolCogswell")
+    {
+        AttackStateTimeMul(1.28571428571429);
+        ReloadStateTimeMul(1.15);
+        Cost(185);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolCogswellBeta", "WpnLogicPistolCogswell")
+    {
+        AttackStateTimeMul(1.125);
+        ReloadStateTimeMul(1.0);
+        Cost(342);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolCogswellNet", "WpnLogicPistolCogswell")
+    {
+        AttackStateTimeMul(0.9);
+        ReloadStateTimeMul(0.785714285714286);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolDerringer", "WpnLogicPistolDoubleAmmo")
+    {
+        ReloadStateTimeMul(1.4);
+        Cost(42);
+        StateTimesScript("WeaponPistolDerringer.scr");
+        WeaponAnimType(12);
+        ReloadWholeClipAtOnce(true);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolDerringerRusty", "WpnLogicPistolDerringer")
+    {
+        ReloadStateTimeMul(1.5);
+        Cost(3);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolDerringerAlpha", "WpnLogicPistolDerringer")
+    {
+        ReloadStateTimeMul(1.3);
+        Cost(89);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolDerringerBeta", "WpnLogicPistolDerringer")
+    {
+        ReloadStateTimeMul(1.1);
+        Cost(214);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolDerringerNet", "WpnLogicPistolDerringer")
+    {
+        ReloadStateTimeMul(0.78125);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolFrontier", "WpnLogicPistol")
+    {
+        AttackStateTimeMul(1.0);
+        ReloadStateTimeMul(0.92);
+        Cost(90);
+        StateTimesScript("WeaponPistolFrontier.scr");
+        WeaponAnimType(2);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolFrontierRusty", "WpnLogicPistolFrontier")
+    {
+        AttackStateTimeMul(1.125);
+        ReloadStateTimeMul(1.34);
+        Cost(74);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolFrontierAlpha", "WpnLogicPistolFrontier")
+    {
+        AttackStateTimeMul(1.0);
+        ReloadStateTimeMul(0.92);
+        Cost(102);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolFrontierBeta", "WpnLogicPistolFrontier")
+    {
+        AttackStateTimeMul(1.0);
+        ReloadStateTimeMul(0.78);
+        Cost(126);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolFrontierNet", "WpnLogicPistolFrontier")
+    {
+        AttackStateTimeMul(1.125);
+        ReloadStateTimeMul(0.785714285714286);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolLemant", "WpnLogicPistolDoubleAmmo")
+    {
+        AttackStateTimeMul(1.63636363636364);
+        ReloadStateTimeMul(1.25);
+        Cost(144);
+        StateTimesScript("WeaponPistolLemant.scr");
+        WeaponAnimType(13);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolLemantRusty", "WpnLogicPistolLemant")
+    {
+        AttackStateTimeMul(2.57142857142857);
+        ReloadStateTimeMul(1.4);
+        Cost(88);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolLemantAlpha", "WpnLogicPistolLemant")
+    {
+        AttackStateTimeMul(1.28571428571429);
+        ReloadStateTimeMul(1.2);
+        Cost(216);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolLemantBeta", "WpnLogicPistolLemant")
+    {
+        AttackStateTimeMul(1.125);
+        ReloadStateTimeMul(1.05);
+        Cost(384);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolLemantNet", "WpnLogicPistolLemant")
+    {
+        AttackStateTimeMul(1.28571428571429);
+        ReloadStateTimeMul(0.928571428571429);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolPeacemaker", "WpnLogicPistol")
+    {
+        AttackStateTimeMul(1.28571428571429);
+        ReloadStateTimeMul(1.15);
+        Cost(60);
+        StateTimesScript("WeaponPistolPeacemaker.scr");
+        WeaponAnimType(15);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolPeacemakerRusty", "WpnLogicPistolPeacemaker")
+    {
+        AttackStateTimeMul(1.63636363636364);
+        ReloadStateTimeMul(1.25);
+        Cost(28);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolPeacemakerAlpha", "WpnLogicPistolPeacemaker")
+    {
+        AttackStateTimeMul(1.2);
+        ReloadStateTimeMul(1.1);
+        Cost(111);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolPeacemakerBeta", "WpnLogicPistolPeacemaker")
+    {
+        AttackStateTimeMul(1.125);
+        ReloadStateTimeMul(1.05);
+        Cost(244);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolPeacemakerNet", "WpnLogicPistolPeacemaker")
+    {
+        AttackStateTimeMul(1.38461538461538);
+        ReloadStateTimeMul(0.785714285714286);
+        StateTimesScript("WeaponPistolPeacemaker.scr");
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolSchofield", "WpnLogicPistol")
+    {
+        AttackStateTimeMul(1.0);
+        ReloadStateTimeMul(1.2);
+        Cost(236);
+        StateTimesScript("WeaponPistolSchofield.scr");
+        WeaponAnimType(1);
+        ReloadWholeClipAtOnce(true);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolSchofieldRusty", "WpnLogicPistolSchofield")
+    {
+        AttackStateTimeMul(1.3);
+        ReloadStateTimeMul(1.5);
+        Cost(148);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolSchofieldAlpha", "WpnLogicPistolSchofield")
+    {
+        AttackStateTimeMul(1.0);
+        ReloadStateTimeMul(1.2);
+        Cost(306);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolSchofieldBeta", "WpnLogicPistolSchofield")
+    {
+        AttackStateTimeMul(1.0);
+        ReloadStateTimeMul(1.2);
+        Cost(504);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolSchofieldNet", "WpnLogicPistolSchofield")
+    {
+        AttackStateTimeMul(1.0);
+        ReloadStateTimeMul(0.967741935483871);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolVolcanic", "WpnLogicPistol")
+    {
+        AttackStateTimeMul(1.3);
+        ReloadStateTimeMul(1.48);
+        Cost(192);
+        StateTimesScript("WeaponPistolVolcanic.scr");
+        WeaponAnimType(18);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolVolcanicRusty", "WpnLogicPistolVolcanic")
+    {
+        AttackStateTimeMul(3.0);
+        ReloadStateTimeMul(1.4);
+        Cost(128);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolVolcanicAlpha", "WpnLogicPistolVolcanic")
+    {
+        AttackStateTimeMul(1.16666666666667);
+        ReloadStateTimeMul(1.25);
+        Cost(276);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolVolcanicBeta", "WpnLogicPistolVolcanic")
+    {
+        AttackStateTimeMul(0.75);
+        ReloadStateTimeMul(1.1);
+        Cost(464);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolVolcanicNet", "WpnLogicPistolVolcanic")
+    {
+        AttackStateTimeMul(1.05);
+        ReloadStateTimeMul(0.961538461538461);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolWalker", "WpnLogicPistol")
+    {
+        AttackStateTimeMul(2.0);
+        ReloadStateTimeMul(1.2);
+        Cost(168);
+        StateTimesScript("WeaponPistolWalker.scr");
+        WeaponAnimType(14);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolWalkerRusty", "WpnLogicPistolWalker")
+    {
+        AttackStateTimeMul(3.6);
+        ReloadStateTimeMul(1.4);
+        Cost(108);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolWalkerAlpha", "WpnLogicPistolWalker")
+    {
+        AttackStateTimeMul(1.63636363636364);
+        ReloadStateTimeMul(1.15);
+        Cost(246);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolWalkerBeta", "WpnLogicPistolWalker")
+    {
+        AttackStateTimeMul(1.2);
+        ReloadStateTimeMul(1.0);
+        Cost(424);
+    }
+
+    Param("WpnLogicPistol", "WpnLogicPistolWalkerNet", "WpnLogicPistolWalker")
+    {
+        AttackStateTimeMul(1.56521739130435);
+        ReloadStateTimeMul(0.785714285714286);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicGatling", "WpnLogicRifle")
+    {
+        WeaponType(12);
+        WeaponTypeForStat(7);
+        BarrelElementName("Barrel");
+        StateTimesScript("WeaponGatling.scr");
+        Mass(50.0000);
+        WeaponAnimType(19);
+        Zoom(1.5000);
+        ScopeZoom(0.0000);
+        InvIndex(11);
+        InventorySlotsThatThisItemFits("10");
+        PhysicsScript("DroppedInventoryHeavy.phx");
+        ReloadWholeClipAtOnce(true);
+        CanNoAmmoUse(false);
+        ThrowAwayOnDie(true);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifle", "WpnLogicFire")
+    {
+        SingleHanded(false);
+        PutToOtherHand(false);
+        WeaponType(3);
+        WeaponTypeForStat(2);
+        Mass(20.0000);
+        Zoom(2.0000);
+        ScopeZoom(0.0000);
+        MassTranslation([-0.500, -0.100, -0.1000]);
+        InvIndex(1);
+        InventorySlotsThatThisItemFits("0;10");
+        PhysicsScript("DroppedInventoryMetal.scr");
+        CanAttackInsteadOther(true);
+        ThrowAwayOnDie(false);
+        SafeShots(150);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleDoubleAmmo", "WpnLogicRifle")
+    {
+        WeaponTypeForStat(4);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleMusket", "WpnLogicRifle")
+    {
+        StateTimesScript("WeaponRifleWinchester.scr");
+        WeaponAnimType(3);
+        ScopeZoom(0.0000);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleRemington", "WpnLogicRifleDoubleAmmo")
+    {
+        ReloadStateTimeMul(1.5375);
+        Cost(225);
+        BarrelElementName("BarrelL");
+        StateTimesScript("WeaponRifleRemington.scr");
+        WeaponAnimType(16);
+        CanAlternateUse(true);
+        CanNormalFire(true);
+        CanAlternateFire(true);
+        ReloadWholeClipAtOnce(true);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleRemingtonRusty", "WpnLogicRifleRemington")
+    {
+        ReloadStateTimeMul(1.71);
+        Cost(140);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleRemingtonAlpha", "WpnLogicRifleRemington")
+    {
+        ReloadStateTimeMul(1.48);
+        Cost(335);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleRemingtonBeta", "WpnLogicRifleRemington")
+    {
+        ReloadStateTimeMul(1.3075);
+        Cost(516);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleRemingtonNet", "WpnLogicRifleRemington")
+    {
+        ReloadStateTimeMul(0.795454545454545);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleRemingtonSawOff", "WpnLogicRifleDoubleAmmo")
+    {
+        ReloadStateTimeMul(1.5375);
+        Cost(102);
+        SingleHanded(false);
+        PutToOtherHand(true);
+        BarrelElementName("BarrelL");
+        StateTimesScript("WeaponRifleRemingtonSawOff.scr");
+        WeaponAnimType(25);
+        MassTranslation([-2.50, -0.50, -0.20]);
+        CanAlternateUse(true);
+        CanNormalFire(true);
+        CanAlternateFire(true);
+        ReloadWholeClipAtOnce(true);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleRemingtonSawOffRusty", "WpnLogicRifleRemingtonSawOff")
+    {
+        ReloadStateTimeMul(1.71);
+        Cost(53);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleRemingtonSawOffAlpha", "WpnLogicRifleRemingtonSawOff")
+    {
+        ReloadStateTimeMul(1.48);
+        Cost(179);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleRemingtonSawOffBeta", "WpnLogicRifleRemingtonSawOff")
+    {
+        ReloadStateTimeMul(1.3075);
+        Cost(314);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleRemingtonSawOffNet", "WpnLogicRifleRemingtonSawOff")
+    {
+        ReloadStateTimeMul(0.531914893617021);
+        SingleHanded(true);
+        WeaponAnimType(17);
+        InvIndex(0);
+        InventorySlotsThatThisItemFits("2;1;10");
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleSharps", "WpnLogicRifle")
+    {
+        AttackStateTimeMul(1.35);
+        ReloadStateTimeMul(1.35);
+        Cost(428);
+        StateTimesScript("WeaponRifleSharps.scr");
+        WeaponAnimType(23);
+        ScopeZoom(0.0000);
+        HandStateMashineClassName(9);
+        CanAlternateUse(true);
+        CanNormalFire(true);
+        CanAlternateFire(true);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleSharpsRusty", "WpnLogicRifleSharps")
+    {
+        AttackStateTimeMul(1.4);
+        ReloadStateTimeMul(1.4);
+        Cost(276);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleSharpsAlpha", "WpnLogicRifleSharps")
+    {
+        AttackStateTimeMul(1.3);
+        ReloadStateTimeMul(1.3);
+        Cost(632);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleSharpsBeta", "WpnLogicRifleSharps")
+    {
+        AttackStateTimeMul(1.15);
+        ReloadStateTimeMul(1.15);
+        Cost(1068);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleSharpsNet", "WpnLogicRifleSharps")
+    {
+        AttackStateTimeMul(0.857142857142857);
+        ReloadStateTimeMul(0.857142857142857);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleSharpsScope", "WpnLogicRifleSharps")
+    {
+        AttackStateTimeMul(1.35);
+        ReloadStateTimeMul(1.35);
+        Cost(528);
+        WeaponTypeForStat(3);
+        Zoom(2.0000);
+        ScopeZoom(4.0000);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleSharpsScopeRusty", "WpnLogicRifleSharpsScope")
+    {
+        AttackStateTimeMul(1.4);
+        ReloadStateTimeMul(1.4);
+        Cost(376);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleSharpsScopeAlpha", "WpnLogicRifleSharpsScope")
+    {
+        AttackStateTimeMul(1.3);
+        ReloadStateTimeMul(1.3);
+        Cost(732);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleSharpsScopeBeta", "WpnLogicRifleSharpsScope")
+    {
+        AttackStateTimeMul(1.15);
+        ReloadStateTimeMul(1.15);
+        Cost(1168);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleSharpsScopeNet", "WpnLogicRifleSharpsScope")
+    {
+        AttackStateTimeMul(1.2);
+        ReloadStateTimeMul(1.2);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleWinchester", "WpnLogicRifle")
+    {
+        AttackStateTimeMul(1.0);
+        ReloadStateTimeMul(1.3);
+        Cost(460);
+        StateTimesScript("WeaponRifleWinchester.scr");
+        WeaponAnimType(3);
+        ScopeZoom(0.0000);
+        CanAlternateUse(true);
+        CanNormalFire(true);
+        CanAlternateFire(true);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleWinchesterRusty", "WpnLogicRifleWinchester")
+    {
+        AttackStateTimeMul(1.0);
+        ReloadStateTimeMul(1.4);
+        Cost(356);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleWinchesterAlpha", "WpnLogicRifleWinchester")
+    {
+        AttackStateTimeMul(0.7);
+        ReloadStateTimeMul(1.25);
+        Cost(672);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleWinchesterBeta", "WpnLogicRifleWinchester")
+    {
+        AttackStateTimeMul(0.7);
+        ReloadStateTimeMul(1.1);
+        Cost(1088);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleWinchesterNet", "WpnLogicRifleWinchester")
+    {
+        AttackStateTimeMul(0.673076923076923);
+        ReloadStateTimeMul(0.906735751295337);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleWinchesterScope", "WpnLogicRifleWinchester")
+    {
+        AttackStateTimeMul(1.0);
+        ReloadStateTimeMul(1.3);
+        Cost(660);
+        WeaponTypeForStat(3);
+        Zoom(2.0000);
+        ScopeZoom(4.0000);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleWinchesterScopeRusty", "WpnLogicRifleWinchesterScope")
+    {
+        AttackStateTimeMul(1.0);
+        ReloadStateTimeMul(1.4);
+        Cost(556);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleWinchesterScopeAlpha", "WpnLogicRifleWinchesterScope")
+    {
+        AttackStateTimeMul(0.7);
+        ReloadStateTimeMul(1.25);
+        Cost(872);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleWinchesterScopeBeta", "WpnLogicRifleWinchesterScope")
+    {
+        AttackStateTimeMul(0.7);
+        ReloadStateTimeMul(1.1);
+        Cost(1288);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicRifleWinchesterScopeNet", "WpnLogicRifleWinchesterScope")
+    {
+        AttackStateTimeMul(0.795454545454545);
+        ReloadStateTimeMul(0.906735751295337);
+    }
+
+    Param("WpnLogicRifle", "WpnLogicStationary", "WpnLogicRifle")
+    {
+        BarrelElementName("BarrelL");
+        StateTimesScript("WeaponStationary.scr");
+        ScopeZoom(0.0000);
+        InvIndex(8);
+        InventorySlotsThatThisItemFits("10");
+        CanAlternateFire(true);
+        ReloadWholeClipAtOnce(true);
+    }
+
+    Param("WpnLogicFire", "WpnLogicBlackPowderCannon", "WpnLogicFire")
+    {
+    }
+
+    Param("WpnLogicThrow", "WpnLogicLamp", "WpnLogicThrow")
+    {
+        SingleHanded(false);
+        PutToOtherHand(false);
+        WeaponType(6);
+        StateTimesScript("WeaponLamp.scr");
+        CanShowCrosshair(false);
+        Mass(2.5);
+        WeaponAnimType(24);
+        InvIndex(8);
+        PhysicsScript("");
+        Flammability(0.8);
+        CanAlternateUse(false);
+        CanNormalFire(true);
+        CanAlternateFire(false);
+        ODECollideBits(-1025);
+        TraceCollisionType(5);
+        Health(25.0);
+        DamageThreshold(0.0000);
+    }
+
+    Weapon("CannonController", "CannonController", "WeaponBullet")
+    {
+        AttackParam(false, 11, "WpnAttackGatlingFire");
+    }
+
+    Weapon("CannonController", "CannonControllerOnWagon", "CannonController")
+    {
+        AttackParam(false, 11, "WpnAttackGatlingOnWagonFire");
+    }
+
+    Weapon("WeaponBow", "WeaponBow", "WeaponFireAmmo")
+    {
+        WpnLogicName("WpnLogicBow");
+        WpnVisualName("WpnVisualBow");
+        WpnAIName("WpnAIBowCoJ2");
+        AttackParam(false, 11, "WpnAttackBowFire");
+        AmmoIdx(0, "WpnAmmoBow");
+        AttackParam(false, 14, "WpnAttackBowFire");
+        AttackParam(true, 11, "WpnAttackBowFireAlt");
+        AttackParam(true, 14, "WpnAttackBowFireAlt");
+    }
+
+    Weapon("WeaponBow", "WeaponBowRusty", "WeaponBow")
+    {
+        WpnLogicName("WpnLogicBowRusty");
+        WpnVisualName("WpnVisualBowRusty");
+        AttackParam(false, 11, "WpnAttackBowRustyFire");
+        AttackParam(false, 14, "WpnAttackBowRustyFire");
+        AttackParam(true, 11, "WpnAttackBowRustyFireAlt");
+        AttackParam(true, 14, "WpnAttackBowRustyFireAlt");
+    }
+
+    Weapon("WeaponBow", "WeaponBowAlpha", "WeaponBow")
+    {
+        WpnLogicName("WpnLogicBowAlpha");
+        WpnVisualName("WpnVisualBowAlpha");
+        AttackParam(false, 11, "WpnAttackBowAlphaFire");
+        AttackParam(false, 14, "WpnAttackBowAlphaFire");
+        AttackParam(true, 11, "WpnAttackBowAlphaFireAlt");
+        AttackParam(true, 14, "WpnAttackBowAlphaFireAlt");
+    }
+
+    Weapon("WeaponBow", "WeaponBowBeta", "WeaponBow")
+    {
+        WpnLogicName("WpnLogicBowBeta");
+        WpnVisualName("WpnVisualBowBeta");
+        AttackParam(false, 11, "WpnAttackBowBetaFire");
+        AttackParam(false, 14, "WpnAttackBowBetaFire");
+        AttackParam(true, 11, "WpnAttackBowBetaFireAlt");
+        AttackParam(true, 14, "WpnAttackBowBetaFireAlt");
+    }
+
+    Weapon("WeaponBow", "WeaponBowNet", "WeaponBow")
+    {
+        WpnLogicName("WpnLogicBowNet");
+        WpnVisualName("WpnVisualBowNet");
+        AttackParam(false, 11, "WpnAttackBowNetFire");
+        AttackParam(false, 14, "WpnAttackBowNetFire");
+        AttackParam(true, 11, "WpnAttackBowNetFireAlt");
+        AttackParam(true, 14, "WpnAttackBowNetFireAlt");
+    }
+
+    Weapon("WeaponBow", "WeaponBowAlphaNet", "WeaponBowNet")
+    {
+        WpnVisualName("WpnVisualBowAlphaNet");
+    }
+
+    Weapon("WeaponBow", "WeaponBowBetaNet", "WeaponBowNet")
+    {
+        WpnVisualName("WpnVisualBowBetaNet");
+    }
+
+    Weapon("WeaponBucket", "WeaponBucket", "WeaponFireAmmo")
+    {
+        WpnLogicName("WpnLogicBucket");
+        WpnVisualName("WpnVisualBucket");
+        AttackParam(false, 11, "WpnAttackBucketFire");
+        AmmoIdx(0, "WpnAmmoBucket");
+        AttackParam(false, 14, "WpnAttackBucketFire");
+    }
+
+    Weapon("WeaponBullet", "WeaponBullet", "WeaponOld")
+    {
+        WpnLogicName("WpnLogicFireNoDestroyable");
+        AttackParam(false, 11, "WpnAttackMelee");
+    }
+
+    Weapon("WeaponChair", "WeaponChair", "WeaponMelee")
+    {
+        WpnLogicName("WpnLogicChair");
+        WpnVisualName("WpnVisualChair");
+        AttackParam(false, 0, "WpnAttackChairMelee");
+    }
+
+    Weapon("WeaponDynamiteStick", "WeaponDynamiteStick", "WeaponExplosive")
+    {
+        WpnLogicName("WpnLogicDynamite");
+        WpnVisualName("WpnVisualDynamite");
+        AttackParam(true, 17, "WpnAttackDynamiteThrow");
+    }
+
+    Weapon("WeaponDynamiteStick", "WeaponDynamiteStickNet", "WeaponDynamiteStick")
+    {
+        WpnLogicName("WpnLogicDynamiteNet");
+    }
+
+    Weapon("WeaponExplosive", "WeaponExplosive", "WeaponThrow")
+    {
+    }
+
+    Weapon("WeaponFire", "WeaponFire", "WeaponMelee")
+    {
+        AttackParam(false, 11, "WpnAttackMelee");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponFireAmmo", "WeaponFire")
+    {
+        AttackParam(false, 11, "WpnAttackMelee");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistol", "WeaponFireAmmo")
+    {
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackMelee");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolCogswell", "WeaponPistol")
+    {
+        WpnLogicName("WpnLogicPistolCogswell");
+        WpnVisualName("WpnVisualPistolCogswell");
+        AttackParam(false, 11, "WpnAttackRifleCogswellFire");
+        AmmoIdx(0, "WpnAmmoPistolCogswell");
+        AttackParam(false, 14, "WpnAttackRifleCogswellFire");
+        AttackParam(true, 11, "WpnAttackRifleCogswellFire");
+        AttackParam(true, 14, "WpnAttackRifleCogswellFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolCogswellRusty", "WeaponPistolCogswell")
+    {
+        WpnLogicName("WpnLogicPistolCogswellRusty");
+        WpnVisualName("WpnVisualPistolCogswellRusty");
+        AttackParam(false, 11, "WpnAttackRifleCogswellRustyFire");
+        AttackParam(false, 14, "WpnAttackRifleCogswellRustyFire");
+        AttackParam(true, 11, "WpnAttackRifleCogswellRustyFire");
+        AttackParam(true, 14, "WpnAttackRifleCogswellRustyFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolCogswellAlpha", "WeaponPistolCogswell")
+    {
+        WpnLogicName("WpnLogicPistolCogswellAlpha");
+        WpnVisualName("WpnVisualPistolCogswellAlpha");
+        AttackParam(false, 11, "WpnAttackRifleCogswellAlphaFire");
+        AttackParam(false, 14, "WpnAttackRifleCogswellAlphaFire");
+        AttackParam(true, 11, "WpnAttackRifleCogswellAlphaFire");
+        AttackParam(true, 14, "WpnAttackRifleCogswellAlphaFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolCogswellBeta", "WeaponPistolCogswell")
+    {
+        WpnLogicName("WpnLogicPistolCogswellBeta");
+        WpnVisualName("WpnVisualPistolCogswellBeta");
+        AttackParam(false, 11, "WpnAttackRifleCogswellBetaFire");
+        AttackParam(false, 14, "WpnAttackRifleCogswellBetaFire");
+        AttackParam(true, 11, "WpnAttackRifleCogswellBetaFire");
+        AttackParam(true, 14, "WpnAttackRifleCogswellBetaFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolCogswellNet", "WeaponPistolCogswell")
+    {
+        WpnLogicName("WpnLogicPistolCogswellNet");
+        WpnVisualName("WpnVisualPistolCogswellNet");
+        AttackParam(false, 11, "WpnAttackRifleCogswellNetFire");
+        AttackParam(false, 14, "WpnAttackRifleCogswellNetFire");
+        AttackParam(true, 11, "WpnAttackRifleCogswellNetFire");
+        AttackParam(true, 14, "WpnAttackRifleCogswellNetFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolCogswellAlphaNet", "WeaponPistolCogswellNet")
+    {
+        WpnVisualName("WpnVisualPistolCogswellAlphaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolCogswellBetaNet", "WeaponPistolCogswellNet")
+    {
+        WpnVisualName("WpnVisualPistolCogswellBetaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolDerringer", "WeaponPistol")
+    {
+        WpnLogicName("WpnLogicPistolDerringer");
+        WpnVisualName("WpnVisualPistolDerringer");
+        AttackParam(false, 11, "WpnAttackPistolDerringerFire");
+        AmmoIdx(0, "WpnAmmoPistolDerringer");
+        AmmoIdx(1, "WpnAmmoPistolDerringer");
+        AttackParam(false, 14, "WpnAttackPistolDerringerFire");
+        AttackParam(false, 12, "WpnAttackPistolDerringerFireB");
+        AttackParam(false, 15, "WpnAttackPistolDerringerFireB");
+        AttackParam(true, 11, "WpnAttackPistolDerringerFire");
+        AttackParam(true, 14, "WpnAttackPistolDerringerFire");
+        AttackParam(true, 12, "WpnAttackPistolDerringerFireB");
+        AttackParam(true, 15, "WpnAttackPistolDerringerFireB");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolDerringerRusty", "WeaponPistolDerringer")
+    {
+        WpnLogicName("WpnLogicPistolDerringerRusty");
+        WpnVisualName("WpnVisualPistolDerringerRusty");
+        AttackParam(false, 11, "WpnAttackPistolDerringerRustyFire");
+        AttackParam(false, 14, "WpnAttackPistolDerringerRustyFire");
+        AttackParam(false, 12, "WpnAttackPistolDerringerRustyFireB");
+        AttackParam(false, 15, "WpnAttackPistolDerringerRustyFireB");
+        AttackParam(true, 11, "WpnAttackPistolDerringerRustyFire");
+        AttackParam(true, 14, "WpnAttackPistolDerringerRustyFire");
+        AttackParam(true, 12, "WpnAttackPistolDerringerRustyFireB");
+        AttackParam(true, 15, "WpnAttackPistolDerringerRustyFireB");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolDerringerAlpha", "WeaponPistolDerringer")
+    {
+        WpnLogicName("WpnLogicPistolDerringerAlpha");
+        WpnVisualName("WpnVisualPistolDerringerAlpha");
+        AttackParam(false, 11, "WpnAttackPistolDerringerAlphaFire");
+        AttackParam(false, 14, "WpnAttackPistolDerringerAlphaFire");
+        AttackParam(false, 12, "WpnAttackPistolDerringerAlphaFireB");
+        AttackParam(false, 15, "WpnAttackPistolDerringerAlphaFireB");
+        AttackParam(true, 11, "WpnAttackPistolDerringerAlphaFire");
+        AttackParam(true, 14, "WpnAttackPistolDerringerAlphaFire");
+        AttackParam(true, 12, "WpnAttackPistolDerringerAlphaFireB");
+        AttackParam(true, 15, "WpnAttackPistolDerringerAlphaFireB");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolDerringerBeta", "WeaponPistolDerringer")
+    {
+        WpnLogicName("WpnLogicPistolDerringerBeta");
+        WpnVisualName("WpnVisualPistolDerringerBeta");
+        AttackParam(false, 11, "WpnAttackPistolDerringerBetaFire");
+        AttackParam(false, 14, "WpnAttackPistolDerringerBetaFire");
+        AttackParam(false, 12, "WpnAttackPistolDerringerBetaFireB");
+        AttackParam(false, 15, "WpnAttackPistolDerringerBetaFireB");
+        AttackParam(true, 11, "WpnAttackPistolDerringerBetaFire");
+        AttackParam(true, 14, "WpnAttackPistolDerringerBetaFire");
+        AttackParam(true, 12, "WpnAttackPistolDerringerBetaFireB");
+        AttackParam(true, 15, "WpnAttackPistolDerringerBetaFireB");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolDerringerNet", "WeaponPistolDerringer")
+    {
+        WpnLogicName("WpnLogicPistolDerringerNet");
+        WpnVisualName("WpnVisualPistolDerringerNet");
+        AttackParam(false, 11, "WpnAttackPistolDerringerNetFire");
+        AttackParam(false, 14, "WpnAttackPistolDerringerNetFire");
+        AttackParam(false, 12, "WpnAttackPistolDerringerNetFireB");
+        AttackParam(false, 15, "WpnAttackPistolDerringerNetFireB");
+        AttackParam(true, 11, "WpnAttackPistolDerringerNetFire");
+        AttackParam(true, 14, "WpnAttackPistolDerringerNetFire");
+        AttackParam(true, 12, "WpnAttackPistolDerringerNetFireB");
+        AttackParam(true, 15, "WpnAttackPistolDerringerNetFireB");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolDerringerAlphaNet", "WeaponPistolDerringerNet")
+    {
+        WpnVisualName("WpnVisualPistolDerringerAlphaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolDerringerBetaNet", "WeaponPistolDerringerNet")
+    {
+        WpnVisualName("WpnVisualPistolDerringerBetaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolFrontier", "WeaponPistol")
+    {
+        WpnLogicName("WpnLogicPistolFrontier");
+        WpnVisualName("WpnVisualPistolFrontier");
+        AttackParam(false, 11, "WpnAttackPistolFrontierFire");
+        AmmoIdx(0, "WpnAmmoPistolFrontier");
+        AttackParam(false, 14, "WpnAttackPistolFrontierFire");
+        AttackParam(true, 11, "WpnAttackPistolFrontierFire");
+        AttackParam(true, 14, "WpnAttackPistolFrontierFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolFrontierRusty", "WeaponPistolFrontier")
+    {
+        WpnLogicName("WpnLogicPistolFrontierRusty");
+        WpnVisualName("WpnVisualPistolFrontierRusty");
+        AttackParam(false, 11, "WpnAttackPistolFrontierRustyFire");
+        AttackParam(false, 14, "WpnAttackPistolFrontierRustyFire");
+        AttackParam(true, 11, "WpnAttackPistolFrontierRustyFire");
+        AttackParam(true, 14, "WpnAttackPistolFrontierRustyFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolFrontierAlpha", "WeaponPistolFrontier")
+    {
+        WpnLogicName("WpnLogicPistolFrontierAlpha");
+        WpnVisualName("WpnVisualPistolFrontierAlpha");
+        AttackParam(false, 11, "WpnAttackPistolFrontierAlphaFire");
+        AttackParam(false, 14, "WpnAttackPistolFrontierAlphaFire");
+        AttackParam(true, 11, "WpnAttackPistolFrontierAlphaFire");
+        AttackParam(true, 14, "WpnAttackPistolFrontierAlphaFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolFrontierBeta", "WeaponPistolFrontier")
+    {
+        WpnLogicName("WpnLogicPistolFrontierBeta");
+        WpnVisualName("WpnVisualPistolFrontierBeta");
+        AttackParam(false, 11, "WpnAttackPistolFrontierBetaFire");
+        AttackParam(false, 14, "WpnAttackPistolFrontierBetaFire");
+        AttackParam(true, 11, "WpnAttackPistolFrontierBetaFire");
+        AttackParam(true, 14, "WpnAttackPistolFrontierBetaFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolFrontierNet", "WeaponPistolFrontier")
+    {
+        WpnLogicName("WpnLogicPistolFrontierNet");
+        WpnVisualName("WpnVisualPistolFrontierNet");
+        AttackParam(false, 11, "WpnAttackPistolFrontierNetFire");
+        AttackParam(false, 14, "WpnAttackPistolFrontierNetFire");
+        AttackParam(true, 11, "WpnAttackPistolFrontierNetFire");
+        AttackParam(true, 14, "WpnAttackPistolFrontierNetFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolFrontierAlphaNet", "WeaponPistolFrontierNet")
+    {
+        WpnVisualName("WpnVisualPistolFrontierAlphaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolFrontierBetaNet", "WeaponPistolFrontierNet")
+    {
+        WpnVisualName("WpnVisualPistolFrontierBetaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolLemant", "WeaponPistol")
+    {
+        WpnLogicName("WpnLogicPistolLemant");
+        WpnVisualName("WpnVisualPistolLemant");
+        AttackParam(false, 11, "WpnAttackRifleLemantFire");
+        AmmoIdx(0, "WpnAmmoRifleLemant");
+        AmmoIdx(1, "WpnAmmoPistolLemant");
+        AttackParam(false, 14, "WpnAttackRifleLemantFire");
+        AttackParam(false, 12, "WpnAttackPistolLemantFire");
+        AttackParam(false, 15, "WpnAttackPistolLemantFire");
+        AttackParam(true, 11, "WpnAttackRifleLemantFire");
+        AttackParam(true, 14, "WpnAttackRifleLemantFire");
+        AttackParam(true, 12, "WpnAttackPistolLemantFire");
+        AttackParam(true, 15, "WpnAttackPistolLemantFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolLemantRusty", "WeaponPistolLemant")
+    {
+        WpnLogicName("WpnLogicPistolLemantRusty");
+        WpnVisualName("WpnVisualPistolLemantRusty");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackRifleLemantRustyFire");
+        AttackParam(false, 14, "WpnAttackRifleLemantRustyFire");
+        AttackParam(false, 12, "WpnAttackPistolLemantRustyFire");
+        AttackParam(false, 15, "WpnAttackPistolLemantRustyFire");
+        AttackParam(true, 11, "WpnAttackRifleLemantRustyFire");
+        AttackParam(true, 14, "WpnAttackRifleLemantRustyFire");
+        AttackParam(true, 12, "WpnAttackPistolLemantRustyFire");
+        AttackParam(true, 15, "WpnAttackPistolLemantRustyFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolLemantAlpha", "WeaponPistolLemant")
+    {
+        WpnLogicName("WpnLogicPistolLemantAlpha");
+        WpnVisualName("WpnVisualPistolLemantAlpha");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackRifleLemantAlphaFire");
+        AttackParam(false, 14, "WpnAttackRifleLemantAlphaFire");
+        AttackParam(false, 12, "WpnAttackPistolLemantAlphaFire");
+        AttackParam(false, 15, "WpnAttackPistolLemantAlphaFire");
+        AttackParam(true, 11, "WpnAttackRifleLemantAlphaFire");
+        AttackParam(true, 14, "WpnAttackRifleLemantAlphaFire");
+        AttackParam(true, 12, "WpnAttackPistolLemantAlphaFire");
+        AttackParam(true, 15, "WpnAttackPistolLemantAlphaFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolLemantBeta", "WeaponPistolLemant")
+    {
+        WpnLogicName("WpnLogicPistolLemantBeta");
+        WpnVisualName("WpnVisualPistolLemantBeta");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackRifleLemantBetaFire");
+        AttackParam(false, 14, "WpnAttackRifleLemantBetaFire");
+        AttackParam(false, 12, "WpnAttackPistolLemantBetaFire");
+        AttackParam(false, 15, "WpnAttackPistolLemantBetaFire");
+        AttackParam(true, 11, "WpnAttackRifleLemantBetaFire");
+        AttackParam(true, 14, "WpnAttackRifleLemantBetaFire");
+        AttackParam(true, 12, "WpnAttackPistolLemantBetaFire");
+        AttackParam(true, 15, "WpnAttackPistolLemantBetaFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolLemantNet", "WeaponPistolLemant")
+    {
+        WpnLogicName("WpnLogicPistolLemantNet");
+        WpnVisualName("WpnVisualPistolLemantNet");
+        AttackParam(false, 11, "WpnAttackRifleLemantNetFire");
+        AttackParam(false, 14, "WpnAttackRifleLemantNetFire");
+        AttackParam(false, 12, "WpnAttackPistolLemantNetFire");
+        AttackParam(false, 15, "WpnAttackPistolLemantNetFire");
+        AttackParam(true, 11, "WpnAttackRifleLemantNetFire");
+        AttackParam(true, 14, "WpnAttackRifleLemantNetFire");
+        AttackParam(true, 12, "WpnAttackPistolLemantNetFire");
+        AttackParam(true, 15, "WpnAttackPistolLemantNetFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolLemantAlphaNet", "WeaponPistolLemantNet")
+    {
+        WpnVisualName("WpnVisualPistolLemantAlphaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolLemantBetaNet", "WeaponPistolLemantNet")
+    {
+        WpnVisualName("WpnVisualPistolLemantBetaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolPeacemaker", "WeaponPistol")
+    {
+        WpnLogicName("WpnLogicPistolPeacemaker");
+        WpnVisualName("WpnVisualPistolPeacemaker");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolPeacemakerFire");
+        AmmoIdx(0, "WpnAmmoPistolPeacemaker");
+        AttackParam(false, 14, "WpnAttackPistolPeacemakerFire");
+        AttackParam(true, 11, "WpnAttackPistolPeacemakerFire");
+        AttackParam(true, 14, "WpnAttackPistolPeacemakerFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolPeacemakerRusty", "WeaponPistolPeacemaker")
+    {
+        WpnLogicName("WpnLogicPistolPeacemakerRusty");
+        WpnVisualName("WpnVisualPistolPeacemakerRusty");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolPeacemakerRustyFire");
+        AttackParam(false, 14, "WpnAttackPistolPeacemakerRustyFire");
+        AttackParam(true, 11, "WpnAttackPistolPeacemakerRustyFire");
+        AttackParam(true, 14, "WpnAttackPistolPeacemakerRustyFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolPeacemakerAlpha", "WeaponPistolPeacemaker")
+    {
+        WpnLogicName("WpnLogicPistolPeacemakerAlpha");
+        WpnVisualName("WpnVisualPistolPeacemakerAlpha");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolPeacemakerAlphaFire");
+        AttackParam(false, 14, "WpnAttackPistolPeacemakerAlphaFire");
+        AttackParam(true, 11, "WpnAttackPistolPeacemakerAlphaFire");
+        AttackParam(true, 14, "WpnAttackPistolPeacemakerAlphaFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolPeacemakerBeta", "WeaponPistolPeacemaker")
+    {
+        WpnLogicName("WpnLogicPistolPeacemakerBeta");
+        WpnVisualName("WpnVisualPistolPeacemakerBeta");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolPeacemakerBetaFire");
+        AttackParam(false, 14, "WpnAttackPistolPeacemakerBetaFire");
+        AttackParam(true, 11, "WpnAttackPistolPeacemakerBetaFire");
+        AttackParam(true, 14, "WpnAttackPistolPeacemakerBetaFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolPeacemakerNet", "WeaponPistolPeacemaker")
+    {
+        WpnLogicName("WpnLogicPistolPeacemakerNet");
+        WpnVisualName("WpnVisualPistolPeacemakerNet");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolPeacemakerNetFire");
+        AttackParam(false, 14, "WpnAttackPistolPeacemakerNetFire");
+        AttackParam(true, 11, "WpnAttackPistolPeacemakerNetFire");
+        AttackParam(true, 14, "WpnAttackPistolPeacemakerNetFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolPeacemakerAlphaNet", "WeaponPistolPeacemakerNet")
+    {
+        WpnVisualName("WpnVisualPistolPeacemakerAlphaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolPeacemakerBetaNet", "WeaponPistolPeacemakerNet")
+    {
+        WpnVisualName("WpnVisualPistolPeacemakerBetaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolSchofield", "WeaponPistol")
+    {
+        WpnLogicName("WpnLogicPistolSchofield");
+        WpnVisualName("WpnVisualPistolSchofield");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolSchofieldFire");
+        AmmoIdx(0, "WpnAmmoPistolSchofield");
+        AttackParam(false, 14, "WpnAttackPistolSchofieldFire");
+        AttackParam(true, 11, "WpnAttackPistolSchofieldFire");
+        AttackParam(true, 14, "WpnAttackPistolSchofieldFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolSchofieldRusty", "WeaponPistolSchofield")
+    {
+        WpnLogicName("WpnLogicPistolSchofieldRusty");
+        WpnVisualName("WpnVisualPistolSchofieldRusty");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolSchofieldRustyFire");
+        AttackParam(false, 14, "WpnAttackPistolSchofieldRustyFire");
+        AttackParam(true, 11, "WpnAttackPistolSchofieldRustyFire");
+        AttackParam(true, 14, "WpnAttackPistolSchofieldRustyFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolSchofieldAlpha", "WeaponPistolSchofield")
+    {
+        WpnLogicName("WpnLogicPistolSchofieldAlpha");
+        WpnVisualName("WpnVisualPistolSchofieldAlpha");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolSchofieldAlphaFire");
+        AttackParam(false, 14, "WpnAttackPistolSchofieldAlphaFire");
+        AttackParam(true, 11, "WpnAttackPistolSchofieldAlphaFire");
+        AttackParam(true, 14, "WpnAttackPistolSchofieldAlphaFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolSchofieldBeta", "WeaponPistolSchofield")
+    {
+        WpnLogicName("WpnLogicPistolSchofieldBeta");
+        WpnVisualName("WpnVisualPistolSchofieldBeta");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolSchofieldBetaFire");
+        AttackParam(false, 14, "WpnAttackPistolSchofieldBetaFire");
+        AttackParam(true, 11, "WpnAttackPistolSchofieldBetaFire");
+        AttackParam(true, 14, "WpnAttackPistolSchofieldBetaFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolSchofieldNet", "WeaponPistolSchofield")
+    {
+        WpnLogicName("WpnLogicPistolSchofieldNet");
+        WpnVisualName("WpnVisualPistolSchofieldNet");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolSchofieldNetFire");
+        AttackParam(false, 14, "WpnAttackPistolSchofieldNetFire");
+        AttackParam(true, 11, "WpnAttackPistolSchofieldNetFire");
+        AttackParam(true, 14, "WpnAttackPistolSchofieldNetFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolSchofieldAlphaNet", "WeaponPistolSchofieldNet")
+    {
+        WpnVisualName("WpnVisualPistolSchofieldAlphaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolSchofieldBetaNet", "WeaponPistolSchofieldNet")
+    {
+        WpnVisualName("WpnVisualPistolSchofieldBetaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolVolcanic", "WeaponPistol")
+    {
+        WpnLogicName("WpnLogicPistolVolcanic");
+        WpnVisualName("WpnVisualPistolVolcanic");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolVolcanicFire");
+        AmmoIdx(0, "WpnAmmoPistolVolcanic");
+        AttackParam(false, 14, "WpnAttackPistolVolcanicFire");
+        AttackParam(true, 11, "WpnAttackPistolVolcanicFire");
+        AttackParam(true, 14, "WpnAttackPistolVolcanicFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolVolcanicRusty", "WeaponPistolVolcanic")
+    {
+        WpnLogicName("WpnLogicPistolVolcanicRusty");
+        WpnVisualName("WpnVisualPistolVolcanicRusty");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolVolcanicRustyFire");
+        AttackParam(false, 14, "WpnAttackPistolVolcanicRustyFire");
+        AttackParam(true, 11, "WpnAttackPistolVolcanicRustyFire");
+        AttackParam(true, 14, "WpnAttackPistolVolcanicRustyFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolVolcanicAlpha", "WeaponPistolVolcanic")
+    {
+        WpnLogicName("WpnLogicPistolVolcanicAlpha");
+        WpnVisualName("WpnVisualPistolVolcanicAlpha");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolVolcanicAlphaFire");
+        AttackParam(false, 14, "WpnAttackPistolVolcanicAlphaFire");
+        AttackParam(true, 11, "WpnAttackPistolVolcanicAlphaFire");
+        AttackParam(true, 14, "WpnAttackPistolVolcanicAlphaFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolVolcanicBeta", "WeaponPistolVolcanic")
+    {
+        WpnLogicName("WpnLogicPistolVolcanicBeta");
+        WpnVisualName("WpnVisualPistolVolcanicBeta");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolVolcanicBetaFire");
+        AttackParam(false, 14, "WpnAttackPistolVolcanicBetaFire");
+        AttackParam(true, 11, "WpnAttackPistolVolcanicBetaFire");
+        AttackParam(true, 14, "WpnAttackPistolVolcanicBetaFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolVolcanicNet", "WeaponPistolVolcanic")
+    {
+        WpnLogicName("WpnLogicPistolVolcanicNet");
+        WpnVisualName("WpnVisualPistolVolcanicNet");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolVolcanicNetFire");
+        AttackParam(false, 14, "WpnAttackPistolVolcanicNetFire");
+        AttackParam(true, 11, "WpnAttackPistolVolcanicNetFire");
+        AttackParam(true, 14, "WpnAttackPistolVolcanicNetFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolVolcanicAlphaNet", "WeaponPistolVolcanicNet")
+    {
+        WpnVisualName("WpnVisualPistolVolcanicAlphaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolVolcanicBetaNet", "WeaponPistolVolcanicNet")
+    {
+        WpnVisualName("WpnVisualPistolVolcanicBetaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolWalker", "WeaponPistol")
+    {
+        WpnLogicName("WpnLogicPistolWalker");
+        WpnVisualName("WpnVisualPistolWalker");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolWalkerFire");
+        AmmoIdx(0, "WpnAmmoPistolWalker");
+        AttackParam(false, 14, "WpnAttackPistolWalkerFire");
+        AttackParam(true, 11, "WpnAttackPistolWalkerFire");
+        AttackParam(true, 14, "WpnAttackPistolWalkerFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolWalkerRusty", "WeaponPistolWalker")
+    {
+        WpnLogicName("WpnLogicPistolWalkerRusty");
+        WpnVisualName("WpnVisualPistolWalkerRusty");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolWalkerRustyFire");
+        AttackParam(false, 14, "WpnAttackPistolWalkerRustyFire");
+        AttackParam(true, 11, "WpnAttackPistolWalkerRustyFire");
+        AttackParam(true, 14, "WpnAttackPistolWalkerRustyFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolWalkerAlpha", "WeaponPistolWalker")
+    {
+        WpnLogicName("WpnLogicPistolWalkerAlpha");
+        WpnVisualName("WpnVisualPistolWalkerAlpha");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolWalkerAlphaFire");
+        AttackParam(false, 14, "WpnAttackPistolWalkerAlphaFire");
+        AttackParam(true, 11, "WpnAttackPistolWalkerAlphaFire");
+        AttackParam(true, 14, "WpnAttackPistolWalkerAlphaFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolWalkerBeta", "WeaponPistolWalker")
+    {
+        WpnLogicName("WpnLogicPistolWalkerBeta");
+        WpnVisualName("WpnVisualPistolWalkerBeta");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolWalkerBetaFire");
+        AttackParam(false, 14, "WpnAttackPistolWalkerBetaFire");
+        AttackParam(true, 11, "WpnAttackPistolWalkerBetaFire");
+        AttackParam(true, 14, "WpnAttackPistolWalkerBetaFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolWalkerNet", "WeaponPistolWalker")
+    {
+        WpnLogicName("WpnLogicPistolWalkerNet");
+        WpnVisualName("WpnVisualPistolWalkerNet");
+        WpnAIName("WpnAIPistol");
+        AttackParam(false, 11, "WpnAttackPistolWalkerNetFire");
+        AttackParam(false, 14, "WpnAttackPistolWalkerNetFire");
+        AttackParam(true, 11, "WpnAttackPistolWalkerNetFire");
+        AttackParam(true, 14, "WpnAttackPistolWalkerNetFire");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolWalkerAlphaNet", "WeaponPistolWalkerNet")
+    {
+        WpnVisualName("WpnVisualPistolWalkerAlphaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponPistolWalkerBetaNet", "WeaponPistolWalkerNet")
+    {
+        WpnVisualName("WpnVisualPistolWalkerBetaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifle", "WeaponFireAmmo")
+    {
+        WpnLogicName("WpnLogic");
+        WpnVisualName("WpnVisual");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackMelee");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleMusket", "WeaponRifle")
+    {
+        WpnLogicName("WpnLogicRifleMusket");
+        WpnVisualName("WpnVisualRifleMusket");
+        WpnAIName("WpnAIRifleCoJ2Musket");
+        AttackParam(false, 11, "WpnAttackRifleMusketFire");
+        AmmoIdx(0, "WpnAmmoRifleMusket");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleMusketRusty", "WeaponRifleMusket")
+    {
+        WpnVisualName("WpnVisualRifleMusketRusty");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleRemington", "WeaponRifle")
+    {
+        WpnLogicName("WpnLogicRifleRemington");
+        WpnVisualName("WpnVisualRifleRemington");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackShotgunRemingtonFireL");
+        AmmoIdx(0, "WpnAmmoShotgunRemington");
+        AmmoIdx(1, "WpnAmmoShotgunRemington");
+        AttackParam(false, 14, "WpnAttackShotgunRemingtonFireL");
+        AttackParam(false, 12, "WpnAttackShotgunRemingtonFireR");
+        AttackParam(false, 15, "WpnAttackShotgunRemingtonFireR");
+        AttackParam(true, 11, "WpnAttackShotgunRemingtonFireL");
+        AttackParam(true, 14, "WpnAttackShotgunRemingtonFireL");
+        AttackParam(true, 12, "WpnAttackShotgunRemingtonFireR");
+        AttackParam(true, 15, "WpnAttackShotgunRemingtonFireR");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleRemingtonRusty", "WeaponRifleRemington")
+    {
+        WpnLogicName("WpnLogicRifleRemingtonRusty");
+        WpnVisualName("WpnVisualRifleRemingtonRusty");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackShotgunRemingtonRustyFireL");
+        AttackParam(false, 14, "WpnAttackShotgunRemingtonRustyFireL");
+        AttackParam(false, 12, "WpnAttackShotgunRemingtonRustyFireR");
+        AttackParam(false, 15, "WpnAttackShotgunRemingtonRustyFireR");
+        AttackParam(true, 11, "WpnAttackShotgunRemingtonRustyFireL");
+        AttackParam(true, 14, "WpnAttackShotgunRemingtonRustyFireL");
+        AttackParam(true, 12, "WpnAttackShotgunRemingtonRustyFireR");
+        AttackParam(true, 15, "WpnAttackShotgunRemingtonRustyFireR");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleRemingtonAlpha", "WeaponRifleRemington")
+    {
+        WpnLogicName("WpnLogicRifleRemingtonAlpha");
+        WpnVisualName("WpnVisualRifleRemingtonAlpha");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackShotgunRemingtonAlphaFireL");
+        AttackParam(false, 14, "WpnAttackShotgunRemingtonAlphaFireL");
+        AttackParam(false, 12, "WpnAttackShotgunRemingtonAlphaFireR");
+        AttackParam(false, 15, "WpnAttackShotgunRemingtonAlphaFireR");
+        AttackParam(true, 11, "WpnAttackShotgunRemingtonAlphaFireL");
+        AttackParam(true, 14, "WpnAttackShotgunRemingtonAlphaFireL");
+        AttackParam(true, 12, "WpnAttackShotgunRemingtonAlphaFireR");
+        AttackParam(true, 15, "WpnAttackShotgunRemingtonAlphaFireR");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleRemingtonBeta", "WeaponRifleRemington")
+    {
+        WpnLogicName("WpnLogicRifleRemingtonBeta");
+        WpnVisualName("WpnVisualRifleRemingtonBeta");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackShotgunRemingtonBetaFireL");
+        AttackParam(false, 14, "WpnAttackShotgunRemingtonBetaFireL");
+        AttackParam(false, 12, "WpnAttackShotgunRemingtonBetaFireR");
+        AttackParam(false, 15, "WpnAttackShotgunRemingtonBetaFireR");
+        AttackParam(true, 11, "WpnAttackShotgunRemingtonBetaFireL");
+        AttackParam(true, 14, "WpnAttackShotgunRemingtonBetaFireL");
+        AttackParam(true, 12, "WpnAttackShotgunRemingtonBetaFireR");
+        AttackParam(true, 15, "WpnAttackShotgunRemingtonBetaFireR");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleRemingtonNet", "WeaponRifleRemington")
+    {
+        WpnLogicName("WpnLogicRifleRemingtonNet");
+        WpnVisualName("WpnVisualRifleRemingtonNet");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackShotgunRemingtonNetFireL");
+        AttackParam(false, 14, "WpnAttackShotgunRemingtonNetFireL");
+        AttackParam(false, 12, "WpnAttackShotgunRemingtonNetFireR");
+        AttackParam(false, 15, "WpnAttackShotgunRemingtonNetFireR");
+        AttackParam(true, 11, "WpnAttackShotgunRemingtonNetFireL");
+        AttackParam(true, 14, "WpnAttackShotgunRemingtonNetFireL");
+        AttackParam(true, 12, "WpnAttackShotgunRemingtonNetFireR");
+        AttackParam(true, 15, "WpnAttackShotgunRemingtonNetFireR");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleRemingtonAlphaNet", "WeaponRifleRemingtonNet")
+    {
+        WpnVisualName("WpnVisualRifleRemingtonAlphaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleRemingtonBetaNet", "WeaponRifleRemingtonNet")
+    {
+        WpnVisualName("WpnVisualRifleRemingtonBetaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleRemingtonSawOff", "WeaponRifleRemington")
+    {
+        WpnLogicName("WpnLogicRifleRemingtonSawOff");
+        WpnVisualName("WpnVisualRifleRemingtonSawOff");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackShotgunRemingtonSawOffFireL");
+        AmmoIdx(0, "WpnAmmoShotgunRemington");
+        AmmoIdx(1, "WpnAmmoShotgunRemington");
+        AttackParam(false, 14, "WpnAttackShotgunRemingtonSawOffFireL");
+        AttackParam(false, 12, "WpnAttackShotgunRemingtonSawOffFireR");
+        AttackParam(false, 15, "WpnAttackShotgunRemingtonSawOffFireR");
+        AttackParam(true, 11, "WpnAttackShotgunRemingtonSawOffFireL");
+        AttackParam(true, 14, "WpnAttackShotgunRemingtonSawOffFireL");
+        AttackParam(true, 12, "WpnAttackShotgunRemingtonSawOffFireR");
+        AttackParam(true, 15, "WpnAttackShotgunRemingtonSawOffFireR");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleRemingtonSawOffRusty", "WeaponRifleRemingtonSawOff")
+    {
+        WpnLogicName("WpnLogicRifleRemingtonSawOffRusty");
+        WpnVisualName("WpnVisualRifleRemingtonSawOffRusty");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackShotgunRemingtonSawOffRustyFireL");
+        AttackParam(false, 14, "WpnAttackShotgunRemingtonSawOffRustyFireL");
+        AttackParam(false, 12, "WpnAttackShotgunRemingtonSawOffRustyFireR");
+        AttackParam(false, 15, "WpnAttackShotgunRemingtonSawOffRustyFireR");
+        AttackParam(true, 11, "WpnAttackShotgunRemingtonSawOffRustyFireL");
+        AttackParam(true, 14, "WpnAttackShotgunRemingtonSawOffRustyFireL");
+        AttackParam(true, 12, "WpnAttackShotgunRemingtonSawOffRustyFireR");
+        AttackParam(true, 15, "WpnAttackShotgunRemingtonSawOffRustyFireR");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleRemingtonSawOffAlpha", "WeaponRifleRemingtonSawOff")
+    {
+        WpnLogicName("WpnLogicRifleRemingtonSawOffAlpha");
+        WpnVisualName("WpnVisualRifleRemingtonSawOffAlpha");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackShotgunRemingtonSawOffAlphaFireL");
+        AttackParam(false, 14, "WpnAttackShotgunRemingtonSawOffAlphaFireL");
+        AttackParam(false, 12, "WpnAttackShotgunRemingtonSawOffAlphaFireR");
+        AttackParam(false, 15, "WpnAttackShotgunRemingtonSawOffAlphaFireR");
+        AttackParam(true, 11, "WpnAttackShotgunRemingtonSawOffAlphaFireL");
+        AttackParam(true, 14, "WpnAttackShotgunRemingtonSawOffAlphaFireL");
+        AttackParam(true, 12, "WpnAttackShotgunRemingtonSawOffAlphaFireR");
+        AttackParam(true, 15, "WpnAttackShotgunRemingtonSawOffAlphaFireR");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleRemingtonSawOffBeta", "WeaponRifleRemingtonSawOff")
+    {
+        WpnLogicName("WpnLogicRifleRemingtonSawOffBeta");
+        WpnVisualName("WpnVisualRifleRemingtonSawOffBeta");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackShotgunRemingtonSawOffBetaFireL");
+        AttackParam(false, 14, "WpnAttackShotgunRemingtonSawOffBetaFireL");
+        AttackParam(false, 12, "WpnAttackShotgunRemingtonSawOffBetaFireR");
+        AttackParam(false, 15, "WpnAttackShotgunRemingtonSawOffBetaFireR");
+        AttackParam(true, 11, "WpnAttackShotgunRemingtonSawOffBetaFireL");
+        AttackParam(true, 14, "WpnAttackShotgunRemingtonSawOffBetaFireL");
+        AttackParam(true, 12, "WpnAttackShotgunRemingtonSawOffBetaFireR");
+        AttackParam(true, 15, "WpnAttackShotgunRemingtonSawOffBetaFireR");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleRemingtonSawOffNet", "WeaponRifleRemingtonSawOff")
+    {
+        WpnLogicName("WpnLogicRifleRemingtonSawOffNet");
+        WpnVisualName("WpnVisualRifleRemingtonSawOffNet");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackShotgunRemingtonSawOffNetFireL");
+        AttackParam(false, 14, "WpnAttackShotgunRemingtonSawOffNetFireL");
+        AttackParam(false, 12, "WpnAttackShotgunRemingtonSawOffNetFireR");
+        AttackParam(false, 15, "WpnAttackShotgunRemingtonSawOffNetFireR");
+        AttackParam(true, 11, "WpnAttackShotgunRemingtonSawOffNetFireL");
+        AttackParam(true, 14, "WpnAttackShotgunRemingtonSawOffNetFireL");
+        AttackParam(true, 12, "WpnAttackShotgunRemingtonSawOffNetFireR");
+        AttackParam(true, 15, "WpnAttackShotgunRemingtonSawOffNetFireR");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleRemingtonSawOffAlphaNet", "WeaponRifleRemingtonSawOffNet")
+    {
+        WpnVisualName("WpnVisualRifleRemingtonSawOffAlphaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleRemingtonSawOffBetaNet", "WeaponRifleRemingtonSawOffNet")
+    {
+        WpnVisualName("WpnVisualRifleRemingtonSawOffBetaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleSharps", "WeaponRifle")
+    {
+        WpnLogicName("WpnLogicRifleSharps");
+        WpnVisualName("WpnVisualRifleSharps");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackRifleSharpsFire");
+        AmmoIdx(0, "WpnAmmoRifleSharps");
+        AttackParam(false, 14, "WpnAttackRifleSharpsNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleSharpsFire");
+        AttackParam(true, 14, "WpnAttackRifleSharpsNoAmmo");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleSharpsRusty", "WeaponRifleSharps")
+    {
+        WpnLogicName("WpnLogicRifleSharpsRusty");
+        WpnVisualName("WpnVisualRifleSharpsRusty");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackRifleSharpsRustyFire");
+        AttackParam(false, 14, "WpnAttackRifleSharpsNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleSharpsRustyFire");
+        AttackParam(true, 14, "WpnAttackRifleSharpsNoAmmo");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleSharpsAlpha", "WeaponRifleSharps")
+    {
+        WpnLogicName("WpnLogicRifleSharpsAlpha");
+        WpnVisualName("WpnVisualRifleSharpsAlpha");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackRifleSharpsAlphaFire");
+        AttackParam(false, 14, "WpnAttackRifleSharpsNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleSharpsAlphaFire");
+        AttackParam(true, 14, "WpnAttackRifleSharpsNoAmmo");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleSharpsBeta", "WeaponRifleSharps")
+    {
+        WpnLogicName("WpnLogicRifleSharpsBeta");
+        WpnVisualName("WpnVisualRifleSharpsBeta");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackRifleSharpsBetaFire");
+        AttackParam(false, 14, "WpnAttackRifleSharpsNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleSharpsBetaFire");
+        AttackParam(true, 14, "WpnAttackRifleSharpsNoAmmo");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleSharpsNet", "WeaponRifleSharps")
+    {
+        WpnLogicName("WpnLogicRifleSharpsNet");
+        WpnVisualName("WpnVisualRifleSharpsNet");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackRifleSharpsNetFire");
+        AttackParam(false, 14, "WpnAttackRifleSharpsNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleSharpsNetFire");
+        AttackParam(true, 14, "WpnAttackRifleSharpsNoAmmo");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleSharpsAlphaNet", "WeaponRifleSharpsNet")
+    {
+        WpnVisualName("WpnVisualRifleSharpsAlphaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleSharpsBetaNet", "WeaponRifleSharpsNet")
+    {
+        WpnVisualName("WpnVisualRifleSharpsBetaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleSharpsScope", "WeaponRifleSharps")
+    {
+        WpnLogicName("WpnLogicRifleSharpsScope");
+        WpnVisualName("WpnVisualRifleSharpsScope");
+        WpnAIName("WpnAIRifleCoJ2SharpsScope");
+        AttackParam(false, 11, "WpnAttackRifleSharpsScopeFire");
+        AmmoIdx(0, "WpnAmmoRifleSharps");
+        AttackParam(false, 14, "WpnAttackRifleSharpsScopeNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleSharpsScopeFireAlt");
+        AttackParam(true, 14, "WpnAttackRifleSharpsScopeNoAmmo");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleSharpsScopeRusty", "WeaponRifleSharpsScope")
+    {
+        WpnLogicName("WpnLogicRifleSharpsScopeRusty");
+        WpnVisualName("WpnVisualRifleSharpsScopeRusty");
+        WpnAIName("WpnAIRifleCoJ2SharpsScope");
+        AttackParam(false, 11, "WpnAttackRifleSharpsScopeRustyFire");
+        AttackParam(false, 14, "WpnAttackRifleSharpsScopeNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleSharpsScopeRustyFireAlt");
+        AttackParam(true, 14, "WpnAttackRifleSharpsScopeNoAmmo");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleSharpsScopeAlpha", "WeaponRifleSharpsScope")
+    {
+        WpnLogicName("WpnLogicRifleSharpsScopeAlpha");
+        WpnVisualName("WpnVisualRifleSharpsScopeAlpha");
+        WpnAIName("WpnAIRifleCoJ2SharpsScope");
+        AttackParam(false, 11, "WpnAttackRifleSharpsScopeAlphaFire");
+        AttackParam(false, 14, "WpnAttackRifleSharpsScopeNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleSharpsScopeAlphaFireAlt");
+        AttackParam(true, 14, "WpnAttackRifleSharpsScopeNoAmmo");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleSharpsScopeBeta", "WeaponRifleSharpsScope")
+    {
+        WpnLogicName("WpnLogicRifleSharpsScopeBeta");
+        WpnVisualName("WpnVisualRifleSharpsScopeBeta");
+        WpnAIName("WpnAIRifleCoJ2SharpsScope");
+        AttackParam(false, 11, "WpnAttackRifleSharpsScopeBetaFire");
+        AttackParam(false, 14, "WpnAttackRifleSharpsScopeNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleSharpsScopeBetaFireAlt");
+        AttackParam(true, 14, "WpnAttackRifleSharpsScopeNoAmmo");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleSharpsScopeNet", "WeaponRifleSharpsScope")
+    {
+        WpnLogicName("WpnLogicRifleSharpsScopeNet");
+        WpnVisualName("WpnVisualRifleSharpsScopeNet");
+        WpnAIName("WpnAIRifleCoJ2SharpsScope");
+        AttackParam(false, 11, "WpnAttackRifleSharpsScopeNetFire");
+        AttackParam(false, 14, "WpnAttackRifleSharpsScopeNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleSharpsScopeNetFireAlt");
+        AttackParam(true, 14, "WpnAttackRifleSharpsScopeNoAmmo");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleSharpsScopeAlphaNet", "WeaponRifleSharpsScopeNet")
+    {
+        WpnVisualName("WpnVisualRifleSharpsScopeAlphaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleSharpsScopeBetaNet", "WeaponRifleSharpsScopeNet")
+    {
+        WpnVisualName("WpnVisualRifleSharpsScopeBetaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleWinchester", "WeaponRifle")
+    {
+        WpnLogicName("WpnLogicRifleWinchester");
+        WpnVisualName("WpnVisualRifleWinchester");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackRifleWinchesterFire");
+        AmmoIdx(0, "WpnAmmoRifleWinchester");
+        AttackParam(false, 14, "WpnAttackRifleWinchesterNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleWinchesterFire");
+        AttackParam(true, 14, "WpnAttackRifleWinchesterNoAmmo");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleWinchesterRusty", "WeaponRifleWinchester")
+    {
+        WpnLogicName("WpnLogicRifleWinchesterRusty");
+        WpnVisualName("WpnVisualRifleWinchesterRusty");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackRifleWinchesterRustyFire");
+        AttackParam(false, 14, "WpnAttackRifleWinchesterNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleWinchesterRustyFire");
+        AttackParam(true, 14, "WpnAttackRifleWinchesterNoAmmo");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleWinchesterIndian", "WeaponRifleWinchesterRusty")
+    {
+        WpnAIName("WpnAIRifleCoJ2Indian");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleWinchesterAlpha", "WeaponRifleWinchester")
+    {
+        WpnLogicName("WpnLogicRifleWinchesterAlpha");
+        WpnVisualName("WpnVisualRifleWinchesterAlpha");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackRifleWinchesterAlphaFire");
+        AttackParam(false, 14, "WpnAttackRifleWinchesterNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleWinchesterAlphaFire");
+        AttackParam(true, 14, "WpnAttackRifleWinchesterNoAmmo");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleWinchesterBeta", "WeaponRifleWinchester")
+    {
+        WpnLogicName("WpnLogicRifleWinchesterBeta");
+        WpnVisualName("WpnVisualRifleWinchesterBeta");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackRifleWinchesterBetaFire");
+        AttackParam(false, 14, "WpnAttackRifleWinchesterNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleWinchesterBetaFire");
+        AttackParam(true, 14, "WpnAttackRifleWinchesterNoAmmo");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleWinchesterNet", "WeaponRifleWinchester")
+    {
+        WpnLogicName("WpnLogicRifleWinchesterNet");
+        WpnVisualName("WpnVisualRifleWinchesterNet");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackRifleWinchesterNetFire");
+        AttackParam(false, 14, "WpnAttackRifleWinchesterNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleWinchesterNetFire");
+        AttackParam(true, 14, "WpnAttackRifleWinchesterNoAmmo");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleWinchesterAlphaNet", "WeaponRifleWinchesterNet")
+    {
+        WpnVisualName("WpnVisualRifleWinchesterAlphaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleWinchesterBetaNet", "WeaponRifleWinchesterNet")
+    {
+        WpnVisualName("WpnVisualRifleWinchesterBetaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleWinchesterScope", "WeaponRifleWinchester")
+    {
+        WpnLogicName("WpnLogicRifleWinchesterScope");
+        WpnVisualName("WpnVisualRifleWinchesterScope");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackRifleWinchesterScopeFire");
+        AmmoIdx(0, "WpnAmmoRifleWinchester");
+        AttackParam(true, 14, "WpnAttackRifleWinchesterScopeNoAmmo");
+        AttackParam(false, 14, "WpnAttackRifleWinchesterScopeNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleWinchesterScopeFireAlt");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleWinchesterScopeRusty", "WeaponRifleWinchesterScope")
+    {
+        WpnLogicName("WpnLogicRifleWinchesterScopeRusty");
+        WpnVisualName("WpnVisualRifleWinchesterScopeRusty");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackRifleWinchesterScopeRustyFire");
+        AttackParam(true, 14, "WpnAttackRifleWinchesterScopeNoAmmo");
+        AttackParam(false, 14, "WpnAttackRifleWinchesterScopeNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleWinchesterScopeRustyFireAlt");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleWinchesterScopeAlpha", "WeaponRifleWinchesterScope")
+    {
+        WpnLogicName("WpnLogicRifleWinchesterScopeAlpha");
+        WpnVisualName("WpnVisualRifleWinchesterScopeAlpha");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackRifleWinchesterScopeAlphaFire");
+        AttackParam(true, 14, "WpnAttackRifleWinchesterScopeNoAmmo");
+        AttackParam(false, 14, "WpnAttackRifleWinchesterScopeNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleWinchesterScopeAlphaFireAlt");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleWinchesterScopeBeta", "WeaponRifleWinchesterScope")
+    {
+        WpnLogicName("WpnLogicRifleWinchesterScopeBeta");
+        WpnVisualName("WpnVisualRifleWinchesterScopeBeta");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackRifleWinchesterScopeBetaFire");
+        AttackParam(true, 14, "WpnAttackRifleWinchesterScopeNoAmmo");
+        AttackParam(false, 14, "WpnAttackRifleWinchesterScopeNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleWinchesterScopeBetaFireAlt");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleWinchesterScopeNet", "WeaponRifleWinchesterScope")
+    {
+        WpnLogicName("WpnLogicRifleWinchesterScopeNet");
+        WpnVisualName("WpnVisualRifleWinchesterScopeNet");
+        WpnAIName("WpnAIRifleCoJ2");
+        AttackParam(false, 11, "WpnAttackRifleWinchesterScopeNetFire");
+        AttackParam(true, 14, "WpnAttackRifleWinchesterScopeNoAmmo");
+        AttackParam(false, 14, "WpnAttackRifleWinchesterScopeNoAmmo");
+        AttackParam(true, 11, "WpnAttackRifleWinchesterScopeNetFireAlt");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleWinchesterScopeAlphaNet", "WeaponRifleWinchesterScopeNet")
+    {
+        WpnVisualName("WpnVisualRifleWinchesterScopeAlphaNet");
+    }
+
+    Weapon("WeaponFireAmmo", "WeaponRifleWinchesterScopeBetaNet", "WeaponRifleWinchesterScopeNet")
+    {
+        WpnVisualName("WpnVisualRifleWinchesterScopeBetaNet");
+    }
+
+    Weapon("WeaponHands", "WeaponHands", "WeaponMelee")
+    {
+        WpnLogicName("WpnLogicHands");
+        WpnVisualName("WpnVisualHands");
+        WpnAIName("WpnAI");
+        AttackParam(false, 2, "WpnAttackHandsMelee2");
+        AttackParam(false, 1, "WpnAttackHandsMelee1");
+        AttackParam(false, 0, "WpnAttackHandsMelee0");
+    }
+
+    Weapon("WeaponKnife", "WeaponKnife", "WeaponMelee")
+    {
+        WpnLogicName("WpnLogicKnife");
+        WpnVisualName("WpnVisualKnife");
+        WpnAIName("WpnAIKnife");
+        AttackParam(true, 17, "WpnAttackKnifeThrow");
+        AttackParam(false, 17, "WpnAttackKnifeThrow");
+    }
+
+    Weapon("WeaponLasso", "WeaponLasso", "WeaponFire")
+    {
+        WpnLogicName("WpnLogicLasso");
+        WpnVisualName("WpnVisualLasso");
+        WpnAIName("WpnAI");
+        AttackParam(false, 11, "WpnAttackLassoFire");
+        AttackParam(true, 22, "WpnAttackLassoShorten");
+        AttackParam(true, 21, "WpnAttackLassoDragOut");
+        AttackParam(true, 20, "WpnAttackLassoDragIn");
+        AttackParam(false, 17, "WpnAttackLassoFire");
+    }
+
+    Weapon("WeaponMelee", "WeaponMelee", "WeaponThrow")
+    {
+        WpnLogicName("WpnLogic");
+        WpnVisualName("WpnVisual");
+        WpnAIName("WpnAI");
+        AttackParam(false, 11, "WpnAttackMelee");
+    }
+
+    Weapon("WeaponOld", "WeaponOld", "WeaponFire")
+    {
+        WpnLogicName("WpnLogic");
+        WpnVisualName("WpnVisual");
+        WpnAIName("WpnAI");
+        AttackParam(false, 11, "WpnAttackMelee");
+    }
+
+    Weapon("WeaponStationary", "WeaponStationary", "WeaponFireAmmo")
+    {
+        WpnLogicName("WpnLogicStationary");
+        WpnVisualName("WpnVisualStationary");
+        WpnAIName("WpnAIStationary");
+        AttackParam(false, 11, "WpnAttackStationaryFire");
+        AmmoIdx(0, "WpnAmmoStationary");
+        AttackParam(true, 14, "WpnAttackStationaryFireAlt");
+        AttackParam(false, 14, "WpnAttackStationaryFire");
+        AttackParam(true, 11, "WpnAttackStationaryFireAlt");
+    }
+
+    Weapon("WeaponStationary", "WeaponGatling", "WeaponStationary")
+    {
+        WpnLogicName("WpnLogicGatling");
+        WpnVisualName("WpnVisualGatling");
+        WpnAIName("WpnAIGatling");
+        AttackParam(false, 11, "WpnAttackGatlingMovableFire");
+        AmmoIdx(0, "WpnAmmoStationary");
+        AttackParam(true, 14, "WpnAttackGatlingMovableFire");
+        AttackParam(false, 14, "WpnAttackGatlingMovableFire");
+        AttackParam(true, 11, "WpnAttackGatlingMovableFire");
+    }
+
+    Weapon("WeaponStationary", "WeaponGatlingPlayer", "WeaponGatling")
+    {
+        WpnVisualName("WpnVisualGatlingPlayer");
+        AmmoIdx(0, "WpnAmmoStationaryPlayer");
+    }
+
+    Weapon("WeaponWhip", "WeaponWhip", "WeaponMelee")
+    {
+        WpnLogicName("WpnLogicWhip");
+        WpnVisualName("WpnVisualWhip");
+        WpnAIName("WpnAI");
+        AttackParam(true, 0, "WpnAttackWhip");
+    }
+
+    Weapon("WeaponBullet", "BlackPowderCannonController", "WeaponBullet")
+    {
+        WpnLogicName("WpnLogicBlackPowderCannon");
+        WpnVisualName("WpnVisual");
+        WpnAIName("WpnAI");
+        AttackParam(false, 11, "WpnAttackBlackPowderCannonFire");
+    }
+
+    Weapon("Lamp", "Lamp", "WeaponThrow")
+    {
+        WpnLogicName("WpnLogicLamp");
+        WpnVisualName("WpnVisualLamp");
+        WpnAIName("WpnAI");
+        AttackParam(false, 17, "WpnAttackLampThrow");
+    }
+
+   call ParamsToOverwrite();
+}
