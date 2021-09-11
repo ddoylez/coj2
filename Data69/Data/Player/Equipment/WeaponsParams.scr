@@ -2173,6 +2173,7 @@ sub main()
         FirePowerInfo(9);
         RateOfFireInfo(2);
         RateOfReloadInfo(6);
+		AccuracyInfo(10);
         NoAmmoSkin("NoArrow");
         NoAmmoHandSkin("NoArrow");
         AmmoSkin("NoArrow");

@@ -1,0 +1,3 @@
+!include("DebugConf.def")
+NoLogos()
+
