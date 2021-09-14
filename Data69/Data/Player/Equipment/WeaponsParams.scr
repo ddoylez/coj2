@@ -666,8 +666,8 @@ sub main()
 
     Param("WpnAttackFire", "WpnAttackBowNetFireAlt", "WpnAttackBowFireAlt")
     {
-        Damage(210.0);
-        MinDamage(105.0000);
+        Damage(230.0);
+        MinDamage(115.0000);
         Accuracy(0.0000);
         AccuracyRecoilChange(0.0000);
         Range(10800.0000);
@@ -1471,7 +1471,7 @@ sub main()
         MinDamage(35.0000);
         Accuracy(0.0000);
         AccuracyRecoilChange(10.0000);
-        Range(1800.0000);
+        Range(1500.0000);
         RangeMaxDamage(600.0000);
         RangeMinDamage(900.0000);
         Spread(10.0000);
