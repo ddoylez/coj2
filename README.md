@@ -14,14 +14,15 @@ Copy Data69.pak and Speech69.pak into ...steamapps/common/Call of Juarez 2 - Bou
   - Dynamite sounds
   - more
 - Most class names
+- Weapons
+  - Sawn-Off Maximum Range+
+  - Sawn-Off Minimum Damage--
+  - Drawn Bow Damage+
 - Gunslinger
   - Damage Multipler+
   - Health-
   - Movement Speed+
   - Quickshooter Accuracy+
-- Hombre
-  - Sawn-Off Maximum Range++
-  - Sawn-Off Minimum Damage--
 - Spy
   - Loadout
   - Health----
