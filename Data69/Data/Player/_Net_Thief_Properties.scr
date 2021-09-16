@@ -30,5 +30,5 @@ CanKick(false)
 CanSprint(true)
 
 Cash(45000)
-Name("Al-Qaeda")
+Name("The Talibum")
 FlavourText("&NET_Thief_Desc&")
