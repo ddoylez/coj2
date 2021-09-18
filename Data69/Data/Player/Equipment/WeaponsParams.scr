@@ -2489,24 +2489,27 @@ sub main()
     Param("WpnVisual", "WpnVisualPistolFrontierNet", "WpnVisualPistolFrontier")
     {
         QualityIcon(0);
+        FirePowerInfo(3);
+        RateOfFireInfo(7);
+        RateOfReloadInfo(10);
     }
 
     Param("WpnVisual", "WpnVisualPistolFrontierAlphaNet", "WpnVisualPistolFrontierNet")
     {
         QualityIcon(2);
-        NoAmmoSkin("Grand");
-        NoAmmoHandSkin("Grand");
-        AmmoSkin("Grand");
-        AmmoHandSkin("Grand");
+        //NoAmmoSkin("Grand");
+        //NoAmmoHandSkin("Grand");
+        //AmmoSkin("Grand");
+        //AmmoHandSkin("Grand");
     }
 
     Param("WpnVisual", "WpnVisualPistolFrontierBetaNet", "WpnVisualPistolFrontierNet")
     {
         QualityIcon(3);
-        NoAmmoSkin("Superb");
-        NoAmmoHandSkin("Superb");
-        AmmoSkin("Superb");
-        AmmoHandSkin("Superb");
+        //NoAmmoSkin("Superb");
+        //NoAmmoHandSkin("Superb");
+        //AmmoSkin("Superb");
+        //AmmoHandSkin("Superb");
     }
 
     Param("WpnVisual", "WpnVisualPistolLemant", "WpnVisualPistol")
