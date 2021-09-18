@@ -18,6 +18,7 @@ Copy Data69.pak and Speech69.pak into ...steamapps/common/Call of Juarez 2 - Bou
   - Sawn-Off Maximum Range+
   - Sawn-Off Minimum Damage--
   - Drawn Bow Damage+
+  - Rifle Scoped Minimum Damage++
 - Gunslinger
   - Damage Multipler+
   - Health-
