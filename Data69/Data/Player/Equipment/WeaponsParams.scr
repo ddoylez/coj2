@@ -1749,7 +1749,7 @@ sub main()
     Param("WpnAttackFire", "WpnAttackRifleWinchesterScopeNetFireAlt", "WpnAttackRifleWinchesterScopeFireAlt")
     {
         Damage(150.0000);
-        MinDamage(110.0000);
+        MinDamage(150.0000);
         Accuracy(6.0);
         AccuracyRecoilChange(9.0000);
         Range(13500.0000);
