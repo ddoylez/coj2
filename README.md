@@ -4,6 +4,7 @@ Locale pack 69 for a customized cancerous multiplayer experience.
 ## How to Install
 Replace ...steamapps/common/Call of Juarez 2 - Bound in Blood/CoJ2/Data/Game.ini with Data/Game.ini
 Add Data/debugconf.scr alongside Data/Game.ini to allow joining of fake LAN games.
+
 Copy Data69.pak and Speech69.pak into ...steamapps/common/Call of Juarez 2 - Bound in Blood/CoJ2
 
 ## How to Join
