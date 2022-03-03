@@ -10,6 +10,7 @@ CUSTOM_MAPS = [('somerton', 'Somerton'), ('pancho', 'Pancho'), ('new_bouquet', '
                ('cursed_land', 'Cursed_land'), ('last_bullet_rebirth', 'N/A')]
 MODES = [('historical', 'Wild West Legends'), ('deathmatch', 'Shootout'), ('teamdeathmatch', 'Posse'),
          ('wanted', 'Wanted'), ('teamwanted', 'Manhunt')]
+DEFAULT_SERVER_NAME = 'Krampus in da House'
 OUTPUT_FILE = 'DedicatedServerSettings.ini'
 
 
@@ -22,36 +23,41 @@ def strip_arr(arr, pos):
 
 def get_parser(version='0.69'):
     parser = argparse.ArgumentParser(description='Generate a DedicatedServerSettings.ini for CoJ2')
-    parser.add_argument('--internet_server', dest='internet_server', type=int, default=0, choices=[0, 1],
-                        help='1 means internet server, 0 means LAN server')
-    parser.add_argument('--public_slots', dest='public_slots', type=int, default=12,
+    parser.add_argument('-i', '--internet-server', dest='internet_server', type=int, default=0, choices=[0, 1],
+                        help='LAN = 0, Internet = 1, 0 by default')
+    parser.add_argument('-ps', '--public-slots', dest='public_slots', type=int, default=12,
                         help='number of public slots (max players), 12 by default')
-    parser.add_argument('--players_to_start', dest='players_to_start', type=int, default=1,
+    parser.add_argument('-p2s', '--players-to-start', dest='players_to_start', type=int, default=1,
                         help='minimum number of players for the game to begin, 1 by default')
-    parser.add_argument('--points_limit_default', dest='points_limit_default', type=int, default=10,
-                        help='target number of points for the game to end (for "teamwanted" only)')
-    parser.add_argument('--bounty_limit_default', dest='bounty_limit_default', type=int, default=1000,
-                        help='target of bounty for the game to end (for "wanted", "deathmatch", "teamdeathmatch" only)')
-    parser.add_argument('--time_limit_default', dest='time_limit_default', type=int, default=1200,
-                        help='map time limit in seconds (for "teamwanted", "wanted", "deathmatch", "teamdeathmatch" only)')
-    parser.add_argument('--points_limit', dest='points_limit', type=int,
-                        help='target number of points for the game to end in game mode s (for "teamwanted" only)')
-    parser.add_argument('--bounty_limit', dest='bounty_limit', type=int,
-                        help='target of bounty for the game to end in game modes (for "wanted", "deathmatch", "teamdeathmatch" only)')
-    parser.add_argument('--time_limit', dest='time_limit', type=int,
-                        help='map time limit in seconds in game mode s (for "teamwanted", "wanted", "deathmatch", "teamdeathmatch" only)')
-    parser.add_argument('--friendly_fire', dest='friendly_fire', type=int, default=1, choices=[0, 1],
-                        help='1 = friendly fire is on 0 = friendly fire is off')
-    parser.add_argument('--server_name', dest='server_name', default='Krampus in da House',
+    parser.add_argument('--points-limit-default', dest='points_limit_default', type=int, default=10,
+                        help='target number of points for the game to end for teamwanted')
+    parser.add_argument('--bounty-limit-default', dest='bounty_limit_default', type=int, default=1000,
+                        help='target of bounty for the game to end for applicable modes')
+    parser.add_argument('--time-limit-default', dest='time_limit_default', type=int, default=1200,
+                        help='map time limit in seconds for applicable modes')
+    parser.add_argument('-p', '--points-limit', dest='points_limit', type=int,
+                        help='target number of points for the game to end in teamwanted')
+    parser.add_argument('-b', '--bounty-limit', dest='bounty_limit', type=int,
+                        help='target of bounty for the game to end for applicable modes')
+    parser.add_argument('-t', '--time-limit', dest='time_limit', type=int,
+                        help='map time limit in seconds in for applicable modes')
+    parser.add_argument('-ff', '--friendly-fire', dest='friendly_fire', type=int, default=1, choices=[0, 1],
+                        help='Off = 0, On = 1, 1 by default')
+    parser.add_argument('-name', '--server-name', dest='server_name', default=DEFAULT_SERVER_NAME,
                         help='server name visible on the server list')
-    parser.add_argument('--server_password', dest='server_password', default='',
-                        help='password for starting the server - should be defined to prevent other servers from using the same name')
-    parser.add_argument('--server_port', dest='server_port', type=int, default=27632,
-                        help='port the server is running on')
-    parser.add_argument('--mode', dest='mode', default='deathmatch', choices=strip_arr(MODES, 0), help='')
-    parser.add_argument('--use_custom_maps', dest='use_custom_maps', default=False,
-                        action=argparse.BooleanOptionalAction, help='')
-    parser.add_argument('--version', action='version', version='%(prog)s v{}'.format(version))
+    parser.add_argument('-pass', '--server-password', dest='server_password', default='',
+                        help='password for starting the server')
+    parser.add_argument('-port', '--server-port', dest='server_port', type=int, default=27632,
+                        help='port the server is running on, 27632 by default')
+    parser.add_argument('-m', '--mode', dest='modes', action='append', default=['deathmatch'],
+                        choices=[mode[0] for mode in MODES], help='can specify multiple times, deathmatch by default')
+    parser.add_argument('-l', '--map-limit', dest='map_limit', type=int, default=None,
+                        help='limit how many "Map" entries are made, unlimited by default')
+    parser.add_argument('-c', '--custom-maps', dest='custom_maps', default=False,
+                        action=argparse.BooleanOptionalAction, help='adds custom maps into selection pool')
+    parser.add_argument('-o', '--output-file', dest='output_file', default=OUTPUT_FILE,
+                        help='file to write settings to')
+    parser.add_argument('-v', '--version', action='version', version='%(prog)s v{}'.format(version))
     return parser
 
 
@@ -79,57 +85,97 @@ def i_setting(name, i):
     return setting
 
 
-def generate_server(args, file):
-    file.write(s_setting('ServerName', args.server_name))
-    file.write(s_setting('ServerPassword', args.server_password))
-    file.write(i_setting('ServerPort', args.server_port))
-    file.write('\n')
-    file.write(i_setting('InternetServer', args.internet_server))
-    file.write(i_setting('FriendlyFire', args.friendly_fire))
-    file.write(i_setting('PublicSlots', args.public_slots))
-    file.write(i_setting('PlayersToStart', args.players_to_start))
-    file.write('\n')
-    file.write(i_setting('PointsLimitDefault', args.points_limit_default))
-    file.write(i_setting('BountyLimitDefault', args.bounty_limit_default))
-    file.write(i_setting('TimeLimitDefault', args.time_limit_default))
-    file.write('\n')
+def generate_server(server_name, server_password, server_port, internet_server, friendly_fire, public_slots,
+                    players_to_start, points_limit_default, bounty_limit_default, time_limit_default):
+    settings = [s_setting('ServerName', server_name), s_setting('ServerPassword', server_password),
+                i_setting('ServerPort', server_port), '\n', i_setting('InternetServer', internet_server),
+                i_setting('FriendlyFire', friendly_fire), i_setting('PublicSlots', public_slots),
+                i_setting('PlayersToStart', players_to_start), '\n',
+                i_setting('PointsLimitDefault', points_limit_default),
+                i_setting('BountyLimitDefault', bounty_limit_default),
+                i_setting('TimeLimitDefault', time_limit_default), '\n']
+    return settings
 
 
-def generate_mode(args, file):
-    if args.mode != 'historical':
-        if args.mode == 'teamwanted':
-            if args.points_limit:
-                file.write(si_setting('PointsLimit', args.mode, args.points_limit))
-        else:
-            if args.bounty_limit:
-                file.write(si_setting('BountyLimit', args.mode, args.bounty_limit))
-        if args.time_limit:
-            file.write(si_setting('TimeLimit', args.mode, args.time_limit))
+def get_map_pool(use_custom_maps):
+    map_pool = [level[0] for level in MAPS]
+    if use_custom_maps:
+        map_pool.extend([level[0] for level in CUSTOM_MAPS])
+    return map_pool
 
 
-def generate_levels(args, file):
-    map_list = MAPS
-    if args.use_custom_maps:
-        for level in CUSTOM_MAPS:
-            map_list.append(level)
+def get_mode_pool(modes):
+    mode_pool = []
+    for mode in modes:
+        if mode not in mode_pool:
+            mode_pool.append(mode)
+    return mode_pool
+
+
+def generate_map_tuples(map_pool, mode_pool):
+    map_tuples = []
+    for mode in mode_pool:
+        for level in map_pool:
+            map_tuples.append((level, mode))
+    return map_tuples
+
+
+def generate_mode(args, modes):
+    settings = []
+    for mode in modes:
+        if mode != 'historical':
+            if mode == 'teamwanted':
+                if args.points_limit:
+                    settings.append(si_setting('PointsLimit', mode, args.points_limit))
+            else:
+                if args.bounty_limit:
+                    settings.append(si_setting('BountyLimit', mode, args.bounty_limit))
+            if args.time_limit:
+                settings.append(si_setting('TimeLimit', mode, args.time_limit))
+    return settings
+
+
+def generate_levels(map_tuples, limit):
+    settings = []
     random.seed()
-    random.shuffle(map_list)
-    for level in map_list:
-        file.write(ss_setting('Map', level[0], args.mode))
+    random.shuffle(map_tuples)
+    for level in map_tuples[:limit]:
+        settings.append(ss_setting('Map', level[0], level[1]))
+    return settings
 
 
 def generate_file(args):
-    out_file = open(OUTPUT_FILE, 'w')
-    generate_server(args, out_file)
-    generate_mode(args, out_file)
-    generate_levels(args, out_file)
-    out_file.close()
+    settings = []
+    settings.extend(generate_server(args.server_name, args.server_password, args.server_port, args.internet_server,
+                                    args.friendly_fire,
+                                    args.public_slots, args.players_to_start, args.points_limit_default,
+                                    args.bounty_limit_default,
+                                    args.time_limit_default))
+    map_pool = get_map_pool(args.custom_maps)
+    mode_pool = get_mode_pool(args.modes)
+    map_tuples = generate_map_tuples(map_pool, mode_pool)
+    settings.extend(generate_mode(args, map_tuples))
+    settings.extend(generate_levels(map_tuples, args.map_limit))
+    return settings
+
+
+def print_settings(settings):
+    for line in settings:
+        print(line, end='')
+
+
+def write_settings(settings, file_name):
+    with open(file_name, 'w') as file:
+        for line in settings:
+            file.write(line)
 
 
 def main():
     parser = get_parser()
     args = parse_args(parser)
-    generate_file(args)
+    settings = generate_file(args)
+    print_settings(settings)
+    write_settings(settings, args.output_file)
 
 
 if __name__ == "__main__":
