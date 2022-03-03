@@ -8,7 +8,7 @@ Locale pack 69 for a customized cancerous multiplayer experience.
 
 ## How to Join
 Add '-join ip:port' to your launch options (either on the shortcut or through Steam)
-  where ip is the IP Address of the server (DNS names do not work)
+  where ip is the IP Address of the server ('localhost' does not work)
   and port is the port it is running on (default is 27632)
 
 You will automatically connect to the server on launch if it is running. Otherwise nothing happens and you can play normally.

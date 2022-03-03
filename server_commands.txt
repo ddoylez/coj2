@@ -1,6 +1,7 @@
 IV: CONSOLE COMMANDS
 
-Most console commands are only available for the administrator of the dedicated server. You can set administrator login and password in \CoJ2\ServerAdmins.ini by adding a line at the end of the file:
+Most console commands are only available for the administrator of the dedicated server.
+You can set administrator login and password in \CoJ2\ServerAdmins.ini by adding a line at the end of the file:
 These commands can be typed in the console window. Some of them work in the chat window in the game as well.
 
 Example:
