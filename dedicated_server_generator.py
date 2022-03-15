@@ -6,7 +6,7 @@ MODES = [('historical', 'Wild West Legends'), ('deathmatch', 'Shootout'), ('team
          ('wanted', 'Wanted'), ('teamwanted', 'Manhunt')]
 DEFAULT_SERVER_NAME = 'Krampus in da House'
 OUTPUT_FILE = 'DedicatedServerSettings.ini'
-MAP_DEF_FILE = 'maps_def_mappings.json'
+MAP_DEF_FILE = 'maps_def.json'
 with open(MAP_DEF_FILE, 'r') as f:
     MAPS_DICT = json.load(f)
 
