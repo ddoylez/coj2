@@ -8,16 +8,6 @@ Locale pack 69 for a customized cancerous multiplayer experience.
 2. Add Data/debugconf.scr alongside Data/Game.ini to allow joining of fake LAN games.
 3. Copy Data69.pak and Speech69.pak into ...steamapps/common/Call of Juarez 2 - Bound in Blood/CoJ2
 
-## How to Install Custom Maps
-
-A functional copy of all custom maps can be
-found [here](https://drive.google.com/file/d/12HkWfwv-7gAKSQzIHQFQ3hJN3iJkNIVp/view?usp=sharing).
-
-1. Find .../Documents/Call of Juarez - Bound in Blood/
-2. Extract data from coj2_custom_maps.zip into the above folder
-3. Make sure you have data/characters, data/creatures, and data/mapsnet in .../Documents/Call of Juarez - Bound in
-   Blood/
-
 ## How to Join
 
 Add '-join ip:port' to your launch options (either on the shortcut or through Steam)

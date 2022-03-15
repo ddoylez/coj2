@@ -1,27 +1,14 @@
 import argparse
+import json
 import random
 
-MAPS = [('Adobes', 'Taos Pueblo'), ('Civil', 'Burnside\'s Bridge'), ('Coffeyville', 'Coffeyville'),
-        ('Frisco', 'Frisco'), ('Magnificent', 'Magnificent'), ('PrisonBreak2', 'Nogales'),
-        ('StrinkingSprings2', 'Stinking Springs'), ('Tombstone', 'Tombstone')]
-DLC_MAPS = [('Klondike', 'Vulture Mine'), ('Liberate', 'Fort Smith'), ('LittleBigHorn', 'Little Bighorn'),
-            ('PrisonCamp', 'Elmira Prison Camp')]
-CUSTOM_MAPS = [('somerton', 'Somerton'), ('pancho', 'Pancho'), ('new_bouquet', 'New Bouquet'),
-               ('calico_ghost_town2', 'Bandits Secret Hideout'), ('calico_ghost_town', 'Calico Ghost Town'),
-               ('little_canyon', 'Little_Canyon'), ('green_hell', 'Green_Hell'), ('enclosure', 'Enclosure'),
-               ('cursed_land', 'Cursed_land'), ('last_bullet_rebirth', 'Last bullet rebirth')]
-HEAVEN_CUSTOM_MAPS = [('tombstone3', 'Tombstone II'), ('tombstone_1888', 'Redemption'), ('pancho', 'PanchoVille'),
-                      ('okcorral', 'OK Corral'), ('mexico_1888', 'Mexico'), ('main_street', 'Main Street'),
-                      ('magnificent3', 'Magnificent II'), ('last_bullet_rebirth', 'Grand Canyon'), ('kabul', 'Kabul'),
-                      ('highnoon', 'HighNoon'), ('high_moon', 'HighMoon'), ('helldorado', 'Helldorado'),
-                      ('goldrush_1880', 'RedRiver'), ('ghost_town', 'Ghost Town'),
-                      ('fiesta_mexicana', 'Fiesta Mexicana'), ('dedham', 'Dedham'), ('deadwood_city', 'Deadwood City'),
-                      ('crashland', 'Crashland'), ('combustion', 'Combustion'), ('bankrobbery', 'BankRobbery'),
-                      ('bandidos', 'Bandidos'), ('backstreet', 'BackStreet')]
 MODES = [('historical', 'Wild West Legends'), ('deathmatch', 'Shootout'), ('teamdeathmatch', 'Posse'),
          ('wanted', 'Wanted'), ('teamwanted', 'Manhunt')]
 DEFAULT_SERVER_NAME = 'Krampus in da House'
 OUTPUT_FILE = 'DedicatedServerSettings.ini'
+MAP_DEF_FILE = 'maps_def_mappings.json'
+with open(MAP_DEF_FILE, 'r') as f:
+    MAPS_DICT = json.load(f)
 
 
 def get_parser(version='1.69'):
@@ -115,11 +102,20 @@ def generate_server(args):
     return settings
 
 
+def get_map_set(set_tag):
+    map_set = []
+    for level in MAPS_DICT:
+        if (set_tag == MAPS_DICT[level]['map_set']) and (eval(MAPS_DICT[level]['in_rotation'])):
+            map_set.append(level)
+    return map_set
+
+
 def get_map_pool(use_custom_maps):
-    map_pool = [level[0] for level in MAPS]
+    map_pool = get_map_set('base')
     if use_custom_maps:
-        map_pool.extend([level[0] for level in CUSTOM_MAPS])
-        map_pool.extend([level[0] for level in HEAVEN_CUSTOM_MAPS])
+        # map_pool.extend(get_map_set('dlc'))
+        map_pool.extend(get_map_set('custom'))
+        map_pool.extend(get_map_set('heaven'))
     return map_pool
 
 
@@ -138,7 +134,9 @@ def generate_map_tuples(map_pool, mode_pool):
     map_tuples = []
     for mode in mode_pool:
         for level in map_pool:
-            map_tuples.append((level, mode))
+            map_modes = MAPS_DICT[level]['modes']
+            if mode in map_modes:
+                map_tuples.append((level, mode))
     return map_tuples
 
 
@@ -195,6 +193,7 @@ def write_settings(settings, file_name):
 
 
 def main():
+    print(MAPS_DICT)
     args = parse_args(get_parser())
     settings = generate_file(args)
     print_settings(settings)
