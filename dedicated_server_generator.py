@@ -119,6 +119,7 @@ def get_map_pool(use_custom_maps):
     map_pool = [level[0] for level in MAPS]
     if use_custom_maps:
         map_pool.extend([level[0] for level in CUSTOM_MAPS])
+        map_pool.extend([level[0] for level in HEAVEN_CUSTOM_MAPS])
     return map_pool
 
 

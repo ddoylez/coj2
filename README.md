@@ -1,39 +1,55 @@
 # Call of Juarez 2: Bound in Blood
+
 Locale pack 69 for a customized cancerous multiplayer experience.
 
 ## How to Install
+
 1. Replace ...steamapps/common/Call of Juarez 2 - Bound in Blood/CoJ2/Data/Game.ini with Data/Game.ini
-1. Add Data/debugconf.scr alongside Data/Game.ini to allow joining of fake LAN games.
-1. Copy Data69.pak and Speech69.pak into ...steamapps/common/Call of Juarez 2 - Bound in Blood/CoJ2
+2. Add Data/debugconf.scr alongside Data/Game.ini to allow joining of fake LAN games.
+3. Copy Data69.pak and Speech69.pak into ...steamapps/common/Call of Juarez 2 - Bound in Blood/CoJ2
+
+## How to Install Custom Maps
+
+A functional copy of all custom maps can be
+found [here](https://drive.google.com/file/d/12HkWfwv-7gAKSQzIHQFQ3hJN3iJkNIVp/view?usp=sharing).
+
+1. Find .../Documents/Call of Juarez - Bound in Blood/
+2. Extract data from coj2_custom_maps.zip into the above folder
+3. Make sure you have data/characters, data/creatures, and data/mapsnet in .../Documents/Call of Juarez - Bound in
+   Blood/
 
 ## How to Join
-Add '-join ip:port' to your launch options (either on the shortcut or through Steam)
-  where ip is the IP Address of the server ('localhost' does not work)
-  and port is the port it is running on (default is 27632)
 
-You will automatically connect to the server on launch if it is running. Otherwise nothing happens and you can play normally.
+Add '-join ip:port' to your launch options (either on the shortcut or through Steam)
+where ip is the IP Address of the server ('localhost' does not work)
+and port is the port it is running on (default is 27632)
+
+You will automatically connect to the server on launch if it is running. Otherwise nothing happens and you can play
+normally.
 
 ## Changes
+
 - Sounds
-  - Gun firing sounds
-  - Bow firing sound
-  - Death scream
-  - Dynamite sounds
-  - more
+    - Gun firing sounds
+    - Bow firing sound
+    - Death scream
+    - Dynamite sounds
+    - more
 - Most class names
 - Weapons
-  - Sawn-Off Maximum Range+
-  - Sawn-Off Minimum Damage--
-  - Drawn Bow Damage+
-  - Scoped Rifle Minimum Damage++
+    - Sawn-Off Maximum Range+
+    - Sawn-Off Minimum Damage--
+    - Drawn Bow Damage+
+    - Scoped Rifle Minimum Damage++
 - Gunslinger
-  - Damage Multipler+
-  - Health-
-  - Movement Speed+
-  - Quickshooter Accuracy+
+    - Damage Multipler+
+    - Health-
+    - Movement Speed+
+    - Quickshooter Accuracy+
 - Spy
-  - Dynamite x10
-  - Health----
-  - Movement Speed++++
+    - Dynamite x10
+    - Health----
+    - Movement Speed++++
 
-Details on base game and changes made can be found [here](https://docs.google.com/spreadsheets/d/1kyl1MVBn95A-9mlR9a86lXmxVeWOlSnEq0oQeT3x2IA/edit?usp=sharing).
+Details on base game and changes made can be
+found [here](https://docs.google.com/spreadsheets/d/1kyl1MVBn95A-9mlR9a86lXmxVeWOlSnEq0oQeT3x2IA/edit?usp=sharing).
