@@ -193,7 +193,6 @@ def write_settings(settings, file_name):
 
 
 def main():
-    print(MAPS_DICT)
     args = parse_args(get_parser())
     settings = generate_file(args)
     print_settings(settings)
