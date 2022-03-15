@@ -21,13 +21,18 @@ Commands:
     switches to the next map in the queue
 /PlayerList
     returns a list of all players and their IDs
-/Kick playername
+/Kick <nick>
     kicks out a given player
 /Kick playerID
     kicks out a given player
-/Kill playername
+/Kill <nick>
 /Kill playerID
-    kills given player
+    kills a given player
+
+/Nick <nick>
+    change your nickname (LAN only)
+/KillMe
+    kills you
 
 Admin Only Commands:
     /AdminLogout

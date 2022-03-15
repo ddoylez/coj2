@@ -4,10 +4,20 @@ import random
 MAPS = [('Adobes', 'Taos Pueblo'), ('Civil', 'Burnside\'s Bridge'), ('Coffeyville', 'Coffeyville'),
         ('Frisco', 'Frisco'), ('Magnificent', 'Magnificent'), ('PrisonBreak2', 'Nogales'),
         ('StrinkingSprings2', 'Stinking Springs'), ('Tombstone', 'Tombstone')]
+DLC_MAPS = [('Klondike', 'Vulture Mine'), ('Liberate', 'Fort Smith'), ('LittleBigHorn', 'Little Bighorn'),
+            ('PrisonCamp', 'Elmira Prison Camp')]
 CUSTOM_MAPS = [('somerton', 'Somerton'), ('pancho', 'Pancho'), ('new_bouquet', 'New Bouquet'),
-               ('calico_ghost_town', 'Bandits Secret Hideout'), ('calico_ghost_town2', 'Calico Ghost Town'),
+               ('calico_ghost_town2', 'Bandits Secret Hideout'), ('calico_ghost_town', 'Calico Ghost Town'),
                ('little_canyon', 'Little_Canyon'), ('green_hell', 'Green_Hell'), ('enclosure', 'Enclosure'),
-               ('cursed_land', 'Cursed_land'), ('last_bullet_rebirth', 'N/A')]
+               ('cursed_land', 'Cursed_land'), ('last_bullet_rebirth', 'Last bullet rebirth')]
+HEAVEN_CUSTOM_MAPS = [('tombstone3', 'Tombstone II'), ('tombstone_1888', 'Redemption'), ('pancho', 'PanchoVille'),
+                      ('okcorral', 'OK Corral'), ('mexico_1888', 'Mexico'), ('main_street', 'Main Street'),
+                      ('magnificent3', 'Magnificent II'), ('last_bullet_rebirth', 'Grand Canyon'), ('kabul', 'Kabul'),
+                      ('highnoon', 'HighNoon'), ('high_moon', 'HighMoon'), ('helldorado', 'Helldorado'),
+                      ('goldrush_1880', 'RedRiver'), ('ghost_town', 'Ghost Town'),
+                      ('fiesta_mexicana', 'Fiesta Mexicana'), ('dedham', 'Dedham'), ('deadwood_city', 'Deadwood City'),
+                      ('crashland', 'Crashland'), ('combustion', 'Combustion'), ('bankrobbery', 'BankRobbery'),
+                      ('bandidos', 'Bandidos'), ('backstreet', 'BackStreet')]
 MODES = [('historical', 'Wild West Legends'), ('deathmatch', 'Shootout'), ('teamdeathmatch', 'Posse'),
          ('wanted', 'Wanted'), ('teamwanted', 'Manhunt')]
 DEFAULT_SERVER_NAME = 'Krampus in da House'
@@ -86,6 +96,14 @@ def i_setting(name, i):
     return f'{name}({i})\n'
 
 
+def generate_definitions():
+    settings = ['!Map(s, s)\n', '!InternetServer(i)\n', '!PublicSlots(i)\n', '!PlayersToStart(i)\n',
+                '!PointsLimitDefault(i)\n', '!BountyLimitDefault(i)\n', '!TimeLimitDefault(i)\n',
+                '!PointsLimit(s, i)\n', '!BountyLimit(s, i)\n', '!TimeLimit(s, i)\n', '!FriendlyFire(i)\n',
+                '!ServerName(s)\n', '!ServerPassword(s)\n', '!ServerPort(i)\n', '\n']
+    return settings
+
+
 def generate_server(args):
     settings = [s_setting('ServerName', args.server_name), s_setting('ServerPassword', args.server_password),
                 i_setting('ServerPort', args.server_port), '\n', i_setting('InternetServer', args.internet_server),
@@ -154,6 +172,7 @@ def generate_levels(map_tuples, limit, seed):
 
 def generate_file(args):
     settings = []
+    settings.extend(generate_definitions())
     settings.extend(generate_server(args))
     map_pool = get_map_pool(args.custom_maps)
     mode_pool = get_mode_pool(args.modes)
